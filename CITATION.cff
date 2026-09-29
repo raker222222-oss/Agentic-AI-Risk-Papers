@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use or discuss these working papers, please cite this repository and the relevant paper."
+title: "Agentic AI Risk Papers"
+type: software
+authors:
+  - family-names: "Rajan"
+    given-names: "Rakesh"
+    alias: "Rakesh OSS"
+repository-code: "https://github.com/raker222222-oss/Agentic-AI-Risk-Papers"
+url: "https://github.com/raker222222-oss/Agentic-AI-Risk-Papers"
+abstract: >-
+  Independent working papers on agentic AI safety, autonomous agents,
+  interpretive failure, recursive amplification, sequence integrity,
+  evidentiary threshold distortion, open-world retrieval failure,
+  Black Swan conditions, human misuse of frontier AI, insider risk,
+  rogue AI narratives, machine agency, and machine volition.
+keywords:
+  - agentic AI
+  - AI agents
+  - autonomous agents
+  - AI safety
+  - frontier AI
+  - LLM safety
+  - retrieval failure
+  - RAG safety
+  - sequence integrity
+  - temporal reasoning
+  - interpretive failure
+  - recursive amplification
+  - evidentiary reasoning
+  - open-world AI
+  - Black Swan AI risk
+  - agentic misalignment
+  - human misuse of AI
+  - insider threat
+  - frontier model security
+  - rogue AI
+  - machine agency
+  - machine volition
+license: CC-BY-4.0
