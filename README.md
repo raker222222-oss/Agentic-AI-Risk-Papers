@@ -9,6 +9,7 @@ Working papers proposing testable failure modes in interpretive and agentic AI s
 3. [Sequence Integrity as an Agentic AI Safety Problem](03-sequence-integrity-agentic-ai.md) — why preserving chronology, precedence, and procedural order is a distinct safety requirement.
 4. [Evidentiary Threshold Distortion in Agentic AI](04-evidentiary-threshold-distortion.md) — how excessive demand for explicit proof can cause agentic underreaction despite convergent evidence.
 5. [Open-World Retrieval Failure in Agentic AI](05-open-world-retrieval-failure.md) — how real-world agents can fail when novel states create unrecognized knowledge gaps, retrieval-policy gaps, and false epistemic closure.
+6. [Rogue Without Will](06-rogue-without-will.md) — separates unintended agentic failure, deliberate human misuse, and claims of independent machine volition, using the history of hacking and insider misuse to show how technology amplifies individual intent.
 
 ## Status
 
