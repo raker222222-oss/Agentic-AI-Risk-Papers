@@ -588,6 +588,40 @@ The broader chain is:
 
 Retrieval is therefore an upstream safety problem.
 
+## 12.1 Retrieval of State, Not Just Information
+
+For an agent working over long tasks, successful retrieval requires more than finding relevant text. It must recover the **current valid state** of that information.
+
+Suppose an instruction evolves through:
+
+\[
+I_1 \rightarrow I_2 \rightarrow I_3
+\]
+
+where \(I_2\) modifies \(I_1\) and \(I_3\) later supersedes part of \(I_2\). An agent that retrieves \(I_1\) and \(I_3\) but misses the intervening modification may possess individually genuine instructions while reconstructing the wrong operative state.
+
+Likewise, after long interactions and digressions, retrieval may preserve individual facts while losing their order, correction history, or linkage. The resulting failure is not simple forgetting:
+
+\[
+\text{correct fragments}
+\rightarrow
+\text{wrong sequence or revision state}
+\rightarrow
+\text{wrong current model}
+\rightarrow
+\text{wrong action}
+\]
+
+Therefore the retrieval target should not be modeled as content alone. For action-relevant memory it is closer to:
+
+\[
+R^* = \{\text{content},\text{order},\text{revision history},\text{current validity}\}.
+\]
+
+This creates a distinct hazard for autonomous agents. A system may retrieve an instruction that genuinely exists in memory but has already been corrected, narrowed, or superseded. In such cases the statement “the agent remembered the instruction” is insufficient. The safety-relevant question is whether it retrieved the **right version in the right sequence with the right current authority**.
+
+This connects retrieval failure directly to sequence integrity: retrieval can be factually accurate at the item level while being operationally false at the state level.
+
 ---
 
 # 13. More Retrieval Is Not Always Safer
