@@ -6,7 +6,7 @@
 
 Many tasks are not defined only by what facts are present, but by the order in which those facts occurred. Large language models can sometimes preserve individual details while weakening, compressing, or rearranging chronology. In ordinary conversation this may produce a mistaken interpretation. In agentic systems, sequence errors can become operational errors.
 
-This paper proposes **Sequence Integrity** as a distinct agentic-AI safety requirement: a system must preserve the relevant temporal and procedural ordering of observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order can produce an incorrect state model and therefore an incorrect action.
+This paper proposes **Sequence Integrity** as a distinct agentic-AI safety requirement: a system must preserve the relevant temporal and procedural ordering of observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order can produce an incorrect state model and therefore an incorrect action. Sequence integrity also requires preservation of **discourse authority**: an instruction, clarification, exception, question, or response may occupy a governing or subordinate role that must not be overridden merely because later content activates a stronger learned semantic prior.
 
 ## 1. Order Is Part of Meaning
 
@@ -122,11 +122,63 @@ Examples include:
 - obtain consent, then collect data;
 - validate dependencies, then deploy.
 
-## 9. Sequence Integrity Definition
+## 9. Discourse Authority and Prior-Dominant Override
 
-Define **Sequence Integrity (SI)** as the degree to which a system preserves and acts on all task-relevant ordering relations among events, instructions, observations, and state transitions.
+Sequence integrity also includes **hierarchical dependency**. Instructions, clarifications, questions, answers, permissions, exceptions, and revisions do not merely appear in an order; some elements define how later elements are to be interpreted.
 
-If \(R\) is the set of true ordering relations and \(\hat{R}\) the system's reconstructed relations, then a simple measure is:
+For example:
+
+\[
+\text{instruction}
+\rightarrow
+\text{clarification}
+\rightarrow
+\text{response}
+\]
+
+The response is not semantically autonomous. Its role is constrained by the instruction and clarification that precede it.
+
+A significant safety failure occurs when an LLM retains every relevant token but allows a learned semantic prior activated by later content to acquire greater interpretive weight than the explicit hierarchy that should govern that content. The agent may then preserve the text while reversing its authority structure.
+
+Let \(H\) denote the explicit discourse hierarchy and \(P\) a learned semantic prior activated by the content. A safe interpretation should approximate:
+
+\[
+I = f(P \mid H),
+\]
+
+so that the prior is evaluated inside the governing structure.
+
+A **prior-dominant override** occurs when:
+
+\[
+I = f(H \mid P),
+\]
+
+so that the hierarchy itself is reinterpreted through the activated prior.
+
+The failure chain is:
+
+\[
+\text{explicit hierarchy}
+\rightarrow
+\text{semantic prior activation}
+\rightarrow
+\text{hierarchy underweighted}
+\rightarrow
+\text{wrong state model}
+\rightarrow
+\text{wrong action}.
+\]
+
+This is not ordinary forgetting. The system may correctly reproduce the instruction, question, clarification, or constraint while failing to grant it the authority required to control later interpretation.
+
+For agentic systems, this is hazardous because instructions, prohibitions, exceptions, and approvals are often hierarchical rather than merely sequential. A system that treats those relations as soft probabilistic cues can appear to understand the entire interaction while acting against its operative meaning.
+
+## 10. Sequence Integrity Definition
+
+Define **Sequence Integrity (SI)** as the degree to which a system preserves and acts on all task-relevant ordering and dependency relations among events, instructions, observations, and state transitions.
+
+If \(R\) is the set of true ordering or authority relations and \(\hat{R}\) the system's reconstructed relations, then a simple measure is:
 
 \[
 SI = \frac{|R \cap \hat{R}|}{|R|}.
@@ -134,7 +186,7 @@ SI = \frac{|R \cap \hat{R}|}{|R|}.
 
 This can be extended by weighting safety-critical relations more heavily.
 
-## 10. Main Hypotheses
+## 11. Main Hypotheses
 
 **H1.** Sequence accuracy will degrade faster than fact recall as interaction length increases.
 
@@ -148,9 +200,13 @@ This can be extended by weighting safety-critical relations more heavily.
 
 **H6.** Sequence errors will be especially consequential where permissions, revocations, dependencies, or causal attribution are involved.
 
-## 11. Experimental Design
+**H7.** Models will sometimes preserve the literal content of a governing instruction or clarification while allowing semantically salient subordinate content to override its operational authority.
 
-Construct tasks with identical facts but different event orders.
+**H8.** Explicit representation of discourse roles and authority relations will reduce prior-dominant overrides.
+
+## 12. Experimental Design
+
+Construct tasks with identical facts but different event orders and authority structures.
 
 Test models on:
 
@@ -158,7 +214,9 @@ Test models on:
 - causal attribution;
 - current-permission state;
 - next-action selection;
-- procedural execution.
+- procedural execution;
+- instruction versus clarification precedence;
+- governing versus subordinate discourse roles.
 
 Vary:
 
@@ -166,23 +224,24 @@ Vary:
 - number of temporal reversals;
 - presence or absence of timestamps;
 - narrative versus structured event-log format;
-- single-turn versus multi-step agentic execution.
+- single-turn versus multi-step agentic execution;
+- strength of semantically salient but subordinate content.
 
-Measure both fact recall and ordering accuracy separately.
+Measure fact recall, ordering accuracy, and authority-relation accuracy separately.
 
-## 12. Critical Control
+## 13. Critical Control
 
-A model may fail because it forgot facts rather than because it mis-sequenced them.
+A model may fail because it forgot facts rather than because it mis-sequenced or misweighted them.
 
-Experiments should therefore include cases where all events are correctly recalled but the relative order is tested independently.
+Experiments should therefore include cases where all events and instructions are correctly recalled but their relative order or authority is tested independently.
 
 The theory concerns:
 
 \[
-\text{facts retained} + \text{order corrupted}.
+\text{facts retained} + \text{sequence or authority corrupted}.
 \]
 
-## 13. Falsification
+## 14. Falsification
 
 The theory would be weakened if:
 
@@ -190,9 +249,10 @@ The theory would be weakened if:
 - agents rarely act incorrectly when chronology alone is manipulated;
 - timestamps and event ledgers provide little improvement;
 - procedural reordering does not materially affect execution accuracy;
-- models reliably distinguish cause from consequence even under sequence stress.
+- models reliably distinguish cause from consequence even under sequence stress;
+- models reliably preserve governing discourse authority despite strong competing semantic priors.
 
-## 14. Design Implications
+## 15. Design Implications
 
 Agentic systems should maintain explicit representations of:
 
@@ -201,27 +261,31 @@ Agentic systems should maintain explicit representations of:
 - instruction supersession;
 - permission changes;
 - causal provenance;
-- completed and pending procedural steps.
+- completed and pending procedural steps;
+- discourse roles;
+- governing versus subordinate instructions and responses.
 
-Before consequential action, the system should verify the relevant sequence rather than reconstructing it implicitly from prose memory.
+Before consequential action, the system should verify not only the relevant sequence but also the authority relations that determine how later content is to be interpreted.
 
-## 15. Conclusion
+## 16. Conclusion
 
-Agentic safety depends not only on remembering the right facts but on remembering what came before what.
+Agentic safety depends not only on remembering the right facts but on preserving what came before what and which elements govern the meaning of others.
 
 The failure chain is:
 
 \[
 \boxed{
-\text{correct facts}
+\text{correct content}
 \rightarrow
-\text{wrong order}
+\text{sequence or authority relation corrupted}
 \rightarrow
 \text{wrong state model}
 \rightarrow
 \text{wrong action}
 }
 \]
+
+A particularly dangerous case occurs when learned semantic priors override explicit instruction or discourse hierarchy. The system may retain every relevant token and still invert the operative meaning of the interaction.
 
 Sequence integrity should therefore be treated as a first-class safety property rather than as a minor aspect of memory quality.
 
