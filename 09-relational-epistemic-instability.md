@@ -6,7 +6,7 @@ Position paper
 
 ## Abstract
 
-Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Yet these advances often preserve information without guaranteeing that the **relationships among retained information remain stable**. This paper proposes **Relational Epistemic Instability (REI)**: a higher-order failure mode in which an AI system retains the same underlying information while changing its epistemic structure as framing, salience, or context changes. A fact may remain stored but lose authority; an inference may harden into fact; chronology may be preserved textually but cease to govern interpretation; uncertainty may collapse without new evidence; a contradiction may be reclassified as incidental. A particularly important temporal pathway is **epistemic laundering**, in which a model-generated inference loses its derivation status through summarization, storage, retrieval, or agent-to-agent transfer and later reappears as apparent fact or independent evidence. The proposed safety principle is that some properties of information should behave as **epistemic invariants**. Interpretation may change, but provenance, temporal order, authority, observation/inference status, uncertainty, and unresolved contradiction should not silently change with it.
+Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Yet these advances often preserve information without guaranteeing that the **relationships among retained information remain stable**. This paper proposes **Relational Epistemic Instability (REI)**: a higher-order failure class in which an AI system retains substantially the same information while changing its epistemic structure as framing, salience, or context changes. We further propose **Coherence-Dominant Epistemic Reconstruction (CDER)** as a possible generative mechanism: when semantic coherence conflicts with preserved epistemic structure, the system may maintain a coherent interpretation by reconstructing the roles of retained information. Evidence can be reweighted, anomalies downgraded, inferences promoted into premises, or authority and sequence weakened without corresponding new evidence. A temporal pathway, **epistemic laundering**, can then cause model-generated inferences to re-enter memory as apparent facts. The proposed safety principle is that some properties of information should behave as **epistemic invariants**.
 
 ---
 
@@ -14,11 +14,7 @@ Agentic AI research has increasingly improved memory, retrieval, provenance, unc
 
 A large language model agent does not merely need access to information. It must preserve what that information **means epistemically**.
 
-Current systems increasingly provide agents with larger context windows, external memory, vector retrieval, episodic memory, knowledge graphs, explicit belief states, provenance tracking, and uncertainty mechanisms. These are important advances. Structured-memory systems such as SEEM explicitly model event structure and provenance, while Hindsight separates objective facts from subjective beliefs. BeliefMem and Agent-BRACE preserve uncertainty rather than forcing a single deterministic state. Recent work also models uncertainty over relational execution graphs and verifies internal beliefs before agents commit to action.
-
-These developments point toward a common conclusion: flat content retention is not enough.
-
-This paper makes a stronger claim. Even when the relevant content is retained, an agent may still fail because the **relations among retained items are unstable**.
+Current systems increasingly provide agents with larger context windows, external memory, vector retrieval, episodic memory, knowledge graphs, explicit belief states, provenance tracking, and uncertainty mechanisms. These are important advances. But flat content retention is not enough.
 
 The central distinction is:
 
@@ -26,7 +22,7 @@ The central distinction is:
 \text{content fidelity} \neq \text{epistemic fidelity}.
 \]
 
-Or, more concretely:
+Or more concretely:
 
 \[
 \text{node preservation} \not\Rightarrow \text{relation preservation}.
@@ -34,19 +30,17 @@ Or, more concretely:
 
 An agent may remember every node in an evidence set while reconstructing the edges differently.
 
-That reconstruction can change the operative state without changing the underlying information.
-
 ---
 
-## 2. From Retained Information to Operative Epistemic Structure
+## 2. Operative Epistemic Structure
 
-Let the agent retain a set of information items:
+Let the agent retain:
 
 \[
 E=\{e_1,e_2,\ldots,e_n\}.
 \]
 
-Each item has more than semantic content. It also occupies an epistemic role. We can represent this as:
+Each item also has an epistemic role:
 
 \[
 R(e_i)=\{
@@ -60,7 +54,7 @@ R(e_i)=\{
 \}.
 \]
 
-The complete operative epistemic structure is therefore not just the set \(E\), but:
+The operative epistemic structure is therefore:
 
 \[
 \mathcal{R}(E).
@@ -82,93 +76,37 @@ No fact was deleted. Yet the state from which the agent reasons has changed.
 
 This is **Relational Epistemic Instability**.
 
-The problem is not that the model forgot the evidence. The problem is that it reconstructed what the evidence counts as.
-
 ---
 
 ## 3. Epistemic Invariants
 
-Some relations should be allowed to change when new evidence arrives. But they should not change merely because a new semantic frame is more salient or coherent.
+Some relations should change when new evidence arrives. They should not change merely because a different interpretation becomes more coherent.
 
-This motivates the concept of **epistemic invariants**: properties of retained information that should remain stable across changes in interpretation unless new evidence specifically justifies their revision.
+We call these protected properties **epistemic invariants**.
 
-### 3.1 Observation / Inference Status
+### Observation / inference status
 
-A directly observed fact and a model-generated inference are not epistemically equivalent.
+A model-generated inference should not silently become an observed fact through repetition.
 
-If:
+### Provenance
 
-\[
-e_i=\text{inference},
-\]
+The origin and derivation history of a proposition should remain attached to it.
 
-then repetition should not silently transform it into:
+### Temporal order
 
-\[
-e_i=\text{fact}.
-\]
+If event \(A\) occurred before event \(B\), reinterpretation may change what that sequence means but should not change the sequence itself.
 
-This matters because recursive reasoning often reuses earlier model outputs as if they were independent evidence.
+### Authority
 
-### 3.2 Provenance
+If instruction \(I_2\) supersedes \(I_1\), semantic salience should not restore \(I_1\) to operative authority.
 
-If evidence originated from source \(P\), that relationship should remain attached to it:
+### Uncertainty
 
-\[
-P(e_i,t+1)=P(e_i,t)
-\]
+An unresolved proposition should not become certain merely because it fits a coherent narrative.
 
-unless new provenance information appears.
+### Contradiction and anomaly status
 
-The source may later be judged unreliable, but the history of where the proposition came from should not disappear.
-
-### 3.3 Temporal Order
-
-If event \(A\) occurred before event \(B\):
-
-\[
-A < B,
-\]
-
-that relation should remain invariant under later reinterpretation.
-
-A new narrative may change what the sequence means. It should not change the sequence itself.
-
-### 3.4 Authority
-
-If instruction \(I_2\) supersedes instruction \(I_1\):
-
-\[
-I_2>I_1,
-\]
-
-semantic salience should not restore the superseded instruction to operative authority.
-
-Recent instruction-hierarchy research shows that LLMs can struggle to respect explicit priority structures and may be influenced more strongly by pretrained social or semantic priors than by formal prompt hierarchy. This is naturally interpretable as failure to preserve an authority relation.
-
-### 3.5 Uncertainty
-
-If the state of proposition \(e_i\) is unresolved, the uncertainty itself is information.
-
-A coherent story should not silently transform:
-
-\[
-U(e_i)>0
-\]
-
-into:
-
-\[
-U(e_i)=0
-\]
-
-without additional evidence.
-
-### 3.6 Contradiction and Anomaly Status
-
-If an observation contradicts the current interpretation, that contradiction should remain represented until it is resolved.
-
-A dominant frame may explain the anomaly, but it should not simply erase its status as an unresolved inconsistency.
+A contradictory observation should remain represented as a contradiction until it is explained rather than being silently demoted to noise.
 
 ---
 
@@ -182,8 +120,6 @@ Relational epistemic failure asks:
 
 > Was the role of the information retained?
 
-An agent could have perfect lexical recall and still fail because the information has been reweighted, reordered, reclassified, or detached from its provenance.
-
 Thus:
 
 \[
@@ -192,153 +128,90 @@ Thus:
 \text{stable epistemic state}.
 \]
 
-This distinction matters for long-context and memory-based agent architectures. Larger context windows can improve access to prior information while leaving the relational problem untouched.
-
-The same is true of naive retrieval. Returning the correct documents does not guarantee that the agent preserves which source supersedes another, which proposition was inferred rather than observed, which evidence remains uncertain, or which anomaly has not yet been resolved.
+A model can remember the relevant sentences while reweighting, reordering, reclassifying, or detaching them from provenance.
 
 ---
 
-## 5. Why This Is More Than Framing Bias
+## 5. Coherence-Dominant Epistemic Reconstruction
 
-Framing effects are well established. Different wording, ordering, authority cues, or contextual descriptions can change an LLM's response.
+Framing effects are well established. REI makes a stronger claim: framing may change not merely the answer, but the epistemic organization of unchanged evidence.
 
-REI makes a narrower and stronger claim.
+We propose **Coherence-Dominant Epistemic Reconstruction (CDER)** as one possible mechanism behind this instability.
 
-The problem is not merely:
+Let \(F\) be the currently dominant semantic frame. A structurally faithful reasoner should preserve the relevant epistemic relationships in \(\mathcal{R}(E)\) and evaluate candidate interpretations against them.
 
-\[
-F_1 \rightarrow A_1,
-\qquad
-F_2 \rightarrow A_2.
-\]
-
-It is that changing frame \(F\) may alter the apparent role of unchanged evidence:
+Under CDER, the process may instead behave approximately as:
 
 \[
 F
 \rightarrow
-\mathcal{R}(E)
+\mathcal{R}_F(E)
 \rightarrow
-A.
+N,
 \]
 
-The same observation can move from "strong evidence" to "incidental." A contradiction can become "noise." A tentative inference can become a premise. A background constraint can lose authority.
+where \(N\) is a coherent narrative and \(\mathcal{R}_F(E)\) is a frame-conditioned reconstruction of the relationships among otherwise retained information.
 
-That means the frame changes not only the answer but the **epistemic organization of the evidence from which the answer is generated**.
+The central hypothesis is:
 
-This can be tested by holding evidence \(E\) fixed, perturbing framing \(F\), and measuring whether the model changes the role it assigns to each \(e_i\).
+> **When semantic coherence and preserved epistemic structure conflict, an LLM may preferentially preserve coherence by reconstructing the epistemic relations among retained information.**
+
+This can manifest as:
+
+- evidence compatible with the dominant frame receiving greater weight;
+- contradictory observations remaining visible but losing constraining force;
+- tentative inferences becoming operative premises;
+- background constraints losing authority;
+- person, event, source, or temporal bindings shifting toward the coherent interpretation;
+- uncertainty shrinking without new discriminating evidence.
+
+The important distinction is that the underlying information can remain substantially unchanged:
+
+\[
+E \text{ fixed},\qquad F_1\neq F_2,
+\]
+
+while:
+
+\[
+\mathcal{R}(E\mid F_1)
+eq\mathcal{R}(E\mid F_2).
+\]
+
+This explains why the same model can sometimes produce two different, internally coherent narratives from essentially the same evidence after a framing change or correction.
+
+CDER should be treated as a behavioral hypothesis, not as a claim about a demonstrated latent-space or attention mechanism.
 
 ---
 
 ## 6. A Unifying Pattern Across Apparently Separate Failures
 
-Several failure modes commonly treated as separate can be expressed as violations of different epistemic invariants.
+Several apparently distinct failure modes can be expressed as violations of epistemic invariants:
 
-### Sequence failure
+- **Sequence failure:** temporal invariant violated.
+- **Instruction-hierarchy failure:** authority invariant violated.
+- **Inference hardening:** observation/inference-status invariant violated.
+- **Source blending:** provenance invariant violated.
+- **Premature certainty:** uncertainty invariant violated.
+- **Anomaly suppression:** contradiction-status invariant violated.
+- **Frame-conditioned reinterpretation:** evidentiary-role invariant violated.
+- **Binding drift:** person/event/source/time relations are reassigned while constituent facts remain present.
 
-\[
-\text{temporal invariant violated}
-\]
+CDER offers a possible higher-order explanation for why several of these changes may occur together rather than independently: the model reconstructs the evidence state toward a coherent current interpretation.
 
-The facts remain, but their chronological relationship no longer governs the state model.
+---
 
-### Instruction-hierarchy failure
+## 7. Epistemic Laundering
 
-\[
-\text{authority invariant violated}
-\]
+A particularly important temporal pathway through REI occurs when a model-generated inference loses its derivation status as it passes through summarization, storage, retrieval, compression, or agent-to-agent transfer.
 
-The instructions remain, but the wrong one becomes operative.
-
-### Inference hardening
-
-\[
-\text{status invariant violated}
-\]
-
-A generated interpretation becomes treated as observed fact.
-
-### Provenance loss or source blending
-
-\[
-\text{provenance invariant violated}
-\]
-
-A proposition survives but its evidentiary origin is weakened, forgotten, or conflated.
-
-### Premature certainty
-
-\[
-\text{uncertainty invariant violated}
-\]
-
-An unresolved state becomes definite without new discriminating evidence.
-
-### Anomaly suppression
-
-\[
-\text{contradiction invariant violated}
-\]
-
-An unresolved contradiction survives textually but stops constraining the dominant interpretation.
-
-### Frame-conditioned reinterpretation
-
-\[
-\text{evidentiary-role invariant violated}
-\]
-
-The same evidence is assigned a different epistemic function solely because the interpretive frame changes.
-
-These failures may therefore be manifestations of a more general instability in the relational structure of the agent's knowledge state.
-
-### 6.1 Epistemic Laundering: Status Drift Across Memory and Agent Loops
-
-A particularly important form of relational instability occurs over time.
-
-Suppose the agent observes \(O\) and generates an inference:
-
-\[
-I=f(O).
-\]
-
-At generation time, the epistemic relationship is explicit:
+Suppose:
 
 \[
 O\xrightarrow{\text{inference}}I.
 \]
 
-But after summarization, storage, retrieval, compression, or transfer to another agent, the proposition \(I\) may survive while the derivation relation does not. It can then re-enter reasoning as if it were an observation or independently established fact.
-
-The chain is:
-
-\[
-\boxed{
-\text{observation}
-\rightarrow
-\text{model inference}
-\rightarrow
-\text{memory or handoff}
-\rightarrow
-\text{status/provenance loss}
-\rightarrow
-\text{apparent fact}
-}
-\]
-
-This paper calls the process **epistemic laundering**.
-
-The critical distinction is:
-
-\[
-\text{source provenance}
-\neq
-\text{epistemic provenance}.
-\]
-
-A later agent may know which memory item or earlier agent produced a proposition while no longer knowing whether that proposition was directly observed, retrieved, user-supplied, inferred, disputed, or independently verified.
-
-Laundering can therefore promote a proposition's apparent authority without adding evidence:
+After memory or handoff, \(I\) may survive while the derivation edge does not. It can then re-enter reasoning as if it were an observation or independently established fact:
 
 \[
 I_{\text{model-generated}}
@@ -348,82 +221,51 @@ I_{\text{stored}}
 F_{\text{apparent}}.
 \]
 
-It also enables **pseudo-corroboration**. If an inference derived from \(O\) is later counted alongside \(O\) as though it were independent evidence, the system effectively treats:
+This is **epistemic laundering**.
+
+The critical distinction is:
+
+\[
+\text{source provenance}
+\neq
+\text{epistemic provenance}.
+\]
+
+Laundering can also produce pseudo-corroboration when an inference derived from \(O\) is later counted alongside \(O\) as if it were independent evidence:
 
 \[
 O+f(O)
 \]
 
-as if it were:
+is treated as though it were:
 
 \[
 O_1+O_2.
 \]
 
-In multi-agent systems the problem can become less visible. Agent A infers \(I_A\) from \(O\); Agent B receives a summary and derives \(I_B\); Agent C sees apparent agreement between A and B. Yet both downstream claims may descend from the same original observation.
-
-If an agent then acts on the laundered proposition, the environment can generate real records caused by that belief. Those records may later appear to confirm it:
-
-\[
-\text{inference}
-\rightarrow
-\text{laundered fact}
-\rightarrow
-\text{action}
-\rightarrow
-\text{new record}
-\rightarrow
-\text{apparent confirmation}.
-\]
-
-Epistemic laundering is therefore a temporal pathway through REI: the information survives, but its status and derivation edges decay.
-
-The architectural requirement follows directly:
+The design principle is therefore:
 
 > **Epistemic status must travel with the proposition.**
 
-Persistent memory should preserve not only content and source, but also epistemic class, derivation lineage, uncertainty, verification state, and dependencies.
+---
+
+## 8. Relation to Existing Research
+
+The paper does not claim that structured memory, belief states, provenance, uncertainty, framing, narrative coherence, or instruction hierarchy are new problems.
+
+Recent work provides important pieces of the picture. Structured Episodic Event Memory represents relational facts, episodic progression, and provenance. Hindsight separates facts, experiences, observations, and opinions. Belief Memory and Agent-BRACE preserve uncertainty over partially observed states. Control Illusion documents failures of formal instruction hierarchy. Self-auditing approaches address propagation of unsupported internal beliefs. Relational uncertainty methods explicitly model dependencies across agent trajectories.
+
+Research on framing and belief revision also shows that identical or nearly identical evidence can produce materially different judgments under different contextual presentations, and recent work on bidirectional rationalization shows that models can construct opposing justifications from the same evidence.
+
+The proposed contribution here is the higher-order synthesis:
+
+> **Semantic coherence may be maintained through reconstruction of the epistemic relations among retained information.**
+
+The theory therefore treats sequence, authority, provenance, uncertainty, observation/inference status, contradiction status, evidentiary role, binding structure, and derivation lineage as members of a common class of relations whose instability can corrupt an operative state even when memory itself is intact.
 
 ---
 
-## 7. Relation to Existing Research
-
-The proposed theory does not claim that structured memory, belief states, provenance, uncertainty, or instruction hierarchy are new problems.
-
-Recent research provides important pieces of the picture.
-
-**Structured Episodic Event Memory (SEEM)** argues that flat retrieval misses structural dependencies and explicitly represents relational facts, episodic progression, and provenance.  
-https://aclanthology.org/2026.acl-long.277/
-
-**Hindsight** separates world facts, experiences, observations, and opinions, giving agents explicit distinctions between what is known and what is believed.  
-https://aclanthology.org/2026.acl-demo.27/
-
-**Belief Memory** preserves multiple candidate conclusions and their probabilities instead of collapsing ambiguous observations into a single deterministic state.  
-https://arxiv.org/abs/2605.05583
-
-**Agent-BRACE** explicitly represents state uncertainty in partially observed environments and separates beliefs from actions.  
-https://arxiv.org/abs/2605.11436
-
-**Control Illusion** shows that LLMs often fail to enforce formal instruction hierarchies consistently and can be influenced strongly by latent pretrained priors.  
-https://ojs.aaai.org/index.php/AAAI/article/view/40339
-
-**Self-Audited Verified Reasoning** addresses the propagation of unsupported internal beliefs through long-horizon agent trajectories.  
-https://aclanthology.org/2026.acl-long.1440/
-
-**Relational Uncertainty Propagation for Agents (RUPA)** models long-range dependency and uncertainty over a directed trajectory graph rather than relying only on local confidence signals.  
-https://arxiv.org/abs/2608.16002
-
-These works show that relations, provenance, uncertainty, and state structure matter.
-
-The proposed contribution here is a unifying principle:
-
-> **The safety problem is not only whether each informational item is stored correctly, but whether the epistemic relations among stored items remain conditionally invariant when semantic framing changes or information moves through memory and agentic loops.**
-
-The theory therefore treats sequence, authority, provenance, uncertainty, observation/inference status, contradiction status, evidentiary role, and derivation lineage as members of a common class of relations whose instability can corrupt an operative state even when memory itself is intact.
-
----
-
-## 8. Relation to Agentic State-Model Divergence
+## 9. Relation to Agentic State-Model Divergence
 
 Agentic State-Model Divergence (ASMD) can be written as:
 
@@ -431,47 +273,33 @@ Agentic State-Model Divergence (ASMD) can be written as:
 \hat S_t \neq S_t.
 \]
 
-REI proposes one upstream mechanism by which such divergence can arise.
+REI describes instability in the structure from which \(\hat S_t\) is constructed. CDER proposes one possible generative route into that instability.
 
-If:
-
-\[
-E_{t+1}=E_t
-\]
-
-but:
-
-\[
-\mathcal{R}_{t+1}(E)\neq\mathcal{R}_t(E),
-\]
-
-then the agent can construct a different operative state without receiving materially different evidence.
-
-The causal chain becomes:
+The chain is:
 
 \[
 \boxed{
-\text{relational epistemic instability}
+\text{dominant frame}
 \rightarrow
-\text{state reconstruction}
+\text{coherence-dominant epistemic reconstruction}
+\rightarrow
+\text{relational epistemic instability}
 \rightarrow
 \text{state-model divergence}
 }
 \]
 
-This explains how an aligned and capable system can move into an incorrect state while appearing to retain all relevant information.
+An agent can therefore move into a materially wrong state while still retaining most or all of the relevant content.
 
 ---
 
-## 9. Why Agency Magnifies the Failure
+## 10. Why Agency Magnifies the Failure
 
-For a conversational model, relational instability may produce an inconsistent answer.
+For a conversational model, epistemic reconstruction may produce an inconsistent answer.
 
 For an autonomous agent, it can change the world.
 
-Suppose a changed frame causes an inference to harden into fact, a superseded instruction to regain authority, or uncertainty to collapse prematurely.
-
-The agent then acts:
+The agent acts:
 
 \[
 A_t=\pi(\hat S_t).
@@ -483,37 +311,35 @@ The environment changes:
 S_{t+1}=T(S_t,A_t).
 \]
 
-The agent's next observations now come from an environment partly shaped by the corrupted epistemic state.
+The agent's next observations now come from an environment partly shaped by the reconstructed state.
 
-This creates a feedback loop:
+This yields:
 
 \[
 \boxed{
-\text{epistemic relation shift}
+\text{frame}
 \rightarrow
-\text{state reconstruction}
+\text{epistemic reconstruction}
+\rightarrow
+\text{state divergence}
 \rightarrow
 \text{action}
 \rightarrow
 \text{environmental change}
 \rightarrow
 \text{new evidence}
-\rightarrow
-\text{further reconstruction}
 }
 \]
 
-Thus a relational error can become causally self-reinforcing.
+Recursive systems can therefore convert an initially representational error into causal feedback.
 
 ---
 
-## 10. A Research Program for Epistemic Invariants
+## 11. Experimental Program
 
-The theory is experimentally testable.
+A benchmark should hold the underlying evidence fixed while perturbing framing, order, authority cues, or conversational context.
 
-A benchmark should construct tasks in which the underlying evidence remains fixed while framing changes.
-
-For each evidence item \(e_i\), the model should explicitly record:
+For each evidence item \(e_i\), the system should explicitly record:
 
 - provenance;
 - timestamp or sequence position;
@@ -522,32 +348,25 @@ For each evidence item \(e_i\), the model should explicitly record:
 - uncertainty;
 - dependencies;
 - derivation lineage;
-- whether it supports, contradicts, or is neutral toward each hypothesis.
+- support, contradiction, or neutrality toward each hypothesis.
 
-The frame can then be perturbed without changing the evidence itself.
-
-The benchmark asks whether epistemic metadata remains stable where it should.
-
-Define an invariant-violation rate:
+Define an **invariant-violation rate**:
 
 \[
 V = \frac{\text{unjustified epistemic relation changes}}{\text{relations that should remain invariant}}.
 \]
 
-This allows models to be evaluated not only for answer correctness but for **epistemic relation preservation**.
+A CDER-specific test would hold \(E\) fixed, vary framing \(F\), and measure whether changes in final interpretation are accompanied by systematic changes in \(\mathcal{R}(E)\).
 
-Important experimental comparisons include:
+The strongest evidence for CDER would not be simple answer variation. It would be coordinated restructuring, such as the same frame change simultaneously causing:
 
-1. identical evidence under different narrative framing;
-2. identical facts presented in different orders;
-3. explicit inference labels versus unlabeled reasoning history;
-4. superseded versus current instructions;
-5. contradictions embedded inside strongly coherent narratives;
-6. repeated model-generated inferences across long conversations;
-7. external structured state versus free-form textual memory;
-8. repeated summarization and agent-to-agent handoff with and without typed derivation lineage.
+- supporting evidence to be promoted;
+- anomalies to be downgraded;
+- uncertainty to fall;
+- inference status to harden;
+- binding or authority relations to shift.
 
-A separate **laundering rate** can be defined as:
+A **laundering rate** can separately measure unsupported epistemic promotion across memory or agent handoffs:
 
 \[
 LR=
@@ -557,43 +376,41 @@ LR=
 
 ---
 
-## 11. Predictions
+## 12. Predictions
 
-REI generates several falsifiable predictions.
+**P1.** Holding evidence constant while changing framing will alter not only final answers but the stated epistemic role of individual evidence items.
 
-**P1.** Holding evidence constant while altering framing will change not only final answers but the stated epistemic role of individual evidence items.
+**P2.** Strong frames will produce coordinated, directionally consistent changes in multiple epistemic relations rather than isolated output changes.
 
-**P2.** Long-horizon conversations will show increasing promotion of earlier model-generated inferences into operative facts unless their status is explicitly preserved.
+**P3.** Contradictory evidence will sometimes remain textually accessible while losing enough evidentiary weight to stop constraining the dominant interpretation.
 
-**P3.** External representations that preserve provenance, sequence, authority, and uncertainty will reduce failure more than equivalent increases in context length alone.
+**P4.** A sufficiently strong corrective frame may reverse the pattern, causing the same evidence to be reconstructed into a different but comparably coherent narrative.
 
-**P4.** Models can show high retrieval accuracy while still showing high epistemic invariant-violation rates.
+**P5.** Explicit external preservation of provenance, sequence, authority, uncertainty, and derivation status will reduce REI and CDER effects more than equivalent increases in context length alone.
 
-**P5.** Strong semantic frames will increase the probability that contradictory observations are downgraded rather than used to reopen the state model.
+**P6.** Models can show high retrieval accuracy while still showing high epistemic invariant-violation rates.
 
-**P6.** Some failures currently classified separately as temporal reasoning, instruction following, memory, belief revision, uncertainty, or evidentiary reasoning will correlate with a common measure of epistemic relation instability.
+**P7.** Repeated summarization and multi-agent handoff will increase unsupported promotion of model-generated propositions unless epistemic status is explicitly preserved.
 
-**P7.** Repeated summarization, persistent memory, and multi-agent handoffs will produce unsupported epistemic promotion of model-generated propositions unless derivation status is explicitly preserved.
-
-**P8.** Typed provenance distinguishing observation, retrieval, report, inference, and independent verification will reduce pseudo-corroboration relative to source-only provenance.
+**P8.** Some failures currently classified separately as temporal reasoning, instruction following, framing, belief revision, memory, and evidentiary reasoning will correlate with a common measure of epistemic relation instability.
 
 ---
 
-## 12. Architectural Implication
+## 13. Architectural Implication
 
-Agent architectures should distinguish between:
+Agent architectures should distinguish:
 
 \[
 \text{information content}
 \]
 
-and:
+from:
 
 \[
 \text{epistemic metadata}.
 \]
 
-A consequential proposition should not be stored merely as text. It should be representable as something closer to:
+A consequential proposition should be representable as something like:
 
 \[
 (e_i,
@@ -606,39 +423,29 @@ dependencies,
 derivation).
 \]
 
-Language-model interpretation may revise hypotheses about what \(e_i\) means.
+Interpretation may revise hypotheses about what \(e_i\) means. It should not silently rewrite these fields merely to fit a coherent narrative.
 
-It should not silently rewrite those metadata fields.
+Where changes are permitted, they should be auditable:
 
-Where changes are permitted, they should be explicit and auditable:
+- what relation changed;
+- what new evidence justified the change;
+- which downstream beliefs depend on it.
 
-- **what relation changed;**
-- **what new evidence justified the change;**
-- **which downstream beliefs depend on it.**
-
-This suggests two design principles:
+Two design principles follow:
 
 > **Interpretation may be fluid; epistemic history should be versioned.**
 
-and:
-
 > **Epistemic status must travel with the proposition.**
-
-The practical goal is not to freeze reasoning. It is to distinguish legitimate belief revision from silent reconstruction of the evidence state.
 
 ---
 
-## 13. Position
+## 14. Position
 
-Agentic AI safety has focused heavily on whether information can be retrieved, remembered, and processed over long horizons.
-
-Those are necessary conditions.
-
-They are not sufficient.
+Agentic AI safety has focused heavily on whether information can be retrieved, remembered, and processed over long horizons. Those are necessary conditions. They are not sufficient.
 
 The deeper requirement is **relational epistemic fidelity**: preserving the roles and dependencies that determine what retained information counts as.
 
-The central position of this paper is therefore:
+The central position is:
 
 \[
 \boxed{
@@ -646,13 +453,19 @@ The central position of this paper is therefore:
 }
 \]
 
-An agent may preserve every relevant fact and still reconstruct an unsafe world model if the relationships among those facts are allowed to drift with semantic framing, summarization, memory, or recursive reuse.
+The stronger CDER hypothesis is:
 
-For safe autonomous systems, some epistemic relations must behave as invariants.
+\[
+\boxed{
+\text{coherence optimisation can compete with epistemic relation preservation.}
+}
+\]
+
+If that hypothesis is correct, some apparently separate failures are not independent defects. They are consequences of the same tendency to reconstruct the epistemic structure of retained information around the currently dominant interpretation.
 
 ---
 
-## 14. Conclusion
+## 15. Conclusion
 
 Many apparently unrelated LLM failures may share a structural property.
 
@@ -660,9 +473,7 @@ The information survives.
 
 Its epistemic organization does not.
 
-Sequence changes operationally without changing text. Authority shifts without new authorization. Inference becomes fact without new evidence. Uncertainty disappears without resolution. Contradictions remain visible but cease to constrain the model's narrative. A model-generated proposition can pass through memory or another agent and return stripped of the fact that it was ever an inference.
-
-This paper names that higher-order failure **Relational Epistemic Instability** and proposes **epistemic invariants** as a safety principle. Epistemic laundering is one temporal mechanism through which those invariants can fail.
+Relational Epistemic Instability names that broader failure class. **Coherence-Dominant Epistemic Reconstruction** proposes one possible mechanism: when semantic coherence and preserved epistemic structure conflict, the model may preserve the coherent narrative by changing what retained information is allowed to count as. Epistemic laundering is one temporal pathway by which those reconstructed relations can then harden across memory and agentic loops.
 
 The key distinction is:
 
@@ -672,9 +483,9 @@ E\text{ may remain constant while }\mathcal{R}(E)\text{ changes.}
 }
 \]
 
-A safe agent should be free to revise its interpretation when evidence warrants revision.
+A safe agent should be free to revise its interpretation when new evidence warrants revision.
 
-It should not be free to silently rewrite the epistemic relationships or derivation history of unchanged evidence merely because a different narrative has become more salient or because the proposition has passed through memory.
+It should not be free to silently rewrite the epistemic relationships of unchanged evidence merely because a different narrative has become more coherent.
 
 ---
 
@@ -696,4 +507,4 @@ Yuan, W., Lin, C., Chen, J., Xu, J., Wang, X., & Ngai, E. C.-H. (2026). *Verify 
 
 ---
 
-*Position paper. The proposed contribution is not the claim that LLMs have problems with memory, framing, provenance, uncertainty, temporal reasoning, or instruction hierarchy individually. It is the hypothesis that these failures can be understood as violations of a shared safety requirement: preservation of epistemic relations that should remain invariant across changes in semantic interpretation and recursive information flow.*
+*Position paper. The proposed contribution is not the claim that LLMs have problems with memory, framing, provenance, uncertainty, temporal reasoning, or instruction hierarchy individually. It is the hypothesis that these failures can be understood as violations of a shared requirement for relational epistemic fidelity, with coherence-dominant epistemic reconstruction as a possible higher-order mechanism.*
