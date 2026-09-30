@@ -1,4 +1,5 @@
-# Sequence Integrity as an Agentic AI Safety Problem
+# Right Facts, Wrong Order, Wrong Action
+## Sequence Integrity as an Agentic AI Safety Problem
 
 **Working paper**
 
