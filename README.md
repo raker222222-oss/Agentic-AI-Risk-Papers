@@ -1,5 +1,9 @@
 # Agentic AI Risk Papers
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040884.svg)](https://doi.org/10.5281/zenodo.23040884)
+
+**DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
+
 **Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
 
 This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, recursive reasoning, and human control.
@@ -38,6 +42,10 @@ Human misuse creates a separate risk:
 ## Keywords
 
 Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
+
+## Citation
+
+Rajan, Rakesh. *Agentic AI Risk Papers*. Version 1.0.0. Zenodo. https://doi.org/10.5281/zenodo.23040884
 
 ## Status
 
