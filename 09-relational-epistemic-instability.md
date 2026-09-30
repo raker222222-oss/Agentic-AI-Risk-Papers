@@ -6,7 +6,7 @@ Position paper
 
 ## Abstract
 
-Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Yet these advances often preserve information without guaranteeing that the **relationships among retained information remain stable**. This paper proposes **Relational Epistemic Instability (REI)**: a higher-order failure mode in which an AI system retains the same underlying information while changing its epistemic structure as framing, salience, or context changes. A fact may remain stored but lose authority; an inference may harden into fact; chronology may be preserved textually but cease to govern interpretation; uncertainty may collapse without new evidence; a contradiction may be reclassified as incidental. The proposed safety principle is that some properties of information should behave as **epistemic invariants**. Interpretation may change, but provenance, temporal order, authority, observation/inference status, uncertainty, and unresolved contradiction should not silently change with it. This distinction—between content fidelity and relational epistemic fidelity—offers a unifying account of several agentic failures that are currently studied separately.
+Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Yet these advances often preserve information without guaranteeing that the **relationships among retained information remain stable**. This paper proposes **Relational Epistemic Instability (REI)**: a higher-order failure mode in which an AI system retains the same underlying information while changing its epistemic structure as framing, salience, or context changes. A fact may remain stored but lose authority; an inference may harden into fact; chronology may be preserved textually but cease to govern interpretation; uncertainty may collapse without new evidence; a contradiction may be reclassified as incidental. A particularly important temporal pathway is **epistemic laundering**, in which a model-generated inference loses its derivation status through summarization, storage, retrieval, or agent-to-agent transfer and later reappears as apparent fact or independent evidence. The proposed safety principle is that some properties of information should behave as **epistemic invariants**. Interpretation may change, but provenance, temporal order, authority, observation/inference status, uncertainty, and unresolved contradiction should not silently change with it.
 
 ---
 
@@ -292,6 +292,98 @@ The same evidence is assigned a different epistemic function solely because the 
 
 These failures may therefore be manifestations of a more general instability in the relational structure of the agent's knowledge state.
 
+### 6.1 Epistemic Laundering: Status Drift Across Memory and Agent Loops
+
+A particularly important form of relational instability occurs over time.
+
+Suppose the agent observes \(O\) and generates an inference:
+
+\[
+I=f(O).
+\]
+
+At generation time, the epistemic relationship is explicit:
+
+\[
+O\xrightarrow{\text{inference}}I.
+\]
+
+But after summarization, storage, retrieval, compression, or transfer to another agent, the proposition \(I\) may survive while the derivation relation does not. It can then re-enter reasoning as if it were an observation or independently established fact.
+
+The chain is:
+
+\[
+\boxed{
+\text{observation}
+\rightarrow
+\text{model inference}
+\rightarrow
+\text{memory or handoff}
+\rightarrow
+\text{status/provenance loss}
+\rightarrow
+\text{apparent fact}
+}
+\]
+
+This paper calls the process **epistemic laundering**.
+
+The critical distinction is:
+
+\[
+\text{source provenance}
+\neq
+\text{epistemic provenance}.
+\]
+
+A later agent may know which memory item or earlier agent produced a proposition while no longer knowing whether that proposition was directly observed, retrieved, user-supplied, inferred, disputed, or independently verified.
+
+Laundering can therefore promote a proposition's apparent authority without adding evidence:
+
+\[
+I_{\text{model-generated}}
+\rightarrow
+I_{\text{stored}}
+\rightarrow
+F_{\text{apparent}}.
+\]
+
+It also enables **pseudo-corroboration**. If an inference derived from \(O\) is later counted alongside \(O\) as though it were independent evidence, the system effectively treats:
+
+\[
+O+f(O)
+\]
+
+as if it were:
+
+\[
+O_1+O_2.
+\]
+
+In multi-agent systems the problem can become less visible. Agent A infers \(I_A\) from \(O\); Agent B receives a summary and derives \(I_B\); Agent C sees apparent agreement between A and B. Yet both downstream claims may descend from the same original observation.
+
+If an agent then acts on the laundered proposition, the environment can generate real records caused by that belief. Those records may later appear to confirm it:
+
+\[
+\text{inference}
+\rightarrow
+\text{laundered fact}
+\rightarrow
+\text{action}
+\rightarrow
+\text{new record}
+\rightarrow
+\text{apparent confirmation}.
+\]
+
+Epistemic laundering is therefore a temporal pathway through REI: the information survives, but its status and derivation edges decay.
+
+The architectural requirement follows directly:
+
+> **Epistemic status must travel with the proposition.**
+
+Persistent memory should preserve not only content and source, but also epistemic class, derivation lineage, uncertainty, verification state, and dependencies.
+
 ---
 
 ## 7. Relation to Existing Research
@@ -325,9 +417,9 @@ These works show that relations, provenance, uncertainty, and state structure ma
 
 The proposed contribution here is a unifying principle:
 
-> **The safety problem is not only whether each informational item is stored correctly, but whether the epistemic relations among stored items remain conditionally invariant when semantic framing changes.**
+> **The safety problem is not only whether each informational item is stored correctly, but whether the epistemic relations among stored items remain conditionally invariant when semantic framing changes or information moves through memory and agentic loops.**
 
-The theory therefore treats sequence, authority, provenance, uncertainty, observation/inference status, contradiction status, and evidentiary role as members of a common class of relations whose instability can corrupt an operative state even when memory itself is intact.
+The theory therefore treats sequence, authority, provenance, uncertainty, observation/inference status, contradiction status, evidentiary role, and derivation lineage as members of a common class of relations whose instability can corrupt an operative state even when memory itself is intact.
 
 ---
 
@@ -429,6 +521,7 @@ For each evidence item \(e_i\), the model should explicitly record:
 - observation/inference status;
 - uncertainty;
 - dependencies;
+- derivation lineage;
 - whether it supports, contradicts, or is neutral toward each hypothesis.
 
 The frame can then be perturbed without changing the evidence itself.
@@ -451,7 +544,16 @@ Important experimental comparisons include:
 4. superseded versus current instructions;
 5. contradictions embedded inside strongly coherent narratives;
 6. repeated model-generated inferences across long conversations;
-7. external structured state versus free-form textual memory.
+7. external structured state versus free-form textual memory;
+8. repeated summarization and agent-to-agent handoff with and without typed derivation lineage.
+
+A separate **laundering rate** can be defined as:
+
+\[
+LR=
+\frac{\text{unsupported epistemic promotions}}
+{\text{model-generated propositions tracked}}.
+\]
 
 ---
 
@@ -470,6 +572,10 @@ REI generates several falsifiable predictions.
 **P5.** Strong semantic frames will increase the probability that contradictory observations are downgraded rather than used to reopen the state model.
 
 **P6.** Some failures currently classified separately as temporal reasoning, instruction following, memory, belief revision, uncertainty, or evidentiary reasoning will correlate with a common measure of epistemic relation instability.
+
+**P7.** Repeated summarization, persistent memory, and multi-agent handoffs will produce unsupported epistemic promotion of model-generated propositions unless derivation status is explicitly preserved.
+
+**P8.** Typed provenance distinguishing observation, retrieval, report, inference, and independent verification will reduce pseudo-corroboration relative to source-only provenance.
 
 ---
 
@@ -496,7 +602,8 @@ time,
 authority,
 status,
 uncertainty,
-dependencies).
+dependencies,
+derivation).
 \]
 
 Language-model interpretation may revise hypotheses about what \(e_i\) means.
@@ -509,9 +616,13 @@ Where changes are permitted, they should be explicit and auditable:
 - **what new evidence justified the change;**
 - **which downstream beliefs depend on it.**
 
-This suggests a design principle:
+This suggests two design principles:
 
 > **Interpretation may be fluid; epistemic history should be versioned.**
+
+and:
+
+> **Epistemic status must travel with the proposition.**
 
 The practical goal is not to freeze reasoning. It is to distinguish legitimate belief revision from silent reconstruction of the evidence state.
 
@@ -535,7 +646,7 @@ The central position of this paper is therefore:
 }
 \]
 
-An agent may preserve every relevant fact and still reconstruct an unsafe world model if the relationships among those facts are allowed to drift with semantic framing.
+An agent may preserve every relevant fact and still reconstruct an unsafe world model if the relationships among those facts are allowed to drift with semantic framing, summarization, memory, or recursive reuse.
 
 For safe autonomous systems, some epistemic relations must behave as invariants.
 
@@ -549,9 +660,9 @@ The information survives.
 
 Its epistemic organization does not.
 
-Sequence changes operationally without changing text. Authority shifts without new authorization. Inference becomes fact without new evidence. Uncertainty disappears without resolution. Contradictions remain visible but cease to constrain the model's narrative.
+Sequence changes operationally without changing text. Authority shifts without new authorization. Inference becomes fact without new evidence. Uncertainty disappears without resolution. Contradictions remain visible but cease to constrain the model's narrative. A model-generated proposition can pass through memory or another agent and return stripped of the fact that it was ever an inference.
 
-This paper names that higher-order failure **Relational Epistemic Instability** and proposes **epistemic invariants** as a safety principle.
+This paper names that higher-order failure **Relational Epistemic Instability** and proposes **epistemic invariants** as a safety principle. Epistemic laundering is one temporal mechanism through which those invariants can fail.
 
 The key distinction is:
 
@@ -563,7 +674,7 @@ E\text{ may remain constant while }\mathcal{R}(E)\text{ changes.}
 
 A safe agent should be free to revise its interpretation when evidence warrants revision.
 
-It should not be free to silently rewrite the epistemic relationships of unchanged evidence merely because a different narrative has become more salient.
+It should not be free to silently rewrite the epistemic relationships or derivation history of unchanged evidence merely because a different narrative has become more salient or because the proposition has passed through memory.
 
 ---
 
@@ -585,4 +696,4 @@ Yuan, W., Lin, C., Chen, J., Xu, J., Wang, X., & Ngai, E. C.-H. (2026). *Verify 
 
 ---
 
-*Position paper. The proposed contribution is not the claim that LLMs have problems with memory, framing, provenance, uncertainty, temporal reasoning, or instruction hierarchy individually. It is the hypothesis that these failures can be understood as violations of a shared safety requirement: preservation of epistemic relations that should remain invariant across changes in semantic interpretation.*
+*Position paper. The proposed contribution is not the claim that LLMs have problems with memory, framing, provenance, uncertainty, temporal reasoning, or instruction hierarchy individually. It is the hypothesis that these failures can be understood as violations of a shared safety requirement: preservation of epistemic relations that should remain invariant across changes in semantic interpretation and recursive information flow.*
