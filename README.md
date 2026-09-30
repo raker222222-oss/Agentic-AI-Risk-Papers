@@ -6,12 +6,13 @@
 
 **DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
 
-**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, state-model divergence, epistemic insufficiency, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
+**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, relational epistemic instability, state-model divergence, epistemic insufficiency, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
 
-This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
+This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, epistemic structure, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
 
 ## Research themes
 
+- **Relational epistemic instability and epistemic invariants** — why retaining the facts is not sufficient if provenance, sequence, authority, observation/inference status, uncertainty, contradiction status, and evidentiary roles can silently change under semantic reframing.
 - **Agentic state-model divergence and state fidelity** — how aligned and competent agents can act dangerously when their operative representation of the task, authority structure, evidence state, or environment diverges from governing reality.
 - **Epistemic insufficiency detection** — whether an agent can recognize that the information available is not sufficient to justify committing to an operative state before planning or action.
 - **Agentic AI safety and autonomous agents** — failure modes that appear when AI systems plan, retrieve information, use tools, and act over time.
@@ -34,6 +35,7 @@ This repository develops testable ideas about how advanced AI agents can fail in
 6. [Rogue Without Will](06-rogue-without-will.md) — separates unintended agentic failure, deliberate human misuse, and claims of independent machine volition, using the history of hacking and insider misuse to show how technology amplifies individual intent.
 7. [Agentic State-Model Divergence: A General Theory of Non-Malicious AI Failure](07-agentic-state-model-divergence.md) — proposes state fidelity as a first-class safety property and unifies task-state, authority-structure, evidence-state, and environment-state divergence under a common agentic failure model.
 8. [Epistemic Insufficiency Detection in Agentic AI](08-epistemic-insufficiency-detection.md) — argues that agents should detect when the available information is insufficient to justify constructing an operative state before interpretation, planning, or consequential action.
+9. [Relational Epistemic Instability in Agentic AI: Why Remembering the Facts Is Not Enough](09-relational-epistemic-instability.md) — proposes epistemic invariants and argues that retained information can still become unsafe when its provenance, status, sequence, authority, uncertainty, contradiction status, or evidentiary role is silently reconstructed.
 
 ## Core proposition
 
@@ -49,13 +51,21 @@ An upstream EID formulation is:
 
 **insufficient information → prior substitution → premature commitment → wrong state model → wrong action.**
 
+The relational epistemic formulation is:
+
+**retained information + unstable epistemic relations → reconstructed operative state → state-model divergence → action.**
+
+Or, in its simplest form:
+
+**memory fidelity ≠ epistemic fidelity.**
+
 Human misuse creates a separate risk:
 
 **human intent + frontier AI capability + tools + automation + access → disproportionate operational power.**
 
 ## Keywords
 
-Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
+Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, relational epistemic instability, epistemic invariants, epistemic fidelity, epistemic structure, provenance, inference status, authority hierarchy, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
 
 ## Citation
 
@@ -63,10 +73,10 @@ Rajan, Rakesh. *Agentic AI Risk Papers*. Version 1.0.0. Zenodo. https://doi.org/
 
 ## Status
 
-These are independent working papers intended to state falsifiable propositions, conceptual models, and experimental designs. They are not peer reviewed.
+These are independent working papers intended to state falsifiable propositions, conceptual models, experimental designs, and position arguments. They are not peer reviewed.
 
 ## Author
 
 **Rakesh Rajan — Rakesh OSS**
 
-Independent research notes and working papers on agentic AI risk, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
+Independent research notes and working papers on agentic AI risk, epistemic structure, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
