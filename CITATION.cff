@@ -10,7 +10,7 @@ version: "1.0.0"
 doi: "10.5281/zenodo.23040884"
 date-released: "2026-09-29"
 repository-code: "https://github.com/raker222222-oss/Agentic-AI-Risk-Papers"
-url: "https://doi.org/10.5281/zenodo.23040884"
+url: "https://raker222222-oss.github.io/Agentic-AI-Risk-Papers/"
 abstract: >-
   Independent working papers on agentic AI safety, autonomous agents,
   interpretive failure, recursive amplification, sequence integrity,
