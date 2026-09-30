@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040884.svg)](https://doi.org/10.5281/zenodo.23040884)
 
+**Research site:** https://raker222222-oss.github.io/Agentic-AI-Risk-Papers/
+
 **DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
 
 **Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
