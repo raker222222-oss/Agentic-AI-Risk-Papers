@@ -1,4 +1,5 @@
-# Evidentiary Threshold Distortion in Agentic AI
+# Proof? Just Ask AI to Define It!
+## Evidentiary Threshold Distortion in Agentic AI
 
 **Working paper**
 
