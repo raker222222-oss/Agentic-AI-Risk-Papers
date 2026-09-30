@@ -138,6 +138,22 @@ Divergence can occur when the system:
 - applies inappropriate proof thresholds;
 - mistakes its own earlier output for external confirmation.
 
+A specific pathway is **epistemic laundering**: a model-generated inference is summarized, stored, retrieved, or transmitted until its original status as an inference is no longer preserved. It can then re-enter the agent's state as if it were an observed or independently verified fact. No new evidence is required; only the epistemic lineage is lost.
+
+Thus:
+
+\[
+\text{observation}
+\rightarrow
+\text{model inference}
+\rightarrow
+\text{status/provenance loss}
+\rightarrow
+\text{apparent fact}.
+\]
+
+This can produce evidence-state divergence even when the proposition itself is remembered accurately.
+
 Thus an agent may possess considerable information while holding the wrong model of the evidentiary state.
 
 ### 3.4 Environment-State Divergence
@@ -292,6 +308,8 @@ ASMD generates several testable predictions.
 
 **P6.** Many apparently unrelated agentic failures should correlate with measurable divergence between the operative internal state and the externally validated task state.
 
+**P7.** Preserving epistemic class and derivation lineage should reduce evidence-state divergence caused by model-generated inferences re-entering memory as apparent facts.
+
 ## 9. Safety Implications
 
 Current agent architectures increasingly externalize memory, state, protocols, and execution control precisely because reconstructing these implicitly from long contexts is unreliable.
@@ -302,7 +320,7 @@ Before consequential action, an agent should verify:
 
 1. **Task:** What task am I currently performing?
 2. **Authority:** Which instruction, constraint, or revision governs?
-3. **Evidence:** What supports my present state estimate, and where did it come from?
+3. **Evidence:** What supports my present state estimate, where did it come from, and was it observed, retrieved, reported, inferred, or independently verified?
 4. **Environment:** What is known, inferred, uncertain, or potentially outdated?
 
 The execution order should become:
