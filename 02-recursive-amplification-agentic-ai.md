@@ -120,6 +120,24 @@ The new evidence is real, but it is endogenous to the agent's prior interpretati
 
 This is **self-generated corroboration**.
 
+A related mechanism is **epistemic laundering**: a model-generated inference can be stored, summarized, retrieved, or passed between agents until its original status as an inference is no longer preserved. It may then re-enter reasoning as if it were an observation or independently established fact. In that case, the agent is not merely acting on self-generated evidence; it is also losing the derivation history that would reveal that the supposed evidence originated in its own earlier reasoning.
+
+The laundering chain is:
+
+\[
+\text{observation}
+\rightarrow
+\text{model inference}
+\rightarrow
+\text{provenance/status loss}
+\rightarrow
+\text{apparent fact}
+\rightarrow
+\text{recursive reuse}.
+\]
+
+This provides one route by which recursive amplification can begin even before an external action changes the world.
+
 ## 5. Confidence Escalation
 
 If the agent does not track causal provenance, recursive updating can increase confidence:
@@ -210,6 +228,8 @@ Each downstream system may treat prior outputs as external evidence rather than 
 
 A speculative judgment can thereby acquire institutional appearance through repetition.
 
+Epistemic laundering makes this dependence harder to see: if an upstream inference is transmitted without its derivation status, downstream agents may count related conclusions as independent corroboration even though they descend from the same original observation.
+
 If multiple agents share similar learned priors, the same authority inversion can recur at each handoff, creating convergence that appears evidentiary even when it originates from a common interpretive bias.
 
 ## 11. Distinguishing Recursion from Mere Repetition
@@ -286,7 +306,8 @@ Agentic systems should track:
 4. what alternative hypotheses remain viable;
 5. whether confidence has risen because of genuinely new evidence or recursive reuse;
 6. which instructions, constraints, clarifications, and permissions govern later content;
-7. whether a learned semantic prior has displaced an explicit authority relation.
+7. whether a learned semantic prior has displaced an explicit authority relation;
+8. whether a proposition originated as observation, retrieval, user report, model inference, or external verification, and whether that status has been preserved through memory and handoffs.
 
 ## 16. Conclusion
 
@@ -310,7 +331,7 @@ The upstream error may itself arise because a learned semantic prior overrides t
 }
 \]
 
-Agentic safety therefore requires more than accurate first-pass reasoning. It requires preservation of instruction and discourse authority before action, and protection against the recursive conversion of interpretation into its own evidence.
+Agentic safety therefore requires more than accurate first-pass reasoning. It requires preservation of instruction and discourse authority before action, preservation of epistemic provenance through recursive memory, and protection against the conversion of interpretation into its own evidence.
 
 ---
 
