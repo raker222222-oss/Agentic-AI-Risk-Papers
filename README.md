@@ -6,12 +6,13 @@
 
 **DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
 
-**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
+**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, state-model divergence, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
 
-This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, recursive reasoning, and human control.
+This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, recursive reasoning, state fidelity, and human control.
 
 ## Research themes
 
+- **Agentic state-model divergence and state fidelity** — how aligned and competent agents can act dangerously when their operative representation of the task, authority structure, evidence state, or environment diverges from governing reality.
 - **Agentic AI safety and autonomous agents** — failure modes that appear when AI systems plan, retrieve information, use tools, and act over time.
 - **AI retrieval failure and RAG safety** — what happens when an agent retrieves the wrong information, misses relevant information, uses stale information, or mistakes “not retrieved” for “does not exist.”
 - **Interpretive failure in large language models** — how an early misunderstanding can reshape later reasoning and action.
@@ -30,6 +31,7 @@ This repository develops testable ideas about how advanced AI agents can fail in
 4. [Evidentiary Threshold Distortion in Agentic AI](04-evidentiary-threshold-distortion.md) — how excessive demand for explicit proof can cause agentic underreaction despite convergent evidence.
 5. [Open-World Retrieval Failure in Agentic AI](05-open-world-retrieval-failure.md) — how real-world AI agents can fail when novel states create knowledge gaps, retrieval-policy gaps, false epistemic closure, and Black Swan conditions.
 6. [Rogue Without Will](06-rogue-without-will.md) — separates unintended agentic failure, deliberate human misuse, and claims of independent machine volition, using the history of hacking and insider misuse to show how technology amplifies individual intent.
+7. [Agentic State-Model Divergence: A General Theory of Non-Malicious AI Failure](07-agentic-state-model-divergence.md) — proposes state fidelity as a first-class safety property and unifies task-state, authority-structure, evidence-state, and environment-state divergence under a common agentic failure model.
 
 ## Core proposition
 
@@ -37,13 +39,17 @@ Many serious AI risks do not require a conscious, malicious, or “rogue” mach
 
 **bad retrieval → wrong interpretation → incorrect state model → flawed evidence assessment → locally coherent but externally wrong action.**
 
+The broader ASMD formulation is:
+
+**state-model divergence → competent action → environmental change → feedback → possible divergence reinforcement.**
+
 Human misuse creates a separate risk:
 
 **human intent + frontier AI capability + tools + automation + access → disproportionate operational power.**
 
 ## Keywords
 
-Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
+Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, agentic state-model divergence, state fidelity, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
 
 ## Citation
 
@@ -57,4 +63,4 @@ These are independent working papers intended to state falsifiable propositions,
 
 **Rakesh Rajan — Rakesh OSS**
 
-Independent research notes and working papers on agentic AI risk, retrieval, interpretation, sequencing, and human control of frontier AI systems.
+Independent research notes and working papers on agentic AI risk, retrieval, interpretation, sequencing, state fidelity, and human control of frontier AI systems.
