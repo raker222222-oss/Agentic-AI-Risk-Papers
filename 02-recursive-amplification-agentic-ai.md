@@ -1,4 +1,5 @@
-# Recursive Amplification of Interpretive Failure in Agentic AI
+# AI Amplifies Its Own Mistakes to Truth
+## Recursive Amplification of Interpretive Failure in Agentic AI
 
 **Working paper**
 
