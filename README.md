@@ -6,13 +6,25 @@
 
 **DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
 
-**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, autonomous agents, relational epistemic instability, state-model divergence, epistemic insufficiency, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
+**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, language-mediated state reconstruction, relational epistemic instability, state-model divergence, epistemic insufficiency, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
 
-This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in interpretation, retrieval, chronology, evidence handling, epistemic structure, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
+This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in state reconstruction, interpretation, retrieval, chronology, evidence handling, epistemic structure, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
+
+## Master framework
+
+The series is organized around an upstream architectural problem: **language is a compressed representation of state, while a language model often has to reconstruct state from that compressed representation.** Because the inverse is underdetermined, learned priors participate directly in state construction.
+
+The proposed failure chain is:
+
+**lossy linguistic representation → underdetermined state reconstruction → prior-driven selection → coherence preservation → epistemic relation distortion → wrong operative state → competent action → feedback and possible reinforcement.**
+
+This master framework is developed in [Language-Mediated State Reconstruction in Agentic AI](10-language-mediated-state-reconstruction.md).
 
 ## Research themes
 
+- **Language-mediated state reconstruction** — why recovering world or task state from compressed linguistic evidence is an underdetermined inverse problem, and how learned priors can become structural substitutes for missing state.
 - **Relational epistemic instability and epistemic invariants** — why retaining the facts is not sufficient if provenance, sequence, authority, observation/inference status, uncertainty, contradiction status, and evidentiary roles can silently change under semantic reframing.
+- **Coherence-Dominant Epistemic Reconstruction (CDER)** — how a dominant reconstructed state can preserve narrative coherence by reweighting evidence, downgrading anomalies, or hardening inferences without new evidence.
 - **Agentic state-model divergence and state fidelity** — how aligned and competent agents can act dangerously when their operative representation of the task, authority structure, evidence state, or environment diverges from governing reality.
 - **Epistemic insufficiency detection** — whether an agent can recognize that the information available is not sufficient to justify committing to an operative state before planning or action.
 - **Agentic AI safety and autonomous agents** — failure modes that appear when AI systems plan, retrieve information, use tools, and act over time.
@@ -36,12 +48,17 @@ This repository develops testable ideas about how advanced AI agents can fail in
 7. [Agentic State-Model Divergence: A General Theory of Non-Malicious AI Failure](07-agentic-state-model-divergence.md) — proposes state fidelity as a first-class safety property and unifies task-state, authority-structure, evidence-state, and environment-state divergence under a common agentic failure model.
 8. [Epistemic Insufficiency Detection in Agentic AI](08-epistemic-insufficiency-detection.md) — argues that agents should detect when the available information is insufficient to justify constructing an operative state before interpretation, planning, or consequential action.
 9. [Relational Epistemic Instability in Agentic AI: Why Remembering the Facts Is Not Enough](09-relational-epistemic-instability.md) — proposes epistemic invariants and argues that retained information can still become unsafe when its provenance, status, sequence, authority, uncertainty, contradiction status, or evidentiary role is silently reconstructed.
+10. [Language-Mediated State Reconstruction in Agentic AI: A Failure Theory of Probabilistic World-State Recovery](10-language-mediated-state-reconstruction.md) — proposes the master architectural framework: language-to-state reconstruction is underdetermined, priors participate in filling missing state, and downstream coherence preservation can produce epistemic instability, state-model divergence, and recursive agentic failure.
 
 ## Core proposition
 
-Many serious AI risks do not require a conscious, malicious, or “rogue” machine. A capable autonomous agent can produce harmful outcomes through a chain such as:
+The most upstream formulation is:
 
-**bad retrieval → wrong interpretation → incorrect state model → flawed evidence assessment → locally coherent but externally wrong action.**
+**language is a lossy projection of state; reconstructing state from language is underdetermined; probable reconstruction is not necessarily epistemically warranted reconstruction.**
+
+The master failure chain is:
+
+**lossy linguistic representation → underdetermined state reconstruction → prior-driven selection → coherence preservation → epistemic relation distortion → wrong operative state → competent action → environmental feedback.**
 
 The broader ASMD formulation is:
 
@@ -65,7 +82,7 @@ Human misuse creates a separate risk:
 
 ## Keywords
 
-Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, relational epistemic instability, epistemic invariants, epistemic fidelity, epistemic structure, provenance, inference status, authority hierarchy, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
+Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, language-mediated state reconstruction, linguistic inverse problem, probabilistic world-state recovery, prior-dominant state construction, Coherence-Dominant Epistemic Reconstruction, CDER, relational epistemic instability, epistemic invariants, epistemic fidelity, epistemic structure, provenance, inference status, authority hierarchy, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
 
 ## Citation
 
@@ -79,4 +96,4 @@ These are independent working papers intended to state falsifiable propositions,
 
 **Rakesh Rajan — Rakesh OSS**
 
-Independent research notes and working papers on agentic AI risk, epistemic structure, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
+Independent research notes and working papers on agentic AI risk, language-mediated state reconstruction, epistemic structure, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
