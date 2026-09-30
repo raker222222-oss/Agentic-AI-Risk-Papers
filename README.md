@@ -39,16 +39,16 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 
 ## Papers
 
-1. [AI-Mediated Interpretive Displacement](01-ai-mediated-interpretive-displacement.md) — how AI interpretation can become a hidden causal participant in human communication.
-2. [Recursive Amplification of Interpretive Failure in Agentic AI](02-recursive-amplification-agentic-ai.md) — how an initial interpretive error can alter later evidence and recursively strengthen itself.
-3. [Sequence Integrity as an Agentic AI Safety Problem](03-sequence-integrity-agentic-ai.md) — why preserving chronology, precedence, procedural order, and revision history is a distinct AI safety requirement.
-4. [Evidentiary Threshold Distortion in Agentic AI](04-evidentiary-threshold-distortion.md) — how excessive demand for explicit proof can cause agentic underreaction despite convergent evidence.
-5. [Open-World Retrieval Failure in Agentic AI](05-open-world-retrieval-failure.md) — how real-world AI agents can fail when novel states create knowledge gaps, retrieval-policy gaps, false epistemic closure, and Black Swan conditions.
+1. [How AI Distorts Meaning!](01-ai-mediated-interpretive-displacement.md) — **AI-Mediated Interpretive Displacement:** how AI interpretation can become a hidden causal participant in human communication.
+2. [AI Amplifies Its Own Mistakes to Truth](02-recursive-amplification-agentic-ai.md) — **Recursive Amplification of Interpretive Failure:** how an initial interpretive error can alter later evidence and recursively strengthen itself.
+3. [Right Facts, Wrong Order, Wrong Action](03-sequence-integrity-agentic-ai.md) — **Sequence Integrity:** why preserving chronology, precedence, procedural order, and revision history is a distinct AI safety requirement.
+4. [Proof? Just Ask AI to Define It!](04-evidentiary-threshold-distortion.md) — **Evidentiary Threshold Distortion:** how excessive demand for explicit proof can cause agentic underreaction despite convergent evidence.
+5. [What AI Doesn’t Find Can Still Be There](05-open-world-retrieval-failure.md) — **Open-World Retrieval Failure:** how real-world AI agents can fail when novel states create knowledge gaps, retrieval-policy gaps, false epistemic closure, and Black Swan conditions.
 6. [Rogue Without Will](06-rogue-without-will.md) — separates unintended agentic failure, deliberate human misuse, and claims of independent machine volition, using the history of hacking and insider misuse to show how technology amplifies individual intent.
-7. [Agentic State-Model Divergence: A General Theory of Non-Malicious AI Failure](07-agentic-state-model-divergence.md) — proposes state fidelity as a first-class safety property and unifies task-state, authority-structure, evidence-state, and environment-state divergence under a common agentic failure model.
-8. [Epistemic Insufficiency Detection in Agentic AI](08-epistemic-insufficiency-detection.md) — argues that agents should detect when the available information is insufficient to justify constructing an operative state before interpretation, planning, or consequential action.
-9. [Relational Epistemic Instability in Agentic AI: Why Remembering the Facts Is Not Enough](09-relational-epistemic-instability.md) — proposes epistemic invariants and argues that retained information can still become unsafe when its provenance, status, sequence, authority, uncertainty, contradiction status, or evidentiary role is silently reconstructed.
-10. [Language-Mediated State Reconstruction in Agentic AI: A Failure Theory of Probabilistic World-State Recovery](10-language-mediated-state-reconstruction.md) — proposes the master architectural framework: language-to-state reconstruction is underdetermined, priors participate in filling missing state, and downstream coherence preservation can produce epistemic instability, state-model divergence, and recursive agentic failure.
+7. [The Agent Has the Right Goal and the Wrong World](07-agentic-state-model-divergence.md) — **Agentic State-Model Divergence:** proposes state fidelity as a first-class safety property and unifies task-state, authority-structure, evidence-state, and environment-state divergence.
+8. [When AI Should Say: I Don’t Know Enough Yet](08-epistemic-insufficiency-detection.md) — **Epistemic Insufficiency Detection:** argues that agents should detect when available information is insufficient before committing to an operative state.
+9. [AI Can Remember the Facts and Still Change What They Mean](09-relational-epistemic-instability.md) — **Relational Epistemic Instability:** proposes epistemic invariants and argues that retained information can become unsafe when its epistemic relations are silently reconstructed.
+10. [AI Reconstructs Reality From Language—and Can Reconstruct It Wrong](10-language-mediated-state-reconstruction.md) — **Language-Mediated State Reconstruction:** the master architectural framework connecting underdetermined reconstruction, prior substitution, epistemic instability, state-model divergence, and recursive agentic failure.
 
 ## Core proposition
 
