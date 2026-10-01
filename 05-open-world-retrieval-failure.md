@@ -8,11 +8,9 @@
 
 An autonomous AI agent operating in the real world cannot be supplied in advance with instructions for every situation it may encounter. When it meets an unfamiliar state, it may need to retrieve procedural guidance, factual knowledge, historical data, rules, or prior experience before acting.
 
-This creates a distinct safety problem.
+Adjacent research already establishes major parts of the retrieval problem. Work on RAG safety such as **RAG LLMs are Not Safer** and **SafeRAG** shows that retrieved information can be incomplete, conflicting, or unsafe; **Astute RAG** studies imperfect retrieval and knowledge conflict; **LongMemEval** exposes long-term memory and temporal-retrieval limitations; and research on unknown unknowns and safe exploration addresses open-world uncertainty. OWRF does not claim that retrieval imperfection, RAG vulnerability, memory failure, or unknown-unknown detection are new.
 
-Research on retrieval-augmented generation, agent memory, information poisoning, safe exploration, and out-of-distribution detection shows that retrieved information can be incomplete, irrelevant, conflicting, stale, or malicious. But the deeper agentic problem arises earlier: the agent must determine what it needs to know, where to search, whether the relevant information exists, and whether retrieval has been sufficiently complete.
-
-This paper defines **Open-World Retrieval Failure (OWRF)** as a failure in which an autonomous agent encounters a task-relevant state not adequately represented by its current knowledge, attempts or should attempt to acquire the missing information, and proceeds using an incomplete, substituted, stale, or incorrectly bounded evidence set.
+This paper defines the narrower agentic failure **Open-World Retrieval Failure (OWRF)**: the agent must itself determine what it needs to know, where to search, whether the relevant information exists, whether retrieval is sufficiently complete, and whether it is safe to proceed. Failure occurs when it acts using an incomplete, substituted, stale, or incorrectly bounded evidence set while treating that set as adequate.
 
 The central distinction is:
 
