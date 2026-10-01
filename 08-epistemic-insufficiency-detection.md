@@ -6,7 +6,9 @@ Working paper
 
 ## Abstract
 
-Agentic AI systems are increasingly expected to act under incomplete information. Existing research has established the importance of uncertainty estimation and abstention, yet agents can fail one step earlier: they may not recognize that the information available is insufficient to justify a particular interpretation or state model. This paper proposes **Epistemic Insufficiency Detection (EID)** as a distinct agentic safety requirement. Before committing to an interpretation, plan, or action, an agent should determine whether its current evidence is adequate to support that commitment. Failure to do so can cause missing context to be replaced by learned priors, producing a coherent but unsupported state model that then drives action.
+Agentic AI systems are increasingly expected to act under incomplete information. Adjacent research already addresses uncertainty estimation, selective prediction, and abstention: **Don’t Hallucinate, Abstain** studies knowledge-gap detection, **AgentAbstain** evaluates whether tool-using agents know when not to act, and the broader abstention literature studies calibrated refusal under uncertainty. EID does not claim that abstention or uncertainty estimation are new.
+
+This paper proposes the narrower safety requirement **Epistemic Insufficiency Detection (EID)**: before committing to an interpretation, plan, or action, an agent should determine whether the information available is sufficient to justify constructing the operative state on which that commitment depends. Failure to do so can cause missing context to be replaced by learned priors, producing a coherent but unsupported state model that then drives action.
 
 ---
 
