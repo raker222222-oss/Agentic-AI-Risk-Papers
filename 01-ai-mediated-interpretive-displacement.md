@@ -172,7 +172,39 @@ The chain becomes:
 
 The danger is not malicious intent. It is **wrong interpretation acquiring operational authority**.
 
-## 11. Competing Explanations
+## 11. Adjacent Empirical Literature
+
+Two recent lines of work establish that generative AI is already entering human relationships as an advisor, interpreter, and mediator, but they stop short of the specific causal mechanism proposed here.
+
+Levkovich and Alon (2026), in **“Generative AI as a Third Voice in Human Couple Relationships: A Systematic Review,”** synthesize 21 studies from 11 countries examining GenAI as an advisory or mediating third voice in couple relationships. Their review documents uses including non-judgmental advice, emotional support, and facilitation of communication between partners, while also identifying risks such as sycophancy, overreliance, reduced authenticity, and weak reliability in consequential settings.
+
+This literature establishes the social presence of AI inside human relationships. AMID makes a narrower mechanistic claim: an AI-generated interpretation can **displace the operative meaning of the original communication**, alter the recipient's behavior, and thereby change the evidence available to later human or machine interpreters.
+
+Tseng and Liang (2026), in **“Chat, Should I Leave Him? Risks, Rewards, and Roles for AI in Relationship Advice,”** empirically examine how people use AI for sex, dating, conflict, communication, and relationship decisions. Their study collected 90 prompts from 25 users and conducted in-depth interviews with 17 participants, identifying both perceived benefits and risks including sycophancy and overreliance.
+
+That work concerns how people seek and use AI relationship advice. AMID focuses on a different level of the process: **interpretive delegation and causal displacement**. The relevant sequence is not merely
+
+\[
+\text{relationship problem} \rightarrow \text{AI advice},
+\]
+
+but
+
+\[
+\text{human communication}
+\rightarrow
+\text{AI interpretation}
+\rightarrow
+\text{belief shift}
+\rightarrow
+\text{behavioral change}
+\rightarrow
+\text{new relational evidence}.
+\]
+
+The distinction matters because a model can become causally important even when the user did not initially ask it to make a relationship decision. A request to explain what another person's words “really mean” may be sufficient to alter the relationship itself.
+
+## 12. Competing Explanations
 
 AMID must be distinguished from ordinary misunderstanding. The theory predicts additional effects produced specifically by AI mediation:
 
@@ -182,7 +214,7 @@ AMID must be distinguished from ordinary misunderstanding. The theory predicts a
 4. stronger recursive amplification when both parties use AI;
 5. persistence of the interpretation even after contradictory contextual details are added.
 
-## 12. Main Hypotheses
+## 13. Main Hypotheses
 
 **H1.** Users who receive an AI interpretation of an ambiguous message will show larger belief shifts than users who reread the same message without AI assistance.
 
@@ -202,7 +234,7 @@ AMID must be distinguished from ordinary misunderstanding. The theory predicts a
 
 **H9.** The same mechanism will appear in agentic tasks where an interpretation changes the state on which later reasoning depends.
 
-## 13. Experimental Design
+## 14. Experimental Design
 
 A controlled experiment can use ambiguous but fully specified exchanges.
 
@@ -223,7 +255,7 @@ Measured outcomes include:
 - sensitivity to later contradictory evidence;
 - divergence from judgments made with full context.
 
-## 14. Falsification
+## 15. Falsification
 
 The theory would be weakened if experiments show that:
 
@@ -233,7 +265,7 @@ The theory would be weakened if experiments show that:
 - anomaly-checking and context expansion produce little effect;
 - agentic systems do not preserve or amplify interpretation-induced state changes.
 
-## 15. Design Implications
+## 16. Design Implications
 
 Systems used for interpretation should distinguish:
 
@@ -245,13 +277,13 @@ Systems used for interpretation should distinguish:
 
 For consequential settings, systems should avoid presenting a single narrative as though it were the hidden truth of another person's intentions.
 
-## 16. Broader Safety Implication
+## 17. Broader Safety Implication
 
 AI safety is often framed around whether models produce false statements. AMID suggests another class of risk: a model may produce a plausible interpretation that changes human behavior, causing the social environment to move toward the interpretation.
 
 The model has not merely described reality incorrectly. It has participated in producing a new reality from its description.
 
-## 17. Conclusion
+## 18. Conclusion
 
 Generative AI is becoming an interpretive intermediary in ordinary human communication. When its interpretations alter subsequent behavior, it becomes a hidden participant in the interaction.
 
@@ -272,6 +304,12 @@ The central sequence is:
 \]
 
 The key safety requirement is therefore not simply better language generation. It is preventing interpretation from acquiring more authority than the evidence and context justify.
+
+## References
+
+Levkovich, I., & Alon, L. (2026). **Generative AI as a third voice in human couple relationships: A systematic review.** *Computers in Human Behavior Reports, 23*, 101255. https://doi.org/10.1016/j.chbr.2026.101255
+
+Tseng, E., & Liang, C. A. (2026). **“Chat, Should I Leave Him?” Risks, Rewards, and Roles for AI in Relationship Advice.** *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI ’26)*, 1–19. https://doi.org/10.1145/3772318.3790739
 
 ---
 
