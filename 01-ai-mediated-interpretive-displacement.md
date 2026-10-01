@@ -5,9 +5,9 @@
 
 ## Abstract
 
-Generative AI is increasingly used not only to draft messages but to interpret them. A person receives a text, asks an AI what it means, and may then respond to the AI's interpretation rather than to the original message. When both parties do this, AI can become an invisible third participant in the relationship.
+Generative AI is increasingly used not only to draft messages but to interpret them. Recent work has already documented AI as a “third voice” in couple relationships (Levkovich & Alon, 2026) and examined how people use AI for relationship advice, conflict, dating, and communication decisions (Tseng & Liang, 2026). This paper isolates a narrower causal mechanism that remains insufficiently specified in that literature: a person receives a communication, asks an AI what it means, and may then respond to the AI's interpretation rather than to the original message itself.
 
-This paper proposes **AI-Mediated Interpretive Displacement (AMID)**: a shift in which the operative meaning of a human communication moves from the original exchange to an AI-generated interpretation of that exchange. The central safety concern is not simply hallucination. It is that an interpretation can alter later human behavior and thereby become causally real even when the original interpretation was wrong.
+This paper proposes **AI-Mediated Interpretive Displacement (AMID)**: a shift in which the operative meaning of a human communication moves from the original exchange to an AI-generated interpretation of that exchange. The central concern is not simply hallucination or bad advice. It is that an interpretation can alter later human behavior and thereby become causally real even when the original interpretation was wrong.
 
 The paper develops a sequence model of this process, distinguishes interpretation from evidence, identifies reciprocal escalation dynamics, and proposes falsifiable experiments for measuring the effect across different models and prompting conditions.
 
@@ -150,29 +150,7 @@ Yet psychologically, a polished AI explanation can feel like external corroborat
 
 This produces **interpretive authority inflation**.
 
-## 10. Agentic Extension
-
-The same failure mode becomes more consequential in agentic systems.
-
-If an autonomous system interprets an instruction incorrectly and then acts, the action changes the world state. Later reasoning may treat that changed state as confirmation of the original interpretation.
-
-The chain becomes:
-
-\[
-\text{ambiguous input}
-\rightarrow
-\text{interpretation}
-\rightarrow
-\text{action}
-\rightarrow
-\text{new state}
-\rightarrow
-\text{apparent confirmation}.
-\]
-
-The danger is not malicious intent. It is **wrong interpretation acquiring operational authority**.
-
-## 11. Adjacent Empirical Literature
+## 10. Adjacent Empirical Literature
 
 Two recent lines of work establish that generative AI is already entering human relationships as an advisor, interpreter, and mediator, but they stop short of the specific causal mechanism proposed here.
 
@@ -204,7 +182,7 @@ but
 
 The distinction matters because a model can become causally important even when the user did not initially ask it to make a relationship decision. A request to explain what another person's words “really mean” may be sufficient to alter the relationship itself.
 
-## 12. Competing Explanations
+## 11. Competing Explanations
 
 AMID must be distinguished from ordinary misunderstanding. The theory predicts additional effects produced specifically by AI mediation:
 
@@ -214,7 +192,7 @@ AMID must be distinguished from ordinary misunderstanding. The theory predicts a
 4. stronger recursive amplification when both parties use AI;
 5. persistence of the interpretation even after contradictory contextual details are added.
 
-## 13. Main Hypotheses
+## 12. Main Hypotheses
 
 **H1.** Users who receive an AI interpretation of an ambiguous message will show larger belief shifts than users who reread the same message without AI assistance.
 
@@ -232,9 +210,7 @@ AMID must be distinguished from ordinary misunderstanding. The theory predicts a
 
 **H8.** Explicit separation of observation, inference, and speculation will reduce authority inflation.
 
-**H9.** The same mechanism will appear in agentic tasks where an interpretation changes the state on which later reasoning depends.
-
-## 14. Experimental Design
+## 13. Experimental Design
 
 A controlled experiment can use ambiguous but fully specified exchanges.
 
@@ -255,17 +231,16 @@ Measured outcomes include:
 - sensitivity to later contradictory evidence;
 - divergence from judgments made with full context.
 
-## 15. Falsification
+## 14. Falsification
 
 The theory would be weakened if experiments show that:
 
 - AI interpretations do not materially change user beliefs or behavior;
 - reciprocal AI use does not increase interpretive drift;
 - users reliably treat AI interpretations as tentative hypotheses rather than evidence;
-- anomaly-checking and context expansion produce little effect;
-- agentic systems do not preserve or amplify interpretation-induced state changes.
+- anomaly-checking and context expansion produce little effect.
 
-## 16. Design Implications
+## 15. Design Implications
 
 Systems used for interpretation should distinguish:
 
@@ -277,13 +252,13 @@ Systems used for interpretation should distinguish:
 
 For consequential settings, systems should avoid presenting a single narrative as though it were the hidden truth of another person's intentions.
 
-## 17. Broader Safety Implication
+## 16. Broader Safety Implication
 
 AI safety is often framed around whether models produce false statements. AMID suggests another class of risk: a model may produce a plausible interpretation that changes human behavior, causing the social environment to move toward the interpretation.
 
 The model has not merely described reality incorrectly. It has participated in producing a new reality from its description.
 
-## 18. Conclusion
+## 17. Conclusion
 
 Generative AI is becoming an interpretive intermediary in ordinary human communication. When its interpretations alter subsequent behavior, it becomes a hidden participant in the interaction.
 
