@@ -6,7 +6,9 @@ Position paper
 
 ## Abstract
 
-Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Yet these advances often preserve information without guaranteeing that the **relationships among retained information remain stable**. This paper proposes **Relational Epistemic Instability (REI)**: a higher-order failure class in which an AI system retains substantially the same information while changing its epistemic structure as framing, salience, or context changes. We further propose **Coherence-Dominant Epistemic Reconstruction (CDER)** as a possible generative mechanism: when semantic coherence conflicts with preserved epistemic structure, the system may maintain a coherent interpretation by reconstructing the roles of retained information. Evidence can be reweighted, anomalies downgraded, inferences promoted into premises, or authority and sequence weakened without corresponding new evidence. A temporal pathway, **epistemic laundering**, can then cause model-generated inferences to re-enter memory as apparent facts. The proposed safety principle is that some properties of information should behave as **epistemic invariants**.
+Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Adjacent work already provides important pieces of this problem: **Structured Episodic Event Memory** and **Hindsight** preserve structured memory and provenance; **Belief Memory** and **Agent-BRACE** preserve uncertainty under partial observability; **Control Illusion** documents instruction-hierarchy failures; and self-auditing and relational-uncertainty methods address unsupported belief propagation and dependency structure. REI does not claim that any of these individual problems are new.
+
+This paper proposes the narrower higher-order failure class **Relational Epistemic Instability (REI)**: an AI system may retain substantially the same information while changing the epistemic relationships among that information as framing, salience, or context changes. It further proposes **Coherence-Dominant Epistemic Reconstruction (CDER)** as a possible generative mechanism: when semantic coherence conflicts with preserved epistemic structure, the system may maintain a coherent interpretation by reconstructing the roles of retained information. Evidence can be reweighted, anomalies downgraded, inferences promoted into premises, or authority and sequence weakened without corresponding new evidence. A temporal pathway, **epistemic laundering**, can then cause model-generated inferences to re-enter memory as apparent facts. The proposed safety principle is that some properties of information should behave as **epistemic invariants**.
 
 ---
 
@@ -174,8 +176,7 @@ E \text{ fixed},\qquad F_1\neq F_2,
 while:
 
 \[
-\mathcal{R}(E\mid F_1)
-eq\mathcal{R}(E\mid F_2).
+\mathcal{R}(E\mid F_1)\neq\mathcal{R}(E\mid F_2).
 \]
 
 This explains why the same model can sometimes produce two different, internally coherent narratives from essentially the same evidence after a framing change or correction.
@@ -458,7 +459,6 @@ The stronger CDER hypothesis is:
 \[
 \boxed{
 \text{coherence optimisation can compete with epistemic relation preservation.}
-}
 \]
 
 If that hypothesis is correct, some apparently separate failures are not independent defects. They are consequences of the same tendency to reconstruct the epistemic structure of retained information around the currently dominant interpretation.
@@ -480,7 +480,6 @@ The key distinction is:
 \[
 \boxed{
 E\text{ may remain constant while }\mathcal{R}(E)\text{ changes.}
-}
 \]
 
 A safe agent should be free to revise its interpretation when new evidence warrants revision.
