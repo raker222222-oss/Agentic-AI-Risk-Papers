@@ -4,6 +4,16 @@
 
 ### Working Paper
 
+## Abstract
+
+Adjacent AI-safety research already distinguishes several nearby risks: work on instrumental convergence and power-seeking studies goal-directed behavior that can emerge without human-like motives, while misuse research shows that harmful capability can be supplied by human operators even when individual models are aligned. Recent empirical work such as **Adversaries Can Misuse Combinations of Safe Models** demonstrates that malicious users can compose otherwise safe systems to obtain harmful outcomes, while current frontier-model evaluations separately examine self-preservation, power-seeking, and unauthorized behavior. This paper does not claim that AI misuse, instrumental behavior, or power-seeking are newly discovered problems.
+
+Its narrower argument is conceptual: **operational agency, human-directed misuse, and independent machine volition should not be collapsed into one category called “rogue AI.”** Serious harm can arise from the first two without establishing the third. Historical cases from telecommunications, hacking, worms, botnets, and insider misuse are used to show how new technologies repeatedly multiply the leverage of a small number of determined humans. Frontier AI may increase that leverage further.
+
+The central claim is therefore:
+
+> **Danger does not require will.**
+
 Public discussion of advanced AI often uses words such as **rogue**, **scheming**, and **self-preserving**.
 
 Those words can blur three very different risks:
