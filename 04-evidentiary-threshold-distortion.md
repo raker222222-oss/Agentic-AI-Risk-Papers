@@ -7,9 +7,9 @@
 
 Humans routinely act on convergent but individually incomplete evidence. Repeated weak signals, chronology, context, and pattern can together justify a practical conclusion even when no single observation proves it.
 
-Large language models may apply a different standard. In many contexts, they distinguish sharply between what is explicitly established and what is merely inferred. This caution can be useful, but in agentic systems it may create a distinct failure mode: strong convergent evidence may fail to trigger action because no individual observation satisfies a sufficiently explicit evidentiary threshold.
+Adjacent research already shows that LLM behavior is shaped by confidence and abstention thresholds, and that models can update evidence in systematically non-Bayesian ways. Kumaran et al. (2026), for example, provide causal evidence that manipulating confidence thresholds changes abstention behavior, while the broader abstention and calibration literature studies when models should refrain from answering or acting. ETD does not claim that confidence thresholds, abstention, or evidence misweighting are new.
 
-This paper proposes **Evidentiary Threshold Distortion (ETD)**:
+This paper proposes the narrower failure mode **Evidentiary Threshold Distortion (ETD)**: in an agentic setting, a system may apply an evidentiary threshold that is too demanding for the practical action under consideration, suppressing a justified probabilistic inference even when several individually incomplete observations converge.
 
 \[
 \boxed{
@@ -25,7 +25,7 @@ This paper proposes **Evidentiary Threshold Distortion (ETD)**:
 }
 \]
 
-The central risk is not hallucination or overconfidence, but the opposite: an autonomous system may remain formally cautious when practical reasoning requires a probabilistic conclusion and precautionary action.
+The central risk is therefore not hallucination or overconfidence, but the opposite: an autonomous system may remain formally cautious when practical reasoning requires a probabilistic conclusion and precautionary action.
 
 ## 1. Human Practical Inference
 
