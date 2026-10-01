@@ -8,9 +8,31 @@
 
 Human communication usually begins with a rich underlying state—perception, chronology, intention, social context, uncertainty, and embodied experience—and compresses that state into language. Language models often face the reverse problem: they receive the compressed linguistic representation and must reconstruct the state that could have produced it.
 
-Because language is information-reducing, this inverse reconstruction is generally underdetermined. Multiple underlying states may be compatible with the same text. A language model therefore relies on learned statistical priors to select among possible reconstructions.
+Because language is information-reducing, this inverse reconstruction is generally underdetermined. Multiple underlying states may be compatible with the same text, so a language model must rely on learned statistical structure to select among possible reconstructions.
 
-This paper proposes that several apparently separate LLM and agentic failure modes can be understood as downstream consequences of that architectural condition. It further identifies an intermediate representational layer: linguistic input is transformed into distributed numerical representations optimized for predictive usefulness, not guaranteed lossless preservation of discourse, temporal, authority, or epistemic relations. Information may remain encoded while the relational structure that should govern interpretation loses operative force. When linguistic evidence is insufficient, the model may then substitute a statistically likely state for an epistemically warranted one; once selected, that state can reshape evidence weighting, anomaly status, provenance, authority, sequence, and uncertainty. In an agentic system, the resulting state model can drive action and generate feedback that reinforces the original reconstruction.
+Important parts of this problem are already established in adjacent research. Recent work on **belief-state maintenance under partial observability**—including *Agent-BRACE* (Singh et al., 2026), *Belief Memory* (Liao et al., 2026), and the *Belief-State Engine* (Chattopadhayay & Halder, 2026)—shows that LLM agents can fail by prematurely committing to uncertain hidden states, losing alternatives, or acting from unstable history-conditioned representations, and that explicit belief representations can improve calibration and performance. Separately, research on LLM world models, compositionality, sentence representations, semantic-role reversal, and relation-aware encoding already establishes that distributed representations can contain substantial structural information while remaining imperfectly sensitive to some relational distinctions.
+
+This paper therefore does **not** claim as novel that language is lossy, that interpretation is probabilistic, that belief-state tracking is necessary, or that distributed representations can imperfectly preserve structure. Its narrower proposal is a unified safety mechanism linking those established observations: linguistic compression is followed by distributed representation; task-governing relations may remain encoded without retaining sufficient operative force; underdetermined reconstruction then invites prior-driven state selection; and the resulting state may reshape evidence weighting, provenance, authority, sequence, and uncertainty before driving agentic action.
+
+The proposed contribution is thus the failure chain:
+
+\[
+\text{lossy language}
+\rightarrow
+\text{distributed representation}
+\rightarrow
+\text{relational weakening or misbinding}
+\rightarrow
+\text{underdetermined state reconstruction}
+\rightarrow
+\text{prior-driven selection}
+\rightarrow
+\text{epistemic distortion}
+\rightarrow
+\text{wrong operative state}
+\rightarrow
+\text{action}.
+\]
 
 The central safety requirement is therefore not merely better language understanding, but **epistemically constrained state reconstruction with relationally faithful representation**.
 
@@ -327,6 +349,8 @@ Representational geometry adds an upstream bridge between linguistic input and t
 Prior work already establishes several important components of this account.
 
 Pragmatics has long treated linguistic meaning as underdetermined by linguistic form alone. Rational Speech Act models formalize interpretation as probabilistic inference over latent speaker states. Symbol-grounding research examines the relationship between linguistic symbols and non-linguistic experience. Recent work on LLM world models argues that human language contains compressed traces of collective grounded experience from which models can reconstruct useful latent structure. Agentic research increasingly emphasizes explicit belief-state maintenance under partial observability.
+
+Recent agent work makes this overlap especially important. **Agent-BRACE** separates a belief-state model from a policy model and represents uncertain environment claims explicitly. **Belief Memory** retains multiple candidate conclusions with probabilities rather than collapsing ambiguous observations into a single deterministic memory. The **Belief-State Engine** places an explicit Bayesian belief-state module outside the LLM so planning is conditioned on a maintained posterior rather than raw interaction history. These approaches directly address premature commitment, uncertainty loss, state drift, and self-reinforcing error under partial observability.
 
 Research on sentence representations and compositionality also establishes that distributed representations can preserve syntactic and semantic information while remaining imperfectly sensitive to structural changes such as word order, semantic-role reversal, or other compositional distinctions. Recent representation-alignment work explicitly treats preservation of internal relational structure as a design problem. These results support the premise that recoverable information and structurally faithful operational use are not identical properties.
 
