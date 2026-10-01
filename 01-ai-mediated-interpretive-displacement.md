@@ -1,4 +1,4 @@
-# How AI Distorts Meaning!
+# When AI Becomes a Hidden Third Party in Relationships
 ## AI-Mediated Interpretive Displacement: How Generative AI Is Becoming a Hidden Third Party in Human Relationships
 
 **Working paper**
