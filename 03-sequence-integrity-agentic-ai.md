@@ -7,7 +7,9 @@
 
 Many tasks are not defined only by what facts are present, but by the order in which those facts occurred. Large language models can sometimes preserve individual details while weakening, compressing, or rearranging chronology. In ordinary conversation this may produce a mistaken interpretation. In agentic systems, sequence errors can become operational errors.
 
-This paper proposes **Sequence Integrity** as a distinct agentic-AI safety requirement: a system must preserve the relevant temporal and procedural ordering of observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order can produce an incorrect state model and therefore an incorrect action. Sequence integrity also requires preservation of **discourse authority**: an instruction, clarification, exception, question, or response may occupy a governing or subordinate role that must not be overridden merely because later content activates a stronger learned semantic prior.
+Adjacent research already demonstrates important parts of this problem. **Lost in the Middle** shows that long-context performance depends strongly on where relevant information appears, long-horizon memory benchmarks such as **LongMemEval** test temporal reasoning and updating over extended interactions, and **Control Illusion** shows that models can fail to preserve explicit instruction hierarchy under competing priors. Sequence Integrity does not claim that position effects, temporal reasoning failures, or instruction-priority failures are new.
+
+This paper proposes the narrower safety requirement **Sequence Integrity**: an agent must preserve the task-relevant temporal, procedural, supersession, and discourse-authority relations among observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order—or retained statements with the wrong governing authority—can produce an incorrect state model and therefore an incorrect action.
 
 ## 1. Order Is Part of Meaning
 
