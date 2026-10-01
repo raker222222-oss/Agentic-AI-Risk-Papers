@@ -6,7 +6,9 @@
 
 ## Abstract
 
-Agentic State-Model Divergence (ASMD) proposes a unifying theory for a large class of non-malicious agentic AI failures. Prior research has established problems in long-horizon state tracking, belief representation, memory, and state externalization. ASMD extends this work by arguing that failures in task understanding, authority, evidence, and environmental representation can be treated as different forms of divergence between the agent’s operative internal state and governing reality. The danger arises when the agent then acts competently on that incorrect state, changes the environment, and potentially generates evidence that reinforces the original error.
+Agentic State-Model Divergence (ASMD) proposes a unifying theory for a large class of non-malicious agentic AI failures. Adjacent research already addresses major pieces of this problem: **Agent-BRACE** represents uncertainty over partially observed environment states, **InfiAgent** externalizes persistent task state for long-horizon agents, and state-aware runtime and memory research studies failures caused by unstable state maintenance. ASMD does not claim that belief states, memory, or state externalization are new.
+
+Its narrower contribution is to treat failures in task understanding, authority, evidence, and environmental representation as different routes into one safety condition: divergence between the agent’s operative internal state and governing reality. The danger arises when the agent then acts competently on that incorrect state, changes the environment, and potentially generates evidence that reinforces the original error.
 
 ## 1. Introduction
 
