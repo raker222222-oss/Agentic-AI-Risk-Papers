@@ -33,6 +33,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 - **Sequence integrity and long-context memory** — why correct facts in the wrong order can produce an incorrect world state and unsafe action.
 - **Recursive amplification** — how an initial interpretive error can alter the environment and generate apparent confirmation of the original mistake.
 - **Evidentiary threshold distortion** — how demanding explicit proof when convergent evidence is operationally sufficient can cause dangerous underreaction.
+- **Narrative evidence weight distortion** — how a model can retain the right evidence yet misinterpret a narrative by assigning the wrong relative importance to explicit statements, behavioural patterns, baseline changes, source asymmetries, and culturally conditioned signals.
 - **Open-world and Black Swan problems for AI agents** — why real-world agents cannot be given a complete instruction set for every novel situation they may encounter.
 - **Human misuse of frontier AI** — the risk that human intent, insider access, automation, and powerful AI capabilities combine to create disproportionate harm.
 - **Rogue AI and machine volition** — distinguishing unintended agentic failure and deliberate human misuse from claims that an AI has developed an independent will.
@@ -49,6 +50,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 8. [When AI Should Say: I Don’t Know Enough Yet](08-epistemic-insufficiency-detection.md) — **Epistemic Insufficiency Detection:** argues that agents should detect when available information is insufficient before committing to an operative state.
 9. [AI Can Remember the Facts and Still Change What They Mean](09-relational-epistemic-instability.md) — **Relational Epistemic Instability:** proposes epistemic invariants and argues that retained information can become unsafe when its epistemic relations are silently reconstructed.
 10. [AI Reconstructs Reality From Language—and Can Reconstruct It Wrong](10-language-mediated-state-reconstruction.md) — **Language-Mediated State Reconstruction:** the master architectural framework connecting underdetermined reconstruction, prior substitution, epistemic instability, state-model divergence, and recursive agentic failure.
+11. [Narrative Evidence Weight Distortion in Large Language Models](11-narrative-evidence-weight-distortion.md) — **Narrative Evidence Weight Distortion (NEWD):** how correct evidence can still produce a wrong interpretation when relative evidentiary weights are distorted; introduces Training-Induced Narrative Weight Priors (TINWP) as a testable training-origin hypothesis.
 
 ## Core proposition
 
@@ -82,7 +84,7 @@ Human misuse creates a separate risk:
 
 ## Keywords
 
-Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, language-mediated state reconstruction, linguistic inverse problem, probabilistic world-state recovery, prior-dominant state construction, Coherence-Dominant Epistemic Reconstruction, CDER, relational epistemic instability, epistemic invariants, epistemic fidelity, epistemic structure, provenance, inference status, authority hierarchy, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
+Agentic AI, AI agents, autonomous agents, AI safety, frontier AI, artificial intelligence safety, LLM safety, large language models, language-mediated state reconstruction, linguistic inverse problem, probabilistic world-state recovery, prior-dominant state construction, Coherence-Dominant Epistemic Reconstruction, CDER, relational epistemic instability, epistemic invariants, epistemic fidelity, epistemic structure, provenance, inference status, authority hierarchy, agentic state-model divergence, state fidelity, epistemic insufficiency, uncertainty, abstention, belief state, retrieval-augmented generation, RAG safety, AI retrieval failure, agent memory, long-context memory, sequence integrity, temporal reasoning, interpretive failure, recursive reasoning, recursive amplification, evidentiary reasoning, narrative evidence weight distortion, NEWD, training-induced narrative weight priors, TINWP, cultural evidence weighting, AI hallucination, tool-using agents, open-world AI, Black Swan AI risk, agentic misalignment, human misuse of AI, insider threat, frontier model security, rogue AI, machine agency, machine volition, AI governance.
 
 ## Citation
 
