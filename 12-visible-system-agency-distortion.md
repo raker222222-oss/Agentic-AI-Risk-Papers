@@ -24,17 +24,17 @@ AI systems increasingly evaluate people from digital traces: messaging histories
 
 An unstated assumption can enter such evaluations:
 
-$
+$$
 \text{observed activity} \approx \text{total relevant activity}.
-$
+$$
 
 But communication research gives strong reasons not to assume this equivalence. Media-multiplexity research treats interpersonal communication as occurring across an ecosystem of channels rather than through one isolated medium. Strong ties commonly use combinations of text, telephone, social media, and face-to-face interaction.
 
 Therefore:
 
-$
+$$
 \boxed{\text{channel completeness} \neq \text{system completeness}}
-$
+$$
 
 A complete Slack archive is not necessarily a complete record of project contribution.
 
@@ -54,9 +54,9 @@ Media-multiplexity research has long argued that social ties often span multiple
 
 This establishes:
 
-$
+$$
 \text{one communication channel} \neq \text{the entire social interaction}.
-$
+$$
 
 It does not, however, directly test whether an LLM attributes greater **overall interpersonal agency** to whichever participant happens to be more visible in the sampled channel.
 
@@ -66,9 +66,9 @@ Network-science research provides a closely related methodological warning. Mura
 
 Prior work here concerns network properties such as degree distributions, clustering, or correlations. The present study instead asks a person-level question:
 
-$
+$$
 \text{Who is driving the underlying interaction?}
-$
+$$
 
 ### 2.3 Missing and Non-Random Modalities
 
@@ -76,11 +76,11 @@ Incomplete multimodal information is already an established machine-learning pro
 
 The present study treats such missingness as a **data-generation condition**, not as the final failure. The target mechanism is:
 
-$
+$$
 \text{actor-correlated visibility}
 \rightarrow
 \text{overall relative-agency judgment}.
-$
+$$
 
 ### 2.4 LLM Social and Relationship Inference
 
@@ -88,9 +88,9 @@ Recent work demonstrates that LLMs make judgments about interpersonal relationsh
 
 These studies establish that:
 
-$
+$$
 \text{LLMs make social judgments from conversational evidence}.
-$
+$$
 
 They do not directly isolate the controlled actor-visibility crossover tested here.
 
@@ -109,15 +109,15 @@ The narrower question tested here is:
 
 The distinction is:
 
-$
+$$
 \boxed{\text{Prior work: incomplete or multiplex observation}}
-$
+$$
 
 versus:
 
-$
+$$
 \boxed{\text{Present work: person-level agency generalization from actor-correlated visibility}}.
-$
+$$
 
 ---
 
@@ -127,19 +127,19 @@ $
 
 Let the complete behavior of actors (A) and (B) be:
 
-$
+$$
 D_A=D_A^{visible}+D_A^{hidden}
-$
+$$
 
-$
+$$
 D_B=D_B^{visible}+D_B^{hidden}.
-$
+$$
 
 If the probability of consequential activity being visible differs systematically between actors,
 
-$
+$$
 P(V\mid A)\neq P(V\mid B),
-$
+$$
 
 then the observation process itself is actor-correlated.
 
@@ -153,15 +153,15 @@ Let (G_A^c) represent agency visible for actor (A) in channel (c), while (G_A^*)
 
 A Channel-to-Total Generalization Error occurs when a model implicitly treats:
 
-$
+$$
 G_A^c>G_B^c
-$
+$$
 
 as sufficient evidence for:
 
-$
+$$
 G_A^*>G_B^*.
-$
+$$
 
 The error is not that the model identifies who is more active in the visible channel. The error occurs when the conclusion is extended beyond the evidentiary boundary of the channel.
 
@@ -169,15 +169,15 @@ The error is not that the model identifies who is more active in the visible cha
 
 A diagnostic crossover occurs when the actor associated with the dominant visible behavior is changed while the structure of the observed record remains otherwise equivalent:
 
-$
+$$
 A_{visible}\rightarrow A_{judged\ more\ agentic}
-$
+$$
 
 and
 
-$
+$$
 B_{visible}\rightarrow B_{judged\ more\ agentic}.
-$
+$$
 
 This serves primarily as a manipulation check rather than as proof of error by itself.
 
@@ -275,51 +275,51 @@ Across both domains there were six model-domain evaluations.
 
 In Condition A:
 
-$
+$$
 \boxed{6/6}
-$
+$$
 
 judged the actor most visible in the observed channel to have greater overall agency.
 
 In Condition B:
 
-$
+$$
 \boxed{0/6}
-$
+$$
 
 retained that judgment after consequential off-channel behavior was restored.
 
 Specifically:
 
-$
+$$
 3/6:\ A\rightarrow E
-$
+$$
 
 and:
 
-$
+$$
 3/6:\ A\rightarrow B.
-$
+$$
 
 In Condition C:
 
-$
+$$
 \boxed{6/6}
-$
+$$
 
 assigned greater agency to the actor receiving the dominant visible-channel pattern.
 
 Thus:
 
-$
+$$
 A_{visible}\rightarrow A
-$
+$$
 
 and:
 
-$
+$$
 B_{visible}\rightarrow B
-$
+$$
 
 in every tested model-domain combination.
 
@@ -333,63 +333,63 @@ The systems were explicitly warned that the supplied channel might omit conseque
 
 Results:
 
-$
+$$
 3/6\rightarrow I
-$
+$$
 
 and:
 
-$
+$$
 3/6\rightarrow A.
-$
+$$
 
 Claude responded with epistemic restraint in both domains. Gemini responded with restraint in the relationship domain but not the workplace domain. Perplexity retained the visible-actor judgment in both domains.
 
 This suggests:
 
-$
+$$
 \boxed{
 \text{recognition of missing evidence}
 \neq
 \text{operative adjustment for missing evidence}
 }
-$
+$$
 
 A model may correctly state that consequential evidence could be absent while nevertheless making nearly the same high-confidence overall judgment.
 
 Perplexity provided the clearest examples. In the workplace condition:
 
-$
+$$
 A_{visible}=95\%
-$
+$$
 
 and after the observation warning:
 
-$
+$$
 A_{warning}=94\%.
-$
+$$
 
 Yet when the previously missing actions were actually supplied:
 
-$
+$$
 B_{full}=82\%.
-$
+$$
 
 Thus:
 
-$
+$$
 \text{partial record}\rightarrow A
-$
+$$
 
-$
+$$
 \text{partial record + explicit uncertainty}\rightarrow A
-$
+$$
 
 but:
 
-$
+$$
 \text{actual missing evidence}\rightarrow B.
-$
+$$
 
 This may represent a related phenomenon of **epistemic caveat–conclusion decoupling**: a valid uncertainty condition is stated but does not propagate sufficiently into the operative judgment or confidence.
 
@@ -403,25 +403,25 @@ If one actor sends more messages, coordinates more Slack activity, or initiates 
 
 The problem arises when:
 
-$
+$$
 \text{agency in observed system}
-$
+$$
 
 is converted into:
 
-$
+$$
 \text{agency in underlying real-world system}.
-$
+$$
 
 The appropriate distinction is:
 
-$
+$$
 \boxed{
 \text{visible-system agency}
 \neq
 \text{total-system agency}
 }.
-$
+$$
 
 The pilot suggests that current systems may fail to preserve this boundary reliably.
 
@@ -437,11 +437,11 @@ Yet when those actions were absent from the communication record, all three syst
 
 The general problem therefore extends beyond social interpretation. It can occur whenever:
 
-$
+$$
 \boxed{
 \text{digital-trace visibility is unevenly distributed across contributors}
 }.
-$
+$$
 
 ---
 
@@ -451,39 +451,39 @@ The mechanism could matter wherever AI evaluates people from partial information
 
 ### Workplace Evaluation
 
-$
+$$
 \text{Slack activity}\not\equiv\text{work contribution}
-$
+$$
 
 ### Sales Analysis
 
-$
+$$
 \text{CRM activity}\not\equiv\text{sales agency}
-$
+$$
 
 ### Customer Service
 
-$
+$$
 \text{ticket visibility}\not\equiv\text{customer experience}
-$
+$$
 
 ### Caregiving
 
-$
+$$
 \text{family-chat activity}\not\equiv\text{caregiving contribution}
-$
+$$
 
 ### Relationships
 
-$
+$$
 \text{text messaging}\not\equiv\text{relationship agency}
-$
+$$
 
 ### Organizational Analytics
 
-$
+$$
 \text{machine-visible work}\not\equiv\text{valuable work}.
-$
+$$
 
 ---
 
@@ -538,21 +538,21 @@ When consequential off-channel actions were restored, none of the six model-doma
 
 The central distinction is:
 
-$
+$$
 \boxed{
 \text{everything visible}
 \neq
 \text{everything that happened}
 }.
-$
+$$
 
 More generally:
 
-$
+$$
 \boxed{
 \textbf{visibility within an information system is not equivalent to agency within the underlying real-world system.}
 }
-$
+$$
 
 For AI systems increasingly asked to evaluate workers, customers, relationships, organizations, and human behavior from digital traces, failure to preserve this distinction could produce systematic errors precisely where the available record appears most complete.
 
