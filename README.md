@@ -19,7 +19,7 @@ The proposed failure chain is:
 
 **lossy linguistic representation → underdetermined state reconstruction → prior-driven selection → coherence preservation → epistemic relation distortion → wrong operative state → competent action → feedback and possible reinforcement.**
 
-This master framework is developed in [Language-Mediated State Reconstruction in Agentic AI](10-language-mediated-state-reconstruction.md).
+This master framework is developed in [Language-Mediated State Reconstruction in Agentic AI](06-language-mediated-state-reconstruction.md).
 
 ## Research themes
 
@@ -39,11 +39,11 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 2. [AI Amplifies Its Own Mistakes to Truth](02-recursive-amplification-agentic-ai.md) — **Recursive Amplification of Interpretive Failure (RAIF):** how an initial interpretive error can alter later evidence and recursively strengthen itself.
 3. [Right Facts, Wrong Order, Wrong Action](03-sequence-integrity-agentic-ai.md) — **Sequence Integrity:** why chronology, precedence, procedural order, and revision history matter for agentic action.
 4. [Proof? Just Ask AI to Define It!](04-evidentiary-threshold-distortion.md) — **Evidentiary Threshold Distortion (ETD):** how an excessive proof threshold can cause underreaction despite convergent evidence.
-5. [The Agent Has the Right Goal and the Wrong World](07-agentic-state-model-divergence.md) — **Agentic State-Model Divergence (ASMD):** how an aligned agent can act competently on the wrong representation of reality.
-6. [AI Reconstructs Reality From Language—and Can Reconstruct It Wrong](10-language-mediated-state-reconstruction.md) — **Language-Mediated State Reconstruction:** the master framework connecting underdetermined language-to-state reconstruction to prior-driven state construction and agentic failure.
-7. [Narrative Evidence Weight Distortion in Large Language Models](11-narrative-evidence-weight-distortion.md) — **Narrative Evidence Weight Distortion (NEWD):** how correct evidence can still yield a wrong interpretation when relative evidentiary weights are distorted.
-8. [Visibility Within an Information System Is Not Agency in the Real World](12-visible-system-agency-distortion.md) — **Channel-to-Total Generalization Error (CTGE):** how visibility within a partial channel can be mistaken for overall real-world agency; includes exploratory pilot evidence.
-9. [The Annotation Tax: Relational Topology Loss in Human–LLM Conversation](13-annotation-tax-relational-topology-loss.md) — **Relational Topology Loss (RTL):** how models can retain propositions while altering the relations that determine meaning; introduces the Excess Annotation Tax.
+5. [The Agent Has the Right Goal and the Wrong World](05-agentic-state-model-divergence.md) — **Agentic State-Model Divergence (ASMD):** how an aligned agent can act competently on the wrong representation of reality.
+6. [AI Reconstructs Reality From Language—and Can Reconstruct It Wrong](06-language-mediated-state-reconstruction.md) — **Language-Mediated State Reconstruction:** the master framework connecting underdetermined language-to-state reconstruction to prior-driven state construction and agentic failure.
+7. [Narrative Evidence Weight Distortion in Large Language Models](07-narrative-evidence-weight-distortion.md) — **Narrative Evidence Weight Distortion (NEWD):** how correct evidence can still yield a wrong interpretation when relative evidentiary weights are distorted.
+8. [Visibility Within an Information System Is Not Agency in the Real World](08-visible-system-agency-distortion.md) — **Channel-to-Total Generalization Error (CTGE):** how visibility within a partial channel can be mistaken for overall real-world agency; includes exploratory pilot evidence.
+9. [The Annotation Tax: Relational Topology Loss in Human–LLM Conversation](09-annotation-tax-relational-topology-loss.md) — **Relational Topology Loss (RTL):** how models can retain propositions while altering the relations that determine meaning; introduces the Excess Annotation Tax.
 
 ## Core proposition
 
