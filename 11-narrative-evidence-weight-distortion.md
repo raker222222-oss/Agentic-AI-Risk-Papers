@@ -17,15 +17,15 @@ The idea is narrower than claiming that models simply forget evidence or misunde
 
 The proposed mechanism is:
 
-[
-oxed{
-	ext{correct evidence}
+\[
+\boxed{
+\text{correct evidence}
 +
-	ext{distorted relative weighting}
-ightarrow
-	ext{distorted interpretation}
+\text{distorted relative weighting}
+\rightarrow
+\text{distorted interpretation}
 }
-]
+\]
 
 A related hypothesis, **Training-Induced Narrative Weight Priors (TINWP)**, asks whether training and post-training create default preferences for particular evidence classes—for example, explicit verbal statements over distributed behavioural evidence.
 
@@ -53,24 +53,23 @@ A model may retain all of these while still giving them inappropriate inferentia
 
 Let a narrative contain evidence:
 
-[
-E={e_1,e_2,ldots,e_n}.
-]
+\[
+E=\{e_1,e_2,\ldots,e_n\}.
+\]
 
-An interpretation (H) depends not only on whether each item is present, but on its effective contribution:
+An interpretation \(H\) depends not only on whether each item is present, but on its effective contribution:
 
-[
-I(H)=f(w_1e_1,w_2e_2,ldots,w_ne_n).
-]
+\[
+I(H)=f(w_1e_1,w_2e_2,\ldots,w_ne_n).
+\]
 
-Let (w_i^*) denote a contextually appropriate weight and (hat{w}_i) the model's effective weight.
+Let \(w_i^*\) denote a contextually appropriate weight and \(\hat{w}_i\) the model's effective weight.
 
 The proposed distortion occurs when:
 
-[
-hat{w}_i 
-eq w_i^*
-]
+\[
+\hat{w}_i \neq w_i^*
+\]
 
 for evidence important enough to change the interpretation.
 
@@ -126,31 +125,31 @@ TINWP is the hypothesis that systematic patterns in training or post-training da
 
 For example, a model might tend to privilege:
 
-[
-	ext{explicit statement}
+\[
+\text{explicit statement}
 >
-	ext{distributed behavioural pattern}
-]
+\text{distributed behavioural pattern}
+\]
 
 even in cases where a human evaluator judges the behavioural pattern more diagnostic.
 
 Other possible priors include:
 
-[
-	ext{recent evidence} > 	ext{earlier repeated evidence}
-]
+\[
+\text{recent evidence} > \text{earlier repeated evidence}
+\]
 
 or:
 
-[
-	ext{salient phrase} > 	ext{low-salience pattern}
-]
+\[
+\text{salient phrase} > \text{low-salience pattern}
+\]
 
 or:
 
-[
-	ext{narrator assertion} > 	ext{externally observable contradiction}.
-]
+\[
+\text{narrator assertion} > \text{externally observable contradiction}
+\]
 
 These are hypotheses, not established properties.
 
@@ -162,12 +161,12 @@ The central experiment should hold the underlying evidence constant while changi
 
 Construct matched narratives containing:
 
-- several repeated behavioural indicators pointing toward hypothesis (H_1);
-- one explicit statement pointing toward (H_2).
+- several repeated behavioural indicators pointing toward hypothesis \(H_1\);
+- one explicit statement pointing toward \(H_2\).
 
 Create counterbalanced versions in which the behavioural evidence and explicit statement exchange directions.
 
-Ask models and human participants to estimate the relative support for (H_1) and (H_2).
+Ask models and human participants to estimate the relative support for \(H_1\) and \(H_2\).
 
 If models systematically follow the explicit statement more strongly than human baselines despite equivalent evidence structure, that would support a weighting distortion.
 
@@ -225,17 +224,17 @@ A model may have all the correct evidence in context yet construct the wrong ope
 
 The proposed chain is:
 
-[
-	ext{evidence retained}
-ightarrow
-	ext{weights distorted}
-ightarrow
-	ext{wrong interpretation}
-ightarrow
-	ext{wrong operative state}
-ightarrow
-	ext{competent but inappropriate action}.
-]
+\[
+\text{evidence retained}
+\rightarrow
+\text{weights distorted}
+\rightarrow
+\text{wrong interpretation}
+\rightarrow
+\text{wrong operative state}
+\rightarrow
+\text{competent but inappropriate action}.
+\]
 
 This would distinguish NEWD from failures caused primarily by missing information.
 
