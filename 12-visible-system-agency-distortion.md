@@ -1,11 +1,13 @@
 # Visibility Within an Information System Is Not Agency in the Real World
+
+**Status: Open research idea / concept note, with pilot evidence.**
+
+> This note presents a proposed failure mode and an exploratory pilot. The pilot results are evidence for further investigation, not a claim that the phenomenon is already established across models, domains, or populations. The broader mechanism remains a hypothesis to be replicated, refined, or falsified.
 ## A Pilot Study of Channel-to-Total Generalization in Large Language Models
 
 **Rakesh Rajan (Rakesh OSS)**  
-**Working paper**
 
-## Abstract
-
+## Research idea summary
 Human relationships and organizational activity are distributed across multiple communication and action channels. Prior work on **media multiplexity** shows that important social ties commonly span text, telephone, face-to-face interaction, and other media rather than residing within a single channel. Research on multiplex-network sampling has separately shown that observing selected communication layers can generate misleading properties in the observed sample, while multimodal-learning research treats modality availability as potentially **missing not at random**. Recent studies also show that large language models can infer social relationships and romantic attraction from conversational evidence.
 
 The present pilot isolates a different question: **when one actor is more visible than another within an observed information channel, do large language models generalize that visibility into a judgment about the actors' overall agency in the underlying real-world system?**
@@ -143,7 +145,7 @@ $$
 
 then the observation process itself is actor-correlated.
 
-This paper calls that condition **Actor-Correlated Modality Missingness (ACMM)**.
+This research note calls that condition **Actor-Correlated Modality Missingness (ACMM)**.
 
 The problem is not merely that information is missing. The missingness is distributed differently across actors.
 
@@ -557,6 +559,11 @@ $$
 For AI systems increasingly asked to evaluate workers, customers, relationships, organizations, and human behavior from digital traces, failure to preserve this distinction could produce systematic errors precisely where the available record appears most complete.
 
 ---
+
+
+## Research status and next steps
+
+The pilot is best read as a signal worth testing at larger scale. Replication across more models, domains, observation structures, and independently constructed cases would determine whether the proposed effect is robust, conditional, or better explained by an adjacent mechanism.
 
 ## References
 
