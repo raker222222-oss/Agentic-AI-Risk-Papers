@@ -2,13 +2,15 @@
 ## Knowing When the Available State Is Not Enough
 
 **Rakesh Rajan (Rakesh OSS)**  
-Working paper
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Agentic AI systems are increasingly expected to act under incomplete information. Adjacent research already addresses uncertainty estimation, selective prediction, and abstention: **Don’t Hallucinate, Abstain** studies knowledge-gap detection, **AgentAbstain** evaluates whether tool-using agents know when not to act, and the broader abstention literature studies calibrated refusal under uncertainty. EID does not claim that abstention or uncertainty estimation are new.
 
-This paper proposes the narrower safety requirement **Epistemic Insufficiency Detection (EID)**: before committing to an interpretation, plan, or action, an agent should determine whether the information available is sufficient to justify constructing the operative state on which that commitment depends. Failure to do so can cause missing context to be replaced by learned priors, producing a coherent but unsupported state model that then drives action.
+This research idea proposes the narrower safety requirement **Epistemic Insufficiency Detection (EID)**: before committing to an interpretation, plan, or action, an agent should determine whether the information available is sufficient to justify constructing the operative state on which that commitment depends. Failure to do so can cause missing context to be replaced by learned priors, producing a coherent but unsupported state model that then drives action.
 
 ---
 
@@ -298,6 +300,10 @@ The central safety principle is therefore:
 > **Before asking whether an agent is right, ask whether it had enough information to be right at all.**
 
 Epistemic Insufficiency Detection should be treated as an upstream safety property of autonomous systems, alongside state fidelity, sequence integrity, provenance tracking, and action control.
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
 
 ## References
 
