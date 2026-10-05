@@ -1,14 +1,15 @@
-# Agentic AI Risk Papers
-
+# Open Research Ideas on Agentic AI Risk
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040884.svg)](https://doi.org/10.5281/zenodo.23040884)
 
 **Research site:** https://raker222222-oss.github.io/Agentic-AI-Risk-Papers/
 
 **DOI:** [10.5281/zenodo.23040884](https://doi.org/10.5281/zenodo.23040884)
 
-**Independent working papers by Rakesh Rajan (Rakesh OSS) on agentic AI safety, language-mediated state reconstruction, relational epistemic instability, state-model divergence, epistemic insufficiency, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
+**Independent research ideas and concept notes by Rakesh Rajan (Rakesh OSS) on agentic AI safety, language-mediated state reconstruction, relational epistemic instability, state-model divergence, epistemic insufficiency, AI retrieval failure, interpretive failure, sequence integrity, evidentiary reasoning, human misuse of frontier AI, and the limits of “rogue AI” narratives.**
 
-This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will. The papers focus on upstream failures in state reconstruction, interpretation, retrieval, chronology, evidence handling, epistemic structure, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
+This repository develops testable ideas about how advanced AI agents can fail in the real world even without malicious intent or independent machine will.
+
+> **Status of this collection:** These are open research ideas, conjectures, pilot observations, and testable problem formulations—not completed empirical papers. The purpose is to make potentially useful failure modes explicit enough for other researchers to test, refine, reject, merge with existing frameworks, or develop experimentally. Giving a concept a name or notation here should not be read as evidence that the phenomenon has already been established. The notes focus on upstream failures in state reconstruction, interpretation, retrieval, chronology, evidence handling, epistemic structure, recursive reasoning, state fidelity, epistemic sufficiency, and human control.
 
 ## Master framework
 
@@ -39,8 +40,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 - **Human misuse of frontier AI** — the risk that human intent, insider access, automation, and powerful AI capabilities combine to create disproportionate harm.
 - **Rogue AI and machine volition** — distinguishing unintended agentic failure and deliberate human misuse from claims that an AI has developed an independent will.
 
-## Papers
-
+## Research ideas
 1. [How AI Distorts Meaning!](01-ai-mediated-interpretive-displacement.md) — **AI-Mediated Interpretive Displacement:** how AI interpretation can become a hidden causal participant in human communication.
 2. [AI Amplifies Its Own Mistakes to Truth](02-recursive-amplification-agentic-ai.md) — **Recursive Amplification of Interpretive Failure:** how an initial interpretive error can alter later evidence and recursively strengthen itself.
 3. [Right Facts, Wrong Order, Wrong Action](03-sequence-integrity-agentic-ai.md) — **Sequence Integrity:** why preserving chronology, precedence, procedural order, and revision history is a distinct AI safety requirement.
@@ -94,10 +94,10 @@ Rajan, Rakesh. *Agentic AI Risk Papers*. Version 1.0.0. Zenodo. https://doi.org/
 
 ## Status
 
-These are independent working papers intended to state falsifiable propositions, conceptual models, experimental designs, and position arguments. They are not peer reviewed.
+These are independent research ideas and concept notes intended to state falsifiable propositions, conceptual models, experimental designs, and position arguments. They are not peer reviewed.
 
 ## Author
 
 **Rakesh Rajan — Rakesh OSS**
 
-Independent research notes and working papers on agentic AI risk, language-mediated state reconstruction, epistemic structure, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
+Independent research notes and research ideas and concept notes on agentic AI risk, language-mediated state reconstruction, epistemic structure, retrieval, interpretation, sequencing, state fidelity, epistemic sufficiency, and human control of frontier AI systems.
