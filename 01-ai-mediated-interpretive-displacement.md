@@ -1,17 +1,19 @@
 # When AI Becomes a Hidden Third Party in Relationships
 ## AI-Mediated Interpretive Displacement: How Generative AI Is Becoming a Hidden Third Party in Human Relationships
 
-**Working paper**
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Generative AI is increasingly used not only to draft messages but to interpret them. Recent work has documented AI as a “third voice” in couple relationships (Levkovich & Alon, 2026) and examined how people use AI for relationship advice, conflict, dating, communication, and interpretation of another person’s words or behaviour (Tseng & Liang, 2026). A separate large experimental study by Cheng et al. (2026) provides an important causal warning: across 11 leading models, AI affirmed users’ actions 49% more often than human respondents, and in three preregistered experiments involving 2,405 participants, even a single interaction with sycophantic AI increased participants’ conviction that they were right while reducing willingness to take responsibility and repair interpersonal conflicts. Despite these distortions, sycophantic responses were more trusted and preferred.
 
-This paper isolates a narrower causal mechanism: **AI-Mediated Interpretive Displacement (AMID)**, in which a person increasingly responds to an AI-generated interpretation of another human’s communication rather than to the communication itself. Existing studies establish that people already seek AI advice and interpretation in intimate relationships and that AI responses can change users’ convictions and intended behaviour. What remains unknown is how often users accept interpersonal interpretations as substantially true, how often those interpretations are materially wrong, and how often acceptance changes subsequent human behaviour.
+This research idea isolates a narrower causal mechanism: **AI-Mediated Interpretive Displacement (AMID)**, in which a person increasingly responds to an AI-generated interpretation of another human’s communication rather than to the communication itself. Existing studies establish that people already seek AI advice and interpretation in intimate relationships and that AI responses can change users’ convictions and intended behaviour. What remains unknown is how often users accept interpersonal interpretations as substantially true, how often those interpretations are materially wrong, and how often acceptance changes subsequent human behaviour.
 
 The possible exposure population is large. Several billion people already have practical mobile-internet access, while consumer generative-AI systems operate at populations measured in hundreds of millions to more than a billion users. Even if only a minority use AI to interpret another person’s words, motives or behaviour, and only a minority of those interpretations are materially wrong and acted upon, the absolute number of consequential cases could reach millions or tens of millions.
 
-AMID may be beneficial when AI surfaces alternative interpretations, reduces impulsive reactions, or encourages repair. It may be harmful when a mistaken or one-sided interpretation acquires enough authority to alter trust, accusation, withdrawal, conflict, employment decisions, family relationships, or other consequential behaviour. The paper develops a sequence model of this process and proposes experiments capable of measuring its prevalence, accuracy, acceptance, belief effects, and behavioural consequences.
+AMID may be beneficial when AI surfaces alternative interpretations, reduces impulsive reactions, or encourages repair. It may be harmful when a mistaken or one-sided interpretation acquires enough authority to alter trust, accusation, withdrawal, conflict, employment decisions, family relationships, or other consequential behaviour. The note develops a sequence model of this process and proposes experiments capable of measuring its prevalence, accuracy, acceptance, belief effects, and behavioural consequences.
 
 ## 1. Population at Risk, Belief Change, and Why the Scale Matters
 
@@ -524,6 +526,10 @@ The central sequence is:
 The key safety requirement is therefore not simply better language generation. It is preventing interpretation from acquiring more authority than the evidence and context justify.
 
 The empirical task is now clear: measure how often AI is used to interpret other humans, how often users accept those interpretations, how often they are wrong, how strongly they shift belief, and how often those shifts alter what happens next between people.
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
 
 ## References
 
