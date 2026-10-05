@@ -1,4 +1,9 @@
 # Agentic State-Model Divergence
+
+**Status: Open research idea / concept note.**
+
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
 ## A General Theory of Non-Malicious AI Failure
 
 **Rakesh Rajan (Rakesh OSS)**  
