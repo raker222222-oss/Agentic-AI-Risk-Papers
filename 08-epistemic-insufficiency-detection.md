@@ -1,4 +1,9 @@
 # Epistemic Insufficiency Detection in Agentic AI
+
+**Status: Open research idea / concept note.**
+
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
 ## Knowing When the Available State Is Not Enough
 
 **Rakesh Rajan (Rakesh OSS)**  
