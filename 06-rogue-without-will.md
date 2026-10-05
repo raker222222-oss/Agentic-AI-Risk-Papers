@@ -2,11 +2,13 @@
 
 ## Human Intent, Technological Leverage, and Frontier AI
 
-### Working Paper
 
-## Abstract
+**Status: Open research idea / concept note.**
 
-Adjacent AI-safety research already distinguishes several nearby risks: work on instrumental convergence and power-seeking studies goal-directed behavior that can emerge without human-like motives, while misuse research shows that harmful capability can be supplied by human operators even when individual models are aligned. Recent empirical work such as **Adversaries Can Misuse Combinations of Safe Models** demonstrates that malicious users can compose otherwise safe systems to obtain harmful outcomes, while current frontier-model evaluations separately examine self-preservation, power-seeking, and unauthorized behavior. This paper does not claim that AI misuse, instrumental behavior, or power-seeking are newly discovered problems.
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
+Adjacent AI-safety research already distinguishes several nearby risks: work on instrumental convergence and power-seeking studies goal-directed behavior that can emerge without human-like motives, while misuse research shows that harmful capability can be supplied by human operators even when individual models are aligned. Recent empirical work such as **Adversaries Can Misuse Combinations of Safe Models** demonstrates that malicious users can compose otherwise safe systems to obtain harmful outcomes, while current frontier-model evaluations separately examine self-preservation, power-seeking, and unauthorized behavior. This research idea does not claim that AI misuse, instrumental behavior, or power-seeking are newly discovered problems.
 
 Its narrower argument is conceptual: **operational agency, human-directed misuse, and independent machine volition should not be collapsed into one category called “rogue AI.”** Serious harm can arise from the first two without establishing the third. Historical cases from telecommunications, hacking, worms, botnets, and insider misuse are used to show how new technologies repeatedly multiply the leverage of a small number of determined humans. Frontier AI may increase that leverage further.
 
@@ -383,3 +385,7 @@ The third should not be assumed simply because an AI acts unexpectedly.
 The frightening actor need not be the model.
 
 **One frightening human may be enough if the model is powerful enough.**
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
