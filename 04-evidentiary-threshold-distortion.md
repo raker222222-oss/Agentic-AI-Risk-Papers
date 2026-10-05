@@ -1,15 +1,17 @@
 # Proof? Just Ask AI to Define It!
 ## Evidentiary Threshold Distortion in Agentic AI
 
-**Working paper**
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Humans routinely act on convergent but individually incomplete evidence. Repeated weak signals, chronology, context, and pattern can together justify a practical conclusion even when no single observation proves it.
 
 Adjacent research already shows that LLM behavior is shaped by confidence and abstention thresholds, and that models can update evidence in systematically non-Bayesian ways. Kumaran et al. (2026), for example, provide causal evidence that manipulating confidence thresholds changes abstention behavior, while the broader abstention and calibration literature studies when models should refrain from answering or acting. ETD does not claim that confidence thresholds, abstention, or evidence misweighting are new.
 
-This paper proposes the narrower failure mode **Evidentiary Threshold Distortion (ETD)**: in an agentic setting, a system may apply an evidentiary threshold that is too demanding for the practical action under consideration, suppressing a justified probabilistic inference even when several individually incomplete observations converge.
+This research idea proposes the narrower failure mode **Evidentiary Threshold Distortion (ETD)**: in an agentic setting, a system may apply an evidentiary threshold that is too demanding for the practical action under consideration, suppressing a justified probabilistic inference even when several individually incomplete observations converge.
 
 \[
 \boxed{
@@ -276,3 +278,7 @@ It is evidence thresholds matched to the consequences of the action being consid
 ---
 
 *This is a working paper intended to state testable propositions. It is not peer reviewed.*
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
