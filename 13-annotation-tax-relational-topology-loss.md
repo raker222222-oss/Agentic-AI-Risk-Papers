@@ -1,9 +1,12 @@
 # The Annotation Tax: Relational Topology Loss in Human–LLM Conversation
 
+**Status: Open research idea / concept note.**
+
+> This note proposes a way of describing and testing a possible class of conversational failures. It is **not presented as a completed empirical paper or an experimentally established theory**. RTL begins as a candidate level of analysis; the Annotation Tax is a proposed measure whose usefulness depends on empirical validation against human and model baselines.
+
 **Rakesh Rajan (Rakesh OSS)**
 
-## Abstract
-
+## Research idea summary
 Large language models can preserve the apparent propositional content of a conversation while altering the relations that determine what those propositions mean. An intuition may later be treated as fact; a conditional response may become an unconditional intention; a quotation may become the speaker's own belief; temporal order may reverse; or a qualification may cease to constrain the proposition it originally modified.
 
 We call this class of failures **Relational Topology Loss (RTL)**: degradation, deletion, inversion, or reassignment of relations among conversational propositions while substantial lexical or propositional content remains intact.
@@ -339,3 +342,6 @@ Part of the **Agentic AI Risk Papers** series.
 Repository: https://github.com/raker222222-oss/Agentic-AI-Risk-Papers
 
 DOI collection: https://doi.org/10.5281/zenodo.23040884
+## Research status and next steps
+
+The central questions remain empirical: whether the proposed relation types show measurable retention failures, whether those failures cluster, how much additional annotation models require relative to humans, and whether the framework adds explanatory value beyond existing pragmatic, discourse, temporal, and modal benchmarks.
