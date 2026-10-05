@@ -2,10 +2,12 @@
 ## A Failure Theory of Probabilistic World-State Recovery
 
 **Rakesh Rajan (Rakesh OSS)**  
-**Working paper**
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Human communication usually begins with a rich underlying state—perception, chronology, intention, social context, uncertainty, and embodied experience—and compresses that state into language. Language models often face the reverse problem: they receive the compressed linguistic representation and must reconstruct the state that could have produced it.
 
 Because language is information-reducing, this inverse reconstruction is generally underdetermined. Multiple underlying states may be compatible with the same text, so a language model must rely on learned statistical structure to select among possible reconstructions.
@@ -190,7 +192,7 @@ D_V(L_1,L_2)\ll D_R(R_1,R_2),
 
 where \(D_V\) is geometric distance between model representations and \(D_R\) is the task-relevant difference in relational structure. When a large relational change produces only a small representational change, downstream reconstruction may be vulnerable to semantic-over-structural substitution.
 
-This paper does not claim that distributed representations or their structural limitations are newly discovered. Prior work has long studied compositionality, sentence embeddings, syntax-sensitive representation, role reversal, and relation-aware encoding. The proposed contribution is the safety connection: **representational geometry can become an intermediate failure layer through which preserved information loses relational authority before state reconstruction, thereby feeding epistemic instability and agentic state-model divergence.**
+This research idea does not claim that distributed representations or their structural limitations are newly discovered. Prior work has long studied compositionality, sentence embeddings, syntax-sensitive representation, role reversal, and relation-aware encoding. The proposed contribution is the safety connection: **representational geometry can become an intermediate failure layer through which preserved information loses relational authority before state reconstruction, thereby feeding epistemic instability and agentic state-model divergence.**
 
 ---
 
@@ -462,3 +464,7 @@ Agentic AI safety should treat both distinctions as first-class architectural re
 ---
 
 *Working paper. The proposed contribution is not that language is compressed, probabilistic interpretation exists, distributed representations have structural limitations, or belief-state estimation is necessary. It is the proposed failure chain connecting lossy language, distributed representation, relational weakening, underdetermined state reconstruction, prior substitution, epistemic relation distortion, operative state divergence, and recursive agentic action.*
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
