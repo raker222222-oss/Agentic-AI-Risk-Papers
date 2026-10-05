@@ -2,10 +2,12 @@
 ## A General Theory of Non-Malicious AI Failure
 
 **Rakesh Rajan (Rakesh OSS)**  
-**Working paper**
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Agentic State-Model Divergence (ASMD) proposes a unifying theory for a large class of non-malicious agentic AI failures. Adjacent research already addresses major pieces of this problem: **Agent-BRACE** represents uncertainty over partially observed environment states, **InfiAgent** externalizes persistent task state for long-horizon agents, and state-aware runtime and memory research studies failures caused by unstable state maintenance. ASMD does not claim that belief states, memory, or state externalization are new.
 
 Its narrower contribution is to treat failures in task understanding, authority, evidence, and environmental representation as different routes into one safety condition: divergence between the agent’s operative internal state and governing reality. The danger arises when the agent then acts competently on that incorrect state, changes the environment, and potentially generates evidence that reinforces the original error.
@@ -395,6 +397,10 @@ The central safety implication is straightforward:
 > **An agent does not need the wrong goal to do the wrong thing. It may only need the wrong state.**
 
 Agentic AI safety should therefore treat **state fidelity** alongside goal alignment, planning reliability, and action control as a fundamental safety property.
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
 
 ## References
 
