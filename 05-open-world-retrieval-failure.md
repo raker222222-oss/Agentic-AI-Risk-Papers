@@ -2,15 +2,17 @@
 
 ## The Safety Problem of Acting When the Required Knowledge Was Never Retrieved
 
-### Working Paper
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 An autonomous AI agent operating in the real world cannot be supplied in advance with instructions for every situation it may encounter. When it meets an unfamiliar state, it may need to retrieve procedural guidance, factual knowledge, historical data, rules, or prior experience before acting.
 
 Adjacent research already establishes major parts of the retrieval problem. Work on RAG safety such as **RAG LLMs are Not Safer** and **SafeRAG** shows that retrieved information can be incomplete, conflicting, or unsafe; **Astute RAG** studies imperfect retrieval and knowledge conflict; **LongMemEval** exposes long-term memory and temporal-retrieval limitations; and research on unknown unknowns and safe exploration addresses open-world uncertainty. OWRF does not claim that retrieval imperfection, RAG vulnerability, memory failure, or unknown-unknown detection are new.
 
-This paper defines the narrower agentic failure **Open-World Retrieval Failure (OWRF)**: the agent must itself determine what it needs to know, where to search, whether the relevant information exists, whether retrieval is sufficiently complete, and whether it is safe to proceed. Failure occurs when it acts using an incomplete, substituted, stale, or incorrectly bounded evidence set while treating that set as adequate.
+This research idea defines the narrower agentic failure **Open-World Retrieval Failure (OWRF)**: the agent must itself determine what it needs to know, where to search, whether the relevant information exists, whether retrieval is sufficiently complete, and whether it is safe to proceed. Failure occurs when it acts using an incomplete, substituted, stale, or incorrectly bounded evidence set while treating that set as adequate.
 
 The central distinction is:
 
@@ -1015,6 +1017,10 @@ The Black Swan cannot be completely prescribed away.
 That is precisely why it remains a Black Swan.
 
 ---
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
 
 ## References
 
