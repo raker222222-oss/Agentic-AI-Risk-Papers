@@ -2,13 +2,16 @@
 ## Why Remembering the Facts Is Not Enough
 
 **Rakesh Rajan (Rakesh OSS)**  
+**Status: Open research idea / concept note.**
+
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
 Position paper
 
-## Abstract
-
+## Research idea summary
 Agentic AI research has increasingly improved memory, retrieval, provenance, uncertainty estimation, belief-state maintenance, and instruction following. Adjacent work already provides important pieces of this problem: **Structured Episodic Event Memory** and **Hindsight** preserve structured memory and provenance; **Belief Memory** and **Agent-BRACE** preserve uncertainty under partial observability; **Control Illusion** documents instruction-hierarchy failures; and self-auditing and relational-uncertainty methods address unsupported belief propagation and dependency structure. REI does not claim that any of these individual problems are new.
 
-This paper proposes the narrower higher-order failure class **Relational Epistemic Instability (REI)**: an AI system may retain substantially the same information while changing the epistemic relationships among that information as framing, salience, or context changes. It further proposes **Coherence-Dominant Epistemic Reconstruction (CDER)** as a possible generative mechanism: when semantic coherence conflicts with preserved epistemic structure, the system may maintain a coherent interpretation by reconstructing the roles of retained information. Evidence can be reweighted, anomalies downgraded, inferences promoted into premises, or authority and sequence weakened without corresponding new evidence. A temporal pathway, **epistemic laundering**, can then cause model-generated inferences to re-enter memory as apparent facts. The proposed safety principle is that some properties of information should behave as **epistemic invariants**.
+This research idea proposes the narrower higher-order failure class **Relational Epistemic Instability (REI)**: an AI system may retain substantially the same information while changing the epistemic relationships among that information as framing, salience, or context changes. It further proposes **Coherence-Dominant Epistemic Reconstruction (CDER)** as a possible generative mechanism: when semantic coherence conflicts with preserved epistemic structure, the system may maintain a coherent interpretation by reconstructing the roles of retained information. Evidence can be reweighted, anomalies downgraded, inferences promoted into premises, or authority and sequence weakened without corresponding new evidence. A temporal pathway, **epistemic laundering**, can then cause model-generated inferences to re-enter memory as apparent facts. The proposed safety principle is that some properties of information should behave as **epistemic invariants**.
 
 ---
 
@@ -487,6 +490,10 @@ A safe agent should be free to revise its interpretation when new evidence warra
 It should not be free to silently rewrite the epistemic relationships of unchanged evidence merely because a different narrative has become more coherent.
 
 ---
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
 
 ## References
 
