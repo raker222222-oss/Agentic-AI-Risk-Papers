@@ -1,15 +1,17 @@
 # Right Facts, Wrong Order, Wrong Action
 ## Sequence Integrity as an Agentic AI Safety Problem
 
-**Working paper**
 
-## Abstract
+**Status: Open research idea / concept note.**
 
+> This note presents a proposed failure mode, mechanism, or research question for further investigation. It is **not presented as a completed empirical paper or as an experimentally established theory**. Where prior research or pilot observations are discussed, they motivate the idea; the broader claims remain hypotheses to be tested, refined, or falsified.
+
+## Research idea summary
 Many tasks are not defined only by what facts are present, but by the order in which those facts occurred. Large language models can sometimes preserve individual details while weakening, compressing, or rearranging chronology. In ordinary conversation this may produce a mistaken interpretation. In agentic systems, sequence errors can become operational errors.
 
 Adjacent research already demonstrates important parts of this problem. **Lost in the Middle** shows that long-context performance depends strongly on where relevant information appears, long-horizon memory benchmarks such as **LongMemEval** test temporal reasoning and updating over extended interactions, and **Control Illusion** shows that models can fail to preserve explicit instruction hierarchy under competing priors. Sequence Integrity does not claim that position effects, temporal reasoning failures, or instruction-priority failures are new.
 
-This paper proposes the narrower safety requirement **Sequence Integrity**: an agent must preserve the task-relevant temporal, procedural, supersession, and discourse-authority relations among observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order—or retained statements with the wrong governing authority—can produce an incorrect state model and therefore an incorrect action.
+This research idea proposes the narrower safety requirement **Sequence Integrity**: an agent must preserve the task-relevant temporal, procedural, supersession, and discourse-authority relations among observations, instructions, permissions, state changes, and actions. The core claim is that correct elements in the wrong order—or retained statements with the wrong governing authority—can produce an incorrect state model and therefore an incorrect action.
 
 ## 1. Order Is Part of Meaning
 
@@ -295,3 +297,7 @@ Sequence integrity should therefore be treated as a first-class safety property 
 ---
 
 *This is a working paper intended to state testable propositions. It is not peer reviewed.*
+
+## Research status and next steps
+
+This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
