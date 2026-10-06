@@ -345,3 +345,29 @@ DOI collection: https://doi.org/10.5281/zenodo.23040884
 ## Research status and next steps
 
 The central questions remain empirical: whether the proposed relation types show measurable retention failures, whether those failures cluster, how much additional annotation models require relative to humans, and whether the framework adds explanatory value beyond existing pragmatic, discourse, temporal, and modal benchmarks.
+
+---
+
+## Context expansion and relational invariance
+
+RTL also suggests a related principle: **adding context should not alter conversational relations that the added context does not bear upon.**
+
+If a proposition's speaker, epistemic status, temporal position, conditional dependency, pragmatic function, or discourse role is already fixed, later contextual enrichment should preserve that edge unless the new material explicitly corrects or supersedes it.
+
+Let (G(C)=(V,E_C)) represent the model's reconstructed conversational graph under context (C). For a relation (e) whose governing evidence is unchanged between (C_1) and (C_2), a desirable invariance property is:
+
+[
+ein E_{C_1}Rightarrow ein E_{C_2},
+]
+
+unless (C_2) contains information that directly revises that relation.
+
+This yields another way to test relational robustness. Instead of asking only whether the model can recover an edge once, compare whether the same edge survives **context expansion**. A model may retain all propositions yet alter their topology as additional framing activates a different narrative.
+
+This is especially important for discourse structure and pragmatic interpretation. Context should constrain ambiguous relations, but it should not license arbitrary reassignment of already-established ones.
+
+The resulting evaluation question is:
+
+> **Which relations remain invariant when context is expanded, and which are silently rewritten even though the added context does not justify the change?**
+
+This criterion complements the Annotation Tax by testing whether users must repeatedly restate already-established relations merely to keep them stable as more context enters the conversation.
