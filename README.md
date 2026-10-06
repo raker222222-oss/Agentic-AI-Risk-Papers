@@ -33,6 +33,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 - **Evidentiary threshold distortion** — how demanding explicit proof when convergent evidence is operationally sufficient can cause dangerous underreaction.
 - **Narrative evidence weight distortion** — how a model can retain the right evidence yet misinterpret a narrative by assigning the wrong relative importance to explicit statements, behavioural patterns, baseline changes, source asymmetries, and culturally conditioned signals.
 - **Visible-system agency distortion** — how AI can mistake prominence within a partial information channel for overall real-world agency when consequential activity is distributed unevenly across visible and hidden channels.
+- **Corpus-shaped human-state interpretation** — how overlapping language for different human states can interact with corpus asymmetry and produce premature collapse toward a dominant latent-state reconstruction.
 
 ## Research ideas
 1. [How AI Distorts Meaning!](01-ai-mediated-interpretive-displacement.md) — **AI-Mediated Interpretive Displacement (AMID):** how AI interpretation can become a hidden causal participant in human communication.
@@ -44,6 +45,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 7. [Narrative Evidence Weight Distortion in Large Language Models](07-narrative-evidence-weight-distortion.md) — **Narrative Evidence Weight Distortion (NEWD):** how correct evidence can still yield a wrong interpretation when relative evidentiary weights are distorted.
 8. [Visibility Within an Information System Is Not Agency in the Real World](08-visible-system-agency-distortion.md) — **Channel-to-Total Generalization Error (CTGE):** how visibility within a partial channel can be mistaken for overall real-world agency; includes exploratory pilot evidence.
 9. [The Annotation Tax: Relational Topology Loss in Human–LLM Conversation](09-annotation-tax-relational-topology-loss.md) — **Relational Topology Loss (RTL):** how models can retain propositions while altering the relations that determine meaning; introduces the Excess Annotation Tax.
+10. [Human State and Corpus-Shaped Interpretation](10-human-state-corpus-shaped-interpretation.md) — a theory of how human-state underdetermination, corpus asymmetry and interpretive collapse can make an LLM statistically faithful to language while wrong about the human state that produced it.
 
 ## Core proposition
 
