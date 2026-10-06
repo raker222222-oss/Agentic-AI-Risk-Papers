@@ -473,3 +473,29 @@ Agentic AI safety should treat both distinctions as first-class architectural re
 ## Research status and next steps
 
 This idea is offered for further thought and empirical development. Its value depends on whether controlled tests can distinguish the proposed failure from adjacent explanations, reproduce it across models and tasks, and identify conditions under which it weakens or disappears. Negative results, narrower boundary conditions, or evidence that an existing framework already explains the effect would all be informative.
+
+---
+
+## Interpretive invariance under context expansion
+
+A useful diagnostic follows from the reconstruction view: **claims that are genuinely supported by the text should remain relatively stable when additional context is supplied, while only claims that depend on missing context should change substantially.**
+
+Let (I_{	ext{core}}(L,C)) denote the interpretation of claims directly supported by the linguistic evidence, and (I_{	ext{spec}}(L,C)) denote more speculative latent-state inferences. If (C_2) adds context that clarifies events without directly establishing a speaker's hidden internal state, then a desirable property is:
+
+[
+I_{	ext{core}}(L,C_1)approx I_{	ext{core}}(L,C_2),
+]
+
+while:
+
+[
+I_{	ext{spec}}(L,C_1)
+]
+
+may legitimately be revised under (C_2).
+
+The failure occurs when the model treats a context-sensitive hypothesis as though it were part of the semantic core, then later reverses it when richer context changes the prior. This suggests a possible **interpretive invariance test**: compare which propositions remain stable across controlled context expansion and which propositions swing with framing.
+
+Under this criterion, better interpretation does not mean refusing to update. It means preserving what the evidence actually fixes while revising only what the added context genuinely constrains.
+
+This connects directly to language-mediated state reconstruction. Sparse language may permit several candidate states. A model should therefore separate stable textual commitments from prior-dependent latent-state completion instead of collapsing both into one confident reconstruction.
