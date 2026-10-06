@@ -270,3 +270,29 @@ Until such questions are tested, NEWD and TINWP should be treated as **research 
 ## Research status and next steps
 
 This concept is offered for further thought and experimental development. Its value depends on whether controlled studies can distinguish weighting errors from retrieval, chronology, pragmatic, and source-attribution failures. Results showing narrow boundary conditions, alternative explanations, or no reproducible effect would be useful outcomes rather than failures of the research program.
+
+---
+
+## Context expansion as an evidence-weighting diagnostic
+
+A further diagnostic for NEWD is **interpretive invariance under context expansion**.
+
+Suppose the underlying text remains unchanged while additional context explains chronology, event structure, pragmatic style, source relations, or competing causes. Some conclusions should remain stable because they are directly supported by the original evidence. Other conclusions may weaken or strengthen because they depended on how ambiguous evidence was weighted.
+
+This creates a useful distinction between:
+
+- **invariant claims** — supported across framings by the same underlying evidence;
+- **context-sensitive inferences** — conclusions whose weight should change when relevant context is added;
+- **prior-driven completions** — conclusions that appear stable only because a familiar narrative initially dominated the evidence.
+
+A weighting failure is suggested when sparse framing causes ambiguous cues to be interpreted almost entirely through one narrative, and richer context causes a large categorical shift even though the underlying text has not changed.
+
+Formally, for evidence items (e_i) with model-assigned weights (hat w_i(C)), context expansion should primarily change the weights of evidence whose relevance is actually altered by the new context:
+
+[
+hat w_i(C_2)approx hat w_i(C_1)
+]
+
+for evidence whose epistemic role is unchanged, while larger revisions are appropriate where (C_2) supplies genuinely relevant constraints.
+
+This provides a possible test of NEWD: measure not only the final interpretation, but **which evidence weights move under context expansion and whether those movements are justified by the added information**.
