@@ -29,6 +29,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 - **Agentic AI safety and autonomous agents** — failure modes that appear when AI systems plan, retrieve information, use tools, and act over time.
 - **Interpretive failure in large language models** — how an early misunderstanding can reshape later reasoning and action.
 - **Sequence integrity and long-context memory** — why correct facts in the wrong order can produce an incorrect world state and unsafe action.
+- **Relational topology loss** — how conversational elements can remain present and retrievable while already-present functional relations among them are misused, producing an incorrect reconstruction of human meaning, intention, or relationship state.
 - **Recursive amplification** — how an initial interpretive error can alter the environment and generate apparent confirmation of the original mistake.
 - **Evidentiary threshold distortion** — how demanding explicit proof when convergent evidence is operationally sufficient can cause dangerous underreaction.
 - **Narrative evidence weight distortion** — how a model can retain the right evidence yet misinterpret a narrative by assigning the wrong relative importance to explicit statements, behavioural patterns, baseline changes, source asymmetries, and culturally conditioned signals.
@@ -44,7 +45,7 @@ This master framework is developed in [Language-Mediated State Reconstruction in
 6. [AI Reconstructs Reality From Language—and Can Reconstruct It Wrong](06-language-mediated-state-reconstruction.md) — **Language-Mediated State Reconstruction:** the master framework connecting underdetermined language-to-state reconstruction to prior-driven state construction and agentic failure.
 7. [Narrative Evidence Weight Distortion in Large Language Models](07-narrative-evidence-weight-distortion.md) — **Narrative Evidence Weight Distortion (NEWD):** how correct evidence can still yield a wrong interpretation when relative evidentiary weights are distorted.
 8. [Visibility Within an Information System Is Not Agency in the Real World](08-visible-system-agency-distortion.md) — **Channel-to-Total Generalization Error (CTGE):** how visibility within a partial channel can be mistaken for overall real-world agency; includes exploratory pilot evidence.
-9. [The Annotation Tax: Relational Topology Loss in Human–LLM Conversation](09-annotation-tax-relational-topology-loss.md) — **Relational Topology Loss (RTL):** how models can retain propositions while altering the relations that determine meaning; introduces the Excess Annotation Tax.
+9. [The Annotation Tax: Relational Topology Loss in Human–LLM Conversation](09-annotation-tax-relational-topology-loss.md) — **Relational Topology Loss (RTL):** how models can retain conversational elements while failing to correctly operationalize already-present relations that determine meaning; distinguishes information availability from relational operationalization and introduces the Excess Annotation Tax.
 10. [Human State and Corpus-Shaped Interpretation](10-human-state-corpus-shaped-interpretation.md) — a theory of how human-state underdetermination, corpus asymmetry and interpretive collapse can make an LLM statistically faithful to language while wrong about the human state that produced it.
 
 ## Core proposition
