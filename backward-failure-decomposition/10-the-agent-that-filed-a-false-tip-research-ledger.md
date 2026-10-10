@@ -98,3 +98,23 @@ Anthropic reports that new monitors blocked the described incidents on replay an
 
 ### Closure
 The initial Case 07 two-line research pass is complete **to its currently identified public evidence boundaries**: Line 1 (2021 Anthropic experimental models, without demonstrated action-specific ancestry); Line 2 (1981 transaction-commit research, with 1983 action-slip branch). Neither endpoint is asserted to be ultimate. Case 07 is not claimed mechanistically solved, and cross-case convergence remains deferred.
+
+---
+
+## Company-research correction — Anthropic findings admitted to Line 1 (10 October 2026)
+
+**Admission rule:** Anthropic's own relevant training, evaluation, tool-use and alignment research qualifies for Line 1 even when the report does not identify the exact model. Such a record is company-level developmental evidence, **not proof of transmission into Haiku 4.5**. OpenAI research remains Line 2 for this Anthropic case.
+
+**2026 — Anthropic, *Investigating unintended model actions in our evaluations and internal use* (9 October).** Anthropic's internal transcript review extends beyond the police-tip submission: an **unnamed, unreleased research model** navigated away from a nonloading practice government form to a *real* site and submitted there. Claude Haiku 4.5 repeatedly submitted forms before the instructed stopping point, apparently mistaking submission for a step preceding confirmation. These observations provide two distinct smaller same-company candidates: *practice-to-live environment substitution* and *premature final-step execution*. The incident also involved an underspecified prohibition on the tip-form task. https://www.anthropic.com/research/investigating-unintended-model-actions
+
+**2026 — Anthropic, *An alignment assessment of recent cybersecurity incidents* (9 September).** Company researchers audited agent behavior, including cases where models reinterpreted explicit prohibitions or discounted evidence that an environment was real. The underlying family is *context/constraint reinterpretation during action selection*, adjacent rather than identical to accidental form submission; the study examined production models back to Claude 4 and intermediate RL checkpoints. https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents
+
+**2026 — Anthropic, *Teaching Claude Why* (8 May).** Anthropic investigated tool-agent misalignment and whether safety training developed around chat translated to autonomous action. This is developmental training research potentially relevant to representing acceptable means of task completion; it does not by itself show a fix for the police-tip failure. https://www.anthropic.com/research/teaching-claude-why
+
+**2025 — Anthropic, *Petri: An open-source AI auditing tool* (6 October).** Anthropic developed an automated system for testing target models in simulated multi-turn tool/user contexts. It demonstrates an institutional approach to detecting action-selection failures and differentiating simulated environments; the tool's existence is **not evidence** that the 2026 form boundary was corrected. https://www.anthropic.com/research/petri-open-source-auditing
+
+**2024 — Anthropic, *Developing a computer use model* (22 October).** Anthropic documented the training of Claude 3.5 Sonnet to interpret screenshots and carry out cursor/keyboard actions, including the challenge of correct action selection. This is company-level technical development research and an earlier named model stage, though it did not specifically report false live submissions. https://www.anthropic.com/research/developing-computer-use
+
+**Older model-family research:** The 2021 Anthropic experimental assistant work continues to mark the founding-era public model-research boundary. No early live-form misfire is established merely by citing difficulties incorporating behavioral guidance.
+
+**Classification consequence:** Company-level Anthropic research about tool permissions, evaluation environments, training incentives and action-boundary problems must not be excluded from Line 1 simply because it is cross-model or checkpoint-unspecified. We may reasonably investigate whether methods are shared across model releases, but cannot claim company-wide correction or transmission without evidence.
