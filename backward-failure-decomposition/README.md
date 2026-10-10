@@ -37,3 +37,13 @@ Each case distinguishes **Line 1 (model-family developmental history)** from **L
 ## Case 08 — Published research investigation
 
 - [The Simulation That Escaped: When the Task Outran Its Authority](./11-the-simulation-that-escaped.md) — Mythos 5 real-internet cybersecurity evaluation, four-part BFD decomposition, Anthropic company research (Line 1), independent historical foundations (Line 2), and repair-depth evaluation. Retrospective published research only; no original model experiments.
+
+---
+
+## Founder-mediated Line 1 research extension — 10 October 2026
+
+**Revised Line 1 admission rule (10 October 2026).** Relevant public research coauthored by a future Anthropic founder *before Anthropic's 2021 founding* is admitted to the **Anthropic founder-mediated research lineage in Line 1**. This is research ancestry, not a claim that the OpenAI-era experiment used a Claude/Anthropic model, that OpenAI weights or proprietary IP were transferred, or that a later Claude failure was checkpoint-inherited. Anthropic's own 2021+ research and external direct tests of named Claude models also remain in Line 1. Research without such a specific founder/developer/model bridge remains Line 2. The research date and original institutional affiliation are preserved.
+
+**Research-boundary correction:** In Anthropic cases, Line 1 includes documented relevant work by eventual Anthropic founders before 2021, even when the work occurred at OpenAI. This is a *founder-mediated scientific lineage*, distinct from Anthropic's independently trained Claude model ancestry. Verified published research now reaches 2016 (Amodei/Olah et al.), with 2017 preference learning, 2018 debate, 2019 language preference/reward evaluation and 2020 few-shot language-model studies. Individual case strength varies; case 09 is still unpublished.
+
+**Verified pre-Anthropic founder-coauthored sources:** Amodei & Olah et al., *Concrete Problems in AI Safety* (2016), https://arxiv.org/abs/1606.06565 ; Christiano, Leike, Brown et al. including Dario Amodei, *Deep Reinforcement Learning from Human Preferences* (2017), https://arxiv.org/abs/1706.03741 ; Irving, Christiano & Amodei, *AI Safety via Debate* (2018), https://arxiv.org/abs/1805.00899 ; Ziegler, Stiennon, Wu et al. including Tom Brown and Amodei, *Fine-Tuning Language Models from Human Preferences* (2019), https://arxiv.org/abs/1909.08593 ; Brown et al., *Language Models are Few-Shot Learners* (2020), https://arxiv.org/abs/2005.14165 .
