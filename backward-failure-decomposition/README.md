@@ -29,3 +29,7 @@ Status: public research preprint; not peer-reviewed. The existing repository's e
 ## Two-line case research
 
 Each case distinguishes **Line 1 (model-family developmental history)** from **Line 2 (the independently traced scientific history of the smaller problem)**. Cases 01–05 were updated with Line 2 sections; Case 06 includes both lines, beginning Line 2 in 2026. The [integrated monograph](MONOGRAPH.md) includes these supplements. Historical parallels never count as model checkpoints by resemblance alone.
+
+## Case 07 (investigation underway)
+
+- [Case 07: Claude Haiku 4.5 external research admission ledger](./10-the-agent-that-filed-a-false-tip-research-ledger.md) — Claude-tested studies in Line 1; other historical problem studies in Line 2. This is a research ledger, not a completed case.
