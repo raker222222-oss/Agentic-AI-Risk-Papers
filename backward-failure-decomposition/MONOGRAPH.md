@@ -1403,3 +1403,11 @@ Each case should publish, where practicable, (1) a concrete candidate mechanism,
 
 **No promotion by analogy.** Similarity, shared developer employment, architecture, citations, or common benchmarks alone do not convert an outside system into a predecessor model. Retain unanswered questions and do not assert unobserved manifestations.
 
+---
+
+## Developer-research inclusion rule (Case 07 clarification, 10 October 2026)
+
+**Line 1 — Target developer research family.** Include relevant **Anthropic-conducted** model, training, evaluation, alignment and tool-use research in the Claude/Anthropic developmental research line, even if the report does not name an exact tested Claude checkpoint. Also include external researchers' **actual tests of identifiable Anthropic/Claude models**. Label each record **A** (Anthropic company research, model unspecified), **M** (named Anthropic model directly tested), or **E** (outside researcher directly tests named Claude). Treat broad applicability across Anthropic models as an **investigative hypothesis**, not proof that every model received the method or exhibited the same failure. Name observed behavior precisely.
+
+**Line 2 — Outside problem history.** OpenAI-only studies, other developers' experiments, benchmark studies without verified Claude testing, and historical software or human-factors research stay in Line 2 for an Anthropic incident. A mixed-model paper may contribute only its verified Claude results to Line 1. Shared technical ideas never by themselves establish a checkpoint ancestor.
+
