@@ -1,5 +1,7 @@
 # The Ghosts in the Machine
 
+**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
+
 **Tracing AI Failures Backward** — Backward Failure Decomposition (BFD), integrated research monograph, v1.1 (10 October 2026), R. Rajan.
 
 **[Read the complete monograph](MONOGRAPH.md)**
