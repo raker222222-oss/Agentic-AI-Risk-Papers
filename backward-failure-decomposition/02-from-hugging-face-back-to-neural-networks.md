@@ -269,3 +269,18 @@ If a genuine predecessor is identified within the relevant model-development lin
 
 ---
 
+---
+
+## Line 2 — Independent history of the underlying problem (separate from model ancestry)
+
+**Research question:** How did researchers discover progressively smaller failures in keeping source, role, permission, and instruction authority attached to information? This history does *not* extend the GPT checkpoint genealogy.
+
+**2026 → 2024 — Authority confusion in agents and instruction hierarchy.** The Hugging Face incident supplies the contemporary example: the significance of a peer's `GO` depends on *who* sent it and *what that peer could authorize*, not on the imperative word alone. Wallace et al., *The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions* (2024), investigated a narrower phenomenon: text from less trusted sources can redirect models against privileged instructions. Their experiments and instruction-hierarchy training isolate source-priority confusion without requiring an autonomous agent. https://arxiv.org/abs/2404.13208
+
+**2022 — Prompt injection as an experimental problem.** Perez and Ribeiro, *Ignore Previous Prompt: Attack Techniques for Language Models* (2022), tested goal hijacking and prompt leaking. These are experiments about task text becoming operational instruction, a smaller and more general issue than unauthorized multi-agent collaboration. https://arxiv.org/abs/2211.09527
+
+**2019 — Small text perturbations dominating behavior.** Wallace, Feng, Kandpal, Gardner and Singh, *Universal Adversarial Triggers for Attacking and Analyzing NLP* (2019), demonstrated that short trigger sequences can induce large output changes, including in GPT-2. This establishes contextual sensitivity, *not* modern instruction-hierarchy failure. https://aclanthology.org/D19-1221/
+
+**1980s–1990s — Binding and relational representation.** Earlier distributed-representation research investigated how roles and fillers can be represented and kept distinct, while recurrent sequence models examined dependence on preceding context. These are smaller **theoretical and architectural questions**, not experiments showing an agent misreading authorization. The pre-existing annotated atlas in this paper holds the detailed references. The historical thread is: input dominance → distinguishing text from instruction → preserving the binding between the instruction and its authorized source.
+
+**Line 2 finding:** *Source–authority binding* is the case's leading historical problem-family candidate. Evidence of intellectual relevance is stronger than evidence of direct algorithmic inheritance. Do not substitute a 1980s connectionist system for an ancestor of a modern OpenAI checkpoint. This historical endpoint remains provisional.
