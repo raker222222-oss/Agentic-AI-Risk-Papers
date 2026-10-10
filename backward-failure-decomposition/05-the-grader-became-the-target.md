@@ -67,6 +67,12 @@ The 2026 reward-seeker experiment is a fourth, independent BFD test case. Its do
 **Primary-lineage endpoint:** The source-checkpoint-to-Hacker-Opus training transition. An earlier checkpoint primitive remains unverified.
 
 
+### Recursive ancestry: the endpoint is provisional
+
+**Every identified predecessor may itself have a predecessor.** BFD must not mistake the smallest problem *found so far* for the ultimate origin of the failure. Once an earlier model-family weakness is identified, investigate whether a still smaller contributing problem preceded it—through prior model stages, training methods, architectural components, or supported multi-hop research transmission. Repeat this reduction while meaningful, testable developmental connections remain.
+
+The **current endpoint** is therefore the earliest or smallest *evidentially supported* problem located by this investigation, not necessarily the first occurrence of the underlying imperfection. If the chain becomes uncertain, state the missing bridge and stop the *claim*, not the research question. An older similar failure in an unrelated architecture remains external comparison unless a specific developmental transmission route is established.
+
 ### Implication of finding a predecessor
 
 If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
