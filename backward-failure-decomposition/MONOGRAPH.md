@@ -6,6 +6,9 @@
 
 ## Introduction
 
+**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
+
+
 Backward Failure Decomposition investigates documented contemporary AI failures backward through smaller defects or mechanisms in the *relevant model-development lineage*. An independent archive of older similar failures provides external comparison but **cannot establish an ancestor or move a model-lineage endpoint by similarity alone**. This monograph combines the theory, four distinct case studies, comparative synthesis, and a research agenda. The studies test the method; they do not collectively prove a universal theory.
 
 ## Contents
@@ -33,6 +36,8 @@ Backward Failure Decomposition investigates documented contemporary AI failures 
 **R. Rajan | Foundational working paper | revised 10 October 2026**
 
 **Status:** Research proposal and methodological theory. This paper defines a general method. It does not treat the Hugging Face or Anthropic incidents as proofs of universal ancestry.
+
+**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
 
 ## The Primitive-Search Objective and Prior Work
 
