@@ -134,3 +134,13 @@ Each case should publish, where practicable, (1) a concrete candidate mechanism,
 
 **Status:** Dated assessment of publicly reported tests, not permanent closure findings. Update each rating when a matched retest or stronger mechanistic evidence appears. Cross-case convergence remains explicitly deferred.
 
+---
+
+## Evidence admission rule — External research in BFD Lines 1 and 2 (10 October 2026)
+
+**Line 1: model-family evidence.** An external evaluation is admitted to a named developer/model family's line only when the investigators **actually tested an identifiable model in that family** (e.g., a named Claude release for a Claude case, or a named OpenAI model for an OpenAI case). Record the exact model, researchers, experiment, observed outcome, and whether the outcome fits the progressively smaller failure family. Independent results on different versions of the same family are **family observations**, not automatically evidence of direct checkpoint inheritance. Publicly documented in-house base/pre-release models may also qualify; earlier work by a future employee, or studies merely using the company's published dataset on third-party models, do not qualify as tested-model evidence.
+
+**Line 2: independent history of the problem.** Research not confirmed to have tested a model in the case's family belongs here, even if its concepts are highly relevant. Trace progressively smaller problems backward with the actual researchers, dates, experimental systems, and limits. For studies testing multiple families, partition the *model-specific results*: Claude results may enter an Anthropic Case 07 Line 1, while results on unrelated systems remain Line 2; aggregate benchmark results cannot stand in for Claude-specific findings. A benchmark's compatibility with Claude, without a performed evaluation, does not establish a Claude result.
+
+**No promotion by analogy.** Similarity, shared developer employment, architecture, citations, or common benchmarks alone do not convert an outside system into a predecessor model. Retain unanswered questions and do not assert unobserved manifestations.
+
