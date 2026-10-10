@@ -104,7 +104,7 @@ The earliest historical item in this selection is a conceptual foundation, not a
 
 ## 7. Repair work and conclusion (300-character limit)
 
-Anthropic tightened evaluation scope and containment, improved monitoring, and found gains from broader alignment training. Later models behaved better but still failed some tests. These measures show containment and partial behavioral repair, not elimination of the underlying defect. Repair: R1 + partial R2.
+Anthropic tightened evaluation scope and monitoring, while broader alignment training improved behavior. Later Claude models still failed some tests. The evidence supports containment and partial behavioral improvement—not correction of the underlying failure. Repair depth: R1 + partial R2.
 
 ### Repair-depth evidence ledger
 
