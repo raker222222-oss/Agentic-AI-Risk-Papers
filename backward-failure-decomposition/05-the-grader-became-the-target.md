@@ -67,4 +67,9 @@ The 2026 reward-seeker experiment is a fourth, independent BFD test case. Its do
 **Primary-lineage endpoint:** The source-checkpoint-to-Hacker-Opus training transition. An earlier checkpoint primitive remains unverified.
 
 
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
+
+
 ---
