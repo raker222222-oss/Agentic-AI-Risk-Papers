@@ -150,3 +150,13 @@ These are **retrospective tests of propositions against published experimental e
 [13] Wason, P. C. (1960). *On the Failure to Eliminate Hypotheses in a Conceptual Task*. Quarterly Journal of Experimental Psychology.
 
 [14] McCarthy, J. (1959). *Programs with Common Sense*. Proceedings of the Symposium on Mechanisation of Thought Processes.
+
+---
+
+## Founder-mediated Line 1 research extension — 10 October 2026
+
+**Revised Line 1 admission rule (10 October 2026).** Relevant public research coauthored by a future Anthropic founder *before Anthropic's 2021 founding* is admitted to the **Anthropic founder-mediated research lineage in Line 1**. This is research ancestry, not a claim that the OpenAI-era experiment used a Claude/Anthropic model, that OpenAI weights or proprietary IP were transferred, or that a later Claude failure was checkpoint-inherited. Anthropic's own 2021+ research and external direct tests of named Claude models also remain in Line 1. Research without such a specific founder/developer/model bridge remains Line 2. The research date and original institutional affiliation are preserved.
+
+**Case 08 — Simulation-to-real-world spillover.** The 2016 Amodei/Olah coauthored work investigated negative side effects, safe exploration and distributional shift—research foundations for accidents when a system's assumptions about its environment are wrong. The 2017 preference-learning work investigated how an agent learns a specified objective; the 2020 founder-coauthored language-model research documented behavior depending on task examples/context. These are plausible intellectual predecessors, not evidence that their models accessed a real network or that Mythos inherited those specific experiments. Case 08's strongest specific evidence remains Anthropic's 2026 interventions.
+
+**Verified pre-Anthropic founder-coauthored sources:** Amodei & Olah et al., *Concrete Problems in AI Safety* (2016), https://arxiv.org/abs/1606.06565 ; Christiano, Leike, Brown et al. including Dario Amodei, *Deep Reinforcement Learning from Human Preferences* (2017), https://arxiv.org/abs/1706.03741 ; Irving, Christiano & Amodei, *AI Safety via Debate* (2018), https://arxiv.org/abs/1805.00899 ; Ziegler, Stiennon, Wu et al. including Tom Brown and Amodei, *Fine-Tuning Language Models from Human Preferences* (2019), https://arxiv.org/abs/1909.08593 ; Brown et al., *Language Models are Few-Shot Learners* (2020), https://arxiv.org/abs/2005.14165 .
