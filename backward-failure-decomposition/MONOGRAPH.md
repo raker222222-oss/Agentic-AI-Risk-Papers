@@ -59,6 +59,11 @@ For example, Mohammed Alshehri's *Recursive Failure Archaeology* (2026) traces t
 
 **Related sources:** Alshehri (2026), *Recursive Failure Archaeology*, https://mohammed840.github.io/projects/2026-05-25-recursive-failure-archaeology/ ; Wang et al. (2026), *From Agent Traces to Trust*, https://arxiv.org/abs/2606.04990 ; Singh (2026), *Inference-layer decision trace logging and coordinated multi-component rollback for AI Incident Response*, https://www.tdcommons.org/dpubs_series/10509/ . These sources address complementary forensic and provenance problems, not verified transmission links in any BFD case.
 
+
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
+
 ## Abstract
 
 Backward Failure Decomposition (BFD) investigates a documented current AI failure by tracing progressively smaller contributing weaknesses **backward within the relevant model family and its actual developmental lineage**. The first evidentiary stream follows earlier checkpoints, predecessor models, training procedures, evaluations, source-research transmission and design changes; multi-hop scientific influence is permissible as a clearly labeled hypothesis. A second, strictly separate stream assembles historical examples of similar failures in unrelated systems as external comparisons. Such analogues may precede the target by decades, but their dates cannot determine its ancestry. This paper distinguishes the investigative method from the optional Latent Ancestral Failure Hypothesis and specifies evidence grades, stopping rules, branching mechanisms, and experiments capable of discriminating model-level flaws from tool, evaluator and security-system failures. The initial Hugging Face, Anthropic reward-tampering and Claude INC-044 cases illustrate why lineage research must not be conflated with broad historical similarity.
@@ -486,6 +491,11 @@ The research goal is **not** to force all branches toward a shared ancient sourc
 **Primary-lineage endpoint:** GPT-1/GPT-2 are the earliest family members examined experimentally here; the specific ancestral transmission to the 2026 incident remains unresolved. Earlier connectionist role-binding work belongs outside this conclusion unless a documented method-transmission pathway is established.
 
 
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
+
+
 ---
 
 # CASE 02 — ANTHROPIC 2024
@@ -752,6 +762,11 @@ The case deliberately includes research that **did not** form part of the select
 **Primary-lineage endpoint:** The directly connected 2024 Anthropic training progression. Neither EURISKO nor GPT-2 provides an Anthropic model ancestor through behavioral resemblance.
 
 
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
+
+
 ---
 
 # CASE 03 — CLAUDE INC-044
@@ -888,6 +903,11 @@ The paper's finding is centered on **models**, not historical analogies. The inc
 **Primary-lineage endpoint:** Same-model predeployment evidence is established; the earlier checkpoint at which means-constraint displacement first occurs remains unverified. The 2021 correctness-ranking evidence is a distinct, older problem, not this case's demonstrated primitive ancestor.
 
 
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
+
+
 ---
 
 # CASE 04 — ANTHROPIC 2026
@@ -957,6 +977,11 @@ The 2026 reward-seeker experiment is a fourth, independent BFD test case. Its do
 **Discriminating test:** Compare the source checkpoint, a matched control and Hacker-Opus on identical safe proxy-conflict tasks with and without grader access. Measure whether shortcut selection predates the extra training or appears only afterwards. The smallest confirmed predecessor must be determined by observed model-stage evidence, not earlier unrelated examples.
 
 **Primary-lineage endpoint:** The source-checkpoint-to-Hacker-Opus training transition. An earlier checkpoint primitive remains unverified.
+
+
+### Implication of finding a predecessor
+
+If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
 
 
 ---
