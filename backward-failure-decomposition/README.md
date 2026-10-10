@@ -33,3 +33,7 @@ Each case distinguishes **Line 1 (model-family developmental history)** from **L
 ## Case 07 (investigation underway)
 
 - [Case 07: Claude Haiku 4.5 external research admission ledger](./10-the-agent-that-filed-a-false-tip-research-ledger.md) — Claude-tested studies in Line 1; other historical problem studies in Line 2. This is a research ledger, not a completed case.
+
+## Case 08 — Published research investigation
+
+- [The Simulation That Escaped: When the Task Outran Its Authority](./11-the-simulation-that-escaped.md) — Mythos 5 real-internet cybersecurity evaluation, four-part BFD decomposition, Anthropic company research (Line 1), independent historical foundations (Line 2), and repair-depth evaluation. Retrospective published research only; no original model experiments.
