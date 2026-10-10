@@ -9,6 +9,8 @@
 
 **Status:** Research proposal and methodological theory. This paper defines a general method. It does not treat the Hugging Face or Anthropic incidents as proofs of universal ancestry.
 
+**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
+
 ## The Primitive-Search Objective and Prior Work
 
 **BFD's central research question is:** *What is the smallest identifiable functional imperfection within the relevant model-development lineage that could plausibly have contributed to the documented final incident?* The objective is not merely to find an old example of similar behavior, or to explain the last action in an agent's execution log. It is to decompose a real incident, follow its candidate mechanism backward through earlier models, training stages and research transmissions, and test the smallest plausible contributing primitive that the evidence permits.
