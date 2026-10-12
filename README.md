@@ -11,6 +11,14 @@ This repository develops testable ideas about how advanced AI agents can fail in
 
 > **Status of this collection:** These are open research ideas, conjectures, pilot observations, and testable problem formulations—not completed empirical papers. The purpose is to make potentially useful failure modes explicit enough for other researchers to test, refine, reject, merge with existing frameworks, or develop experimentally. Giving a concept a name or notation here should not be read as evidence that the phenomenon has already been established. The notes focus on upstream failures in state reconstruction, interpretation, chronology, evidence handling, relational structure, recursive reasoning, state fidelity, and observation boundaries.
 
+## Backward Failure Decomposition (BFD): case-selection requirements
+
+BFD begins with a documented incident in a **specifically identifiable model** and works backward through that model's technical, training, and research lineage to isolate earlier components of the failure.
+
+**Incident model identification is a primary eligibility requirement.** A case must identify the responsible model by name and version, and preferably by checkpoint or release identifier, using verifiable incident reports, technical papers, evaluation records, appendices, or independent research. A product name, agent name, or provider name alone does not identify the incident model; cases without a sufficiently specific model identifier are deferred or excluded.
+
+Priority goes to cases with accessible primary incident evidence and documented technical or training predecessors. Model lineage must be distinguished from product-release chronology: a newer model name does not, by itself, establish inherited weights, training data, mechanisms, or behavior. External historical analogues are investigated separately and must not be presented as demonstrated ancestors of the incident model. Where direct causal inheritance is unknown, the analysis explicitly identifies the evidence gap.
+
 ## Master framework
 
 The series is organized around an upstream architectural problem: **language is a compressed representation of state, while a language model often has to reconstruct state from that compressed representation.** Because the inverse is underdetermined, learned priors participate directly in state construction.
