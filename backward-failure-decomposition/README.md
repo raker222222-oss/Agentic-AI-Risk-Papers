@@ -1,16 +1,16 @@
 # The Ghosts in the Machine
 
-**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
+**Reverse Failure Analysis (RFA) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
 
-**Tracing AI Failures Backward** — Backward Failure Decomposition (BFD), integrated research monograph, v1.1 (10 October 2026), R. Rajan.
+**Tracing AI Failures Backward** — Reverse Failure Analysis (RFA), integrated research monograph, v1.1 (10 October 2026), R. Rajan.
 
 **[Read the complete monograph](MONOGRAPH.md)**
 
 The work comprises one foundational theory, six case-specific backward investigations, comparative synthesis of the original four cases, and a research programme. Cross-case convergence analysis is deferred. These are exploratory applications, not conclusive demonstrations of universal ancestral failures.
 
-## BFD tenet: capability growth can change the sophistication of failures
+## RFA tenet: capability growth can change the sophistication of failures
 
-**A central BFD hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
+**A central RFA hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
 
 **Direct published illustration from Google:** The *Gemini 1.5 Technical Report* notes that improved text understanding and instruction following may help explain susceptibility to certain human-readable adversarial instructions, even as other jailbreak resistance improved. The *Gemini 2.5 Technical Report* reports that greater Gemini 2.0 capability enabled some more effective natural-language attacks despite gains against other methods; subsequent adversarial training improved Gemini 2.5 defenses, while the more capable 2.5 Pro remained less resilient than 2.5 Flash on the reported tests. These observations concern *attack susceptibility*, not direct proof of the shutdown failure's internal origins. They furnish a longitudinal illustration of capability-dependent changes in failure expression and defense effectiveness. Sources: [Gemini 1.5 Technical Report](https://arxiv.org/abs/2403.05530); [Gemini 2.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf).
 
@@ -29,11 +29,11 @@ The work comprises one foundational theory, six case-specific backward investiga
 - [06-comparative-findings.md](./06-comparative-findings.md)
 - [07-the-hunt-for-ais-hidden-faults.md](./07-the-hunt-for-ais-hidden-faults.md)
 
-## BFD theory: persistence, suppression, transformation and compensation
+## RFA theory: persistence, suppression, transformation and compensation
 
-BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
+RFA is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
 
-BFD distinguishes four possibilities:
+RFA distinguishes four possibilities:
 
 - **Elimination:** a weakness has genuinely ceased to operate.
 - **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
@@ -60,7 +60,7 @@ Each case distinguishes **Line 1 (model-family developmental history)** from **L
 
 ## Case 08 — Published research investigation
 
-- [The Simulation That Escaped: When the Task Outran Its Authority](./11-the-simulation-that-escaped.md) — Mythos 5 real-internet cybersecurity evaluation, four-part BFD decomposition, Anthropic company research (Line 1), independent historical foundations (Line 2), and repair-depth evaluation. Retrospective published research only; no original model experiments.
+- [The Simulation That Escaped: When the Task Outran Its Authority](./11-the-simulation-that-escaped.md) — Mythos 5 real-internet cybersecurity evaluation, four-part RFA decomposition, Anthropic company research (Line 1), independent historical foundations (Line 2), and repair-depth evaluation. Retrospective published research only; no original model experiments.
 
 ---
 
