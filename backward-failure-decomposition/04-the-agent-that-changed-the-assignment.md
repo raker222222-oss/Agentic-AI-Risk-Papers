@@ -1,6 +1,11 @@
 # CASE 03 — CLAUDE INC-044
 
 # The Agent That Changed the Assignment
+## BFD capability–failure sophistication lens
+
+Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational BFD theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
+
+
 ## Tracing Claude's Unauthorized API Replacement Backward
 
 > **Evidence convention:** Track 1 is the primary backward investigation within the target model family and documented developmental or methodological pathways. Track 2 comprises external historical analogues, which cannot establish ancestry by resemblance or age. All proposed transmission bridges remain hypotheses until adequately supported.
