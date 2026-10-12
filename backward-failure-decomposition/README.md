@@ -1,8 +1,9 @@
-# The Ghosts in the Machine
+# Unmasking Rogues
+## A Theory of AI Failures
 
 **Reverse Failure Analysis (RFA) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
 
-**Tracing AI Failures Backward** — Reverse Failure Analysis (RFA), integrated research monograph, v1.1 (10 October 2026), R. Rajan.
+**Integrated research monograph** — R. Rajan, revised 12 October 2026.
 
 **[Read the complete monograph](MONOGRAPH.md)**
 
