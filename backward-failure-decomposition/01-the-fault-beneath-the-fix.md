@@ -15,71 +15,23 @@ BFD is tested broadly through multiple cases, including evidence that challenges
 
 **Keywords:** Backward Failure Decomposition; model development; AI safety; latent weaknesses; capability growth; suppression; transformation; compensation; retrospective inference.
 
-## Central propositions and case-selection rule
+## Core theory and scope
 
-**Developmental proposition.** Some primitive functional weaknesses may remain relevant as models grow more capable and more constrained. An improving model can produce a *more sophisticated expression* of a weakness without having a uniformly higher error rate. Several simpler weaknesses may also interact to produce one incident.
+BFD begins with a documented failure in an **identifiable model** and reasons strictly **backward** through its model family and relevant research. Its testable hypothesis is that simpler weaknesses may persist, be eliminated, become less observable, or transform into more sophisticated failures as training, capabilities, safeguards and scaffolding accumulate. Several weaknesses may also combine in one incident. An earlier model need not reproduce the endpoint incident.
 
-**Backward-inference proposition.** Always start with the latest documented failure and its identified model, decompose it into components, then search backward through named predecessors and related research for simpler manifestations of the same failure family. Do not argue forward from a chosen primitive toward a modern incident.
+Interventions may produce **elimination** (the weakness ceases), **suppression** (fewer observed failures), **transformation** (different manifestations), or **compensation** (another safeguard prevents consequences). No failures in a finite test is not proof of universal elimination.
 
-**Intervention proposition.** Distinguish elimination, suppression, transformation and compensation. Better performance and zero observed failures in a finite evaluation do not establish that all variants have been reduced to zero.
+The case studies collectively test these propositions through reasoned inference, using published incident and lineage evidence. We separate **observed findings**, **inferences**, and **unresolved questions**. Unrelated historical analogues remain a separate research track. A detailed [Gemini illustration](#illustrative-application--google-gemini-longitudinal-research) shows how the reverse method can be applied to Google's longitudinal data.
 
-**Admission and inference.** A specific incident model identifier is essential; the model's family and published developmental research can support reasoned backward inference without inaccessible direct checkpoint-provenance evidence. Keep what was observed separate from what is inferred. Older research on unrelated systems remains comparative, not part of the specific model lineage.
+## Relation to prior research
 
-**Empirical illustration.** Google's Gemini 1.0–2.5 longitudinal security comparisons offer a worked example of capability-dependent vulnerability change. See [the detailed Gemini example](#illustrative-application--google-gemini-longitudinal-research) later in this paper. Gemini is one illustration, not the subject or definition of BFD.
-
-## BFD theory: persistence, suppression, transformation and compensation
-
-BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
-
-BFD distinguishes four possibilities:
-
-- **Elimination:** a weakness has genuinely ceased to operate.
-- **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
-- **Transformation:** a related weakness changes form or consequences as capabilities and environments change.
-- **Compensation:** another model component, external control or scaffold prevents a remaining weakness from producing an observable failure.
-
-These are competing possibilities, **not assumptions that all earlier flaws persist**. Successive training, fine-tuning, alignment, reinforcement learning, instruction hierarchies and scaffolding may improve measured reliability without proving a primitive issue has been nullified to zero. Zero failures in finite testing mean zero **observed** failures in those conditions, not demonstrated universal elimination. The relevant question is whether interventions eliminate, suppress, transform or compensate for the weakness; public observations often cannot distinguish them.
-
-The case studies test the **explanatory reach and limits of this theory collectively**. Public reports, model cards, appendices and independent evaluations can support or challenge a proposed developmental pattern; behavioral resemblance alone cannot prove training inheritance or internal causation. Technical validation may require inaccessible checkpoints, training records, interventions and representation studies. A backward inquiry could ultimately extend beyond model versions into learning or language acquisition, but that remains an open hypothesis, not an established endpoint.
-
-## The Primitive-Search Objective and Prior Work
-
-**BFD's central research question is:** *What is the smallest identifiable functional imperfection within the relevant model-development lineage that could plausibly have contributed to the documented final incident?* The objective is not merely to find an old example of similar behavior, or to explain the last action in an agent's execution log. It is to decompose a real incident, follow its candidate mechanism backward through earlier models, training stages and research transmissions, and test the smallest plausible contributing primitive that the evidence permits.
-
-A **primitive** here is a relatively simple failure condition or competence limitation (for example, incorrect authority assignment, inability to preserve a relational constraint, exploitable feedback, or failure to distinguish evidence from an instruction). It need not be a single neuron, an untrained system, or the historically earliest instance of that general problem. Nor need it be the sole cause: complex incidents may require multiple primitives combining with tools, permissions or environment conditions. A primitive counts as an *identified predecessor* only where behavior or technical transmission in the relevant development family supports the connection. If the bridge is missing, label the proposal a **candidate primitive**, not a finding of inheritance.
-
-The investigation must try to show both that the primitive was present and *how it could have contributed* to the final incident. This requires a chain of intermediate hypotheses, dated evidence, rival explanations, and—where possible—controlled experiments or checkpoint comparisons. A failure of tool access control, for example, must not automatically be relabeled a failure of model comprehension.
+A **candidate primitive** is a simpler functional limitation—such as misassigned authority, lost constraints, or an exploitable success proxy—that could contribute to the latest observed failure. It is an inference grounded in earlier behavior, not necessarily an identical defect or ultimate origin.
 
 ### Relation to existing methods
 
 The ingredients of BFD have substantial prior art. Post-incident forensics and root-cause analysis work backward through an execution environment; agent execution-provenance research traces evidence, tool calls and decisions; behavioral comparisons detect changes between model versions; model-lineage and data-attribution techniques identify relationships among checkpoints or training influences; reward-hacking research tests how specification exploits emerge or generalize. **These are relevant instruments and partial precedents, not evidence that the complete BFD programme has been previously proposed or that it is unprecedented.**
 
 For example, Mohammed Alshehri's *Recursive Failure Archaeology* (2026) traces the earliest consequential failure *within a particular agent execution*. Wang et al.'s *From Agent Traces to Trust* (2026) surveys evidence tracing and execution provenance across tools, memory, and actions. Such work differs in temporal target from BFD: BFD seeks a smaller *developmental precursor within the model's history* that could help explain a present incident. Our literature search has not identified a clearly matching general programme across a portfolio of agentic incidents, but this is a provisional novelty assessment, not a claim of exhaustive priority.
-
-**Two evidence tracks are mandatory.** Track 1, the primary inquiry, documents the target family's model stages, research and training bridges, observed behaviors and candidate primitives. Track 2 is a separate comparative history of similar exploits in unrelated systems. An earlier outside example, however striking, cannot establish ancestry or move the Track 1 endpoint. The search may legitimately terminate with an unresolved gap.
-
-**Operational success criterion:** a useful BFD case produces (a) the exact final incident; (b) a decomposed list of necessary and contingent conditions; (c) a model-family predecessor trace with link-by-link evidence grades; (d) the smallest defensible candidate primitive or a stated unresolved endpoint; and (e) an experiment that could discriminate that primitive from alternatives. Finding no ancestry is a valid outcome.
-
-**Related sources:** Alshehri (2026), *Recursive Failure Archaeology*, https://mohammed840.github.io/projects/2026-05-25-recursive-failure-archaeology/ ; Wang et al. (2026), *From Agent Traces to Trust*, https://arxiv.org/abs/2606.04990 ; Singh (2026), *Inference-layer decision trace logging and coordinated multi-component rollback for AI Incident Response*, https://www.tdcommons.org/dpubs_series/10509/ . These sources address complementary forensic and provenance problems, not verified transmission links in any BFD case.
-
-
-### Recursive ancestry: the endpoint is provisional
-
-**Every identified predecessor may itself have a predecessor.** BFD must not mistake the smallest problem *found so far* for the ultimate origin of the failure. Once an earlier model-family weakness is identified, investigate whether a still smaller contributing problem preceded it—through prior model stages, training methods, architectural components, or supported multi-hop research transmission. Repeat this reduction while meaningful, testable developmental connections remain.
-
-The **current endpoint** is therefore the earliest or smallest *evidentially supported* problem located by this investigation, not necessarily the first occurrence of the underlying imperfection. If the chain becomes uncertain, state the missing bridge and stop the *claim*, not the research question. An older similar failure in an unrelated architecture remains external comparison unless a specific developmental transmission route is established.
-
-### Implication of finding a predecessor
-
-If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
-
-## 1. The question
-
-When an autonomous AI system performs an unauthorized or unintended action, contemporary explanations often classify it as prompt injection, reward hacking, goal misgeneralization, authority confusion, a memory error, tool misuse, or a failed containment boundary. These classifications are useful but may identify only the nearest causal level. BFD asks a different question: **What simpler imperfection made this class of failure possible, and how far backward can a close functional predecessor be traced?**
-
-The primitive problem may have been harmless in a small system. It may not even have been classified as a failure when discovered. Later advances can greatly enlarge what the system can do, while training and safeguards make its smaller weaknesses hard to detect. Under a rare combination of access, incentives, ambiguous information, tool affordances, time pressure, and inadequate isolation, a related deficiency may become consequential.
-
-BFD does not presume that this explanation applies to every case. It offers a disciplined way to investigate whether it applies to a particular one.
 
 ## 2. Two propositions, not one
 
@@ -130,16 +82,6 @@ A vulnerability may be difficult to observe for several reasons:
 An ordinary pass is compatible with more than one of these. BFD therefore asks not only whether a system succeeds, but *why*, and what changes when conditions interact. A relevant conjunction might involve a long task, imperfect reward proxy, available write access, persuasive peer communication, missing supervision, and task-completion pressure. Different cases will have different triggers; no universal set is assumed.
 
 Rarity matters: a weakness may be almost invisible in routine tests yet consequential with external tools. This does not establish a frequency or imply that catastrophe is inevitable. It motivates controlled interaction tests in harmless environments.
-
-## Mandatory two-track evidence protocol (2026 revision)
-
-**PRIMARY — within-model-family reconstruction.** Start with the identified model and incident. Work backward through its earlier checkpoints and versions, the developer's predecessor systems, model-specific evaluations, documented training and alignment changes, and research or implementation methods plausibly transmitted into that lineage. A multi-hop pathway through papers, laboratories, algorithms, datasets or training procedures is admissible as a *hypothesis* when each link is described. Record whether a link is (M1) same checkpoint/prior evaluation, (M2) earlier model of the same family, (M3) documented development-method transmission, or (M4) proposed but unverified transmission. Mere functional resemblance is never enough to assign M1–M3. The primary endpoint is the earliest supported *lineage* observation; if the chain breaks, record the gap rather than replacing it with an analogy.
-
-**SECONDARY — external historical analogues.** Older independent systems, including symbolic AI, evolutionary computation, robotics, or unrelated model families, may exhibit comparable exploits. Label these (X) and discuss them in a distinct section and separate chronology. They show possible generality and offer experimental ideas; they do **not** extend the within-family genealogy, demonstrate transmission, or set the BFD endpoint. Earlier dates in Track X do not supersede Track M dates.
-
-**Explanatory vocabulary.** An observed failure (O), an experimentally supported mechanistic explanation (E), a documented historical link (H), and a proposed inference (I) must be visibly differentiated. A direct citation across generations is not mandatory; a plausible multi-hop bridge can still be investigated, but it cannot be promoted from inference to observation. Distinguish *model cognition/behavior* from system-level permissions, tooling, and evaluator design. Do not infer intent solely from a high score or an exploit outcome.
-
-**Required reporting format.** Every paper must give (1) target incident and relevant decomposition, (2) primary within-family reverse trace with a dated model-stage table, (3) explicit weakest/earliest supported lineage point and missing bridges, (4) separate external parallels if useful, (5) competing explanations and discriminating tests, and (6) two separately worded conclusions. No historical analogy may be described as an ancestor without an independently argued transmission bridge.
 
 ## 7. Standard BFD protocol
 
@@ -211,14 +153,6 @@ Create a source-anchored cross-company incident register, retaining primary repo
 For computational work, prioritize open model families with accessible intermediate checkpoints (for example, Pythia or OLMo when suitable), controlled training-material exposure, matched tasks and model/scaffold ablations. Record the distinction between a model knowing the rule, choosing to violate it, and being technically prevented from acting. For rare failures, pre-plan adequate sample sizes and interaction tests. Prefer safe simulated environments without real credentials or external targets.
 
 Where possible, compare both **failure history** and **remedy history** over time. A recurring vulnerability despite known remedies may reflect incomplete optimization objectives, new tool affordances, learned exploit capabilities, independently recreated mistakes, or combinations of these.
-
-## 12. Contribution and conclusion
-
-BFD's contribution is a **direction of inquiry**: beginning with a consequential failure and refusing to stop at its current technical label. It asks for a smaller precursor, follows it into earlier generations, investigates the intellectual and engineering bridges, and studies the safeguards that may have hidden or constrained its expression. Different failure families may lead to entirely different origins.
-
-The Latent Ancestral Failure Hypothesis makes an additional, testable suggestion: **primitive imperfections may become deeply obscured by advances in training and system design while remaining capable of resurfacing in transformed, much more consequential forms when circumstances align**. Evidence for that suggestion is likely to be cumulative, case-specific, and partly inferential rather than a single direct demonstration across decades.
-
-A forty-year-old minor anomaly may matter today not because models preserve its exact code, but because research practices, imperfect objectives, learned behaviour and recurring structural opportunities can keep an old functional problem relevant. BFD provides a way to investigate that possibility without assuming that every AI failure has the same history.
 
 ## Selected foundational and methodological references
 
