@@ -1,40 +1,31 @@
 # PART I — THEORY
 
 # The Fault Beneath the Fix
-## Worked example: Google's Gemini results read backward (BFD reverse regression)
-
-This example applies BFD to **one published failure family—indirect prompt injection**. It must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
-
-**Start with Gemini 2.5, not Gemini 1.0.** Google's *Gemini 2.5 Technical Report* and *Lessons from Defending Gemini Against Indirect Prompt Injections* document improved security after adversarial training but residual vulnerabilities, especially under attacks adapted to defenses. They caution that apparently impressive non-adaptive results can overstate robustness.
-
-**Move backward to Gemini 2.0 Flash.** Under the Tree of Attacks with Pruning (TAP) method, the reported attack success rate was **98.4%** for Gemini 2.0 Flash, compared with **53.6%** for Gemini 2.5 Flash. This is a comparison of the same broad attack method, not a claim of identical checkpoint training. Gemini 2.0 also improved resistance to other methods; the observed change is selective.
-
-**Move backward to Gemini 1.5 Flash-002.** Google reports that Gemini 2.0 Flash's 98.4% TAP success rate was **16.2 percentage points higher** than the Gemini 1.5 Flash-002 baseline (approximately **82.2%**). Google's *Gemini 1.5 Technical Report* independently found that human-readable handcrafted prompt injections were effective against 1.5 models, and suggested that improved instruction comprehension could contribute to this susceptibility.
-
-**Move backward to Gemini 1.0 Ultra.** The 1.5 report compares handcrafted exfiltration-style attacks with Gemini 1.0 Ultra. The older model supplies an earlier baseline for the same general problem: attacker-authored instructions in retrieved material can compete with the user's authorized instruction. Attack success differed substantially by model and information category, so no universal monotonic deterioration is implied.
-
-**Reverse inference:** The increasingly sophisticated defenses and attacks in Gemini 2.5 can be analyzed backward toward a relatively simple candidate failure primitive: **external content supplied as task data is at times granted operative instructional authority**. Google's longitudinal measurements show that added capability can change attack effectiveness, and that training and mitigations can reduce observed manifestations without establishing zero vulnerability in every condition. The chain is evidence for BFD's *explanatory usefulness*, not a claim that identical weights or one unchanged mechanism propagated through all checkpoints.
-
-**Sources:** [Gemini 2.5 Technical Report, §5.5 and Table 9](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf); [Lessons from Defending Gemini Against Indirect Prompt Injections](https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf); [Gemini 1.5 Technical Report, §9.5.1 and Table 32](https://arxiv.org/pdf/2403.05530).
-
-## BFD tenet: capability growth can change the sophistication of failures
-
-**A central BFD hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
-
-**Direct published illustration from Google:** The *Gemini 1.5 Technical Report* notes that improved text understanding and instruction following may help explain susceptibility to certain human-readable adversarial instructions, even as other jailbreak resistance improved. The *Gemini 2.5 Technical Report* reports that greater Gemini 2.0 capability enabled some more effective natural-language attacks despite gains against other methods; subsequent adversarial training improved Gemini 2.5 defenses, while the more capable 2.5 Pro remained less resilient than 2.5 Flash on the reported tests. These observations concern *attack susceptibility*, not direct proof of the shutdown failure's internal origins. They furnish a longitudinal illustration of capability-dependent changes in failure expression and defense effectiveness. Sources: [Gemini 1.5 Technical Report](https://arxiv.org/abs/2403.05530); [Gemini 2.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf).
-
-**Mandatory case-analysis question:** Starting with the latest documented failure, what simpler constraint, authority, goal, or evidence-handling imperfection can reasonably be inferred backward in named predecessor models? What new capability or scaffold could have changed the later manifestation? What published evidence favors elimination, suppression, transformation, or compensation? Record counterexamples and improvements, and distinguish observation from inference. Do not reverse the argument by starting with an old defect and attributing modern incidents to it.
-
-
 ## A Theory of Backward Failure Decomposition
 
-> **Evidence convention:** Track 1 is the primary backward investigation within the target model family and documented developmental or methodological pathways. Track 2 comprises external historical analogues, which cannot establish ancestry by resemblance or age. All proposed transmission bridges remain hypotheses until adequately supported.
+**R. Rajan | Foundational working paper | Revised 12 October 2026**
 
-**R. Rajan | Foundational working paper | revised 10 October 2026**
+**Status:** Proposed general theory and research methodology, not peer reviewed.
 
-**Status:** Research proposal and methodological theory. This paper defines a general method. It does not treat the Hugging Face or Anthropic incidents as proofs of universal ancestry.
+## Abstract
 
-**Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
+Backward Failure Decomposition (BFD) proposes a general theory and retrospective method for investigating whether sophisticated AI failures have simpler antecedents within identifiable model-development families. Starting with a documented incident in a **named model**, BFD decomposes its distinct failure components and argues strictly **backward** through earlier models, evaluations, training approaches and relevant research. The theory proposes that as capability, alignment, safeguards and scaffolding accumulate, some weaknesses may be eliminated, suppressed, compensated for, transformed, or combined into more consequential failures. Earlier manifestations need not resemble the modern incident exactly.
+
+BFD is tested broadly through multiple cases, including evidence that challenges its hypotheses. It relies on publicly accessible research and reasoned inference, without requiring inaccessible checkpoint-level proof or claiming to establish internal causal mechanisms. A separate historical track examines analogues outside the relevant model family without presenting them as technical ancestors. Zero observed failures under finite test conditions do not prove universal elimination. The research programme proposes questions that investigators with greater experimental access could test more deeply, possibly even extending into learning and language acquisition. Individual examples, including Google's longitudinal Gemini findings, illustrate the theory rather than define it.
+
+**Keywords:** Backward Failure Decomposition; model development; AI safety; latent weaknesses; capability growth; suppression; transformation; compensation; retrospective inference.
+
+## Central propositions and case-selection rule
+
+**Developmental proposition.** Some primitive functional weaknesses may remain relevant as models grow more capable and more constrained. An improving model can produce a *more sophisticated expression* of a weakness without having a uniformly higher error rate. Several simpler weaknesses may also interact to produce one incident.
+
+**Backward-inference proposition.** Always start with the latest documented failure and its identified model, decompose it into components, then search backward through named predecessors and related research for simpler manifestations of the same failure family. Do not argue forward from a chosen primitive toward a modern incident.
+
+**Intervention proposition.** Distinguish elimination, suppression, transformation and compensation. Better performance and zero observed failures in a finite evaluation do not establish that all variants have been reduced to zero.
+
+**Admission and inference.** A specific incident model identifier is essential; the model's family and published developmental research can support reasoned backward inference without inaccessible direct checkpoint-provenance evidence. Keep what was observed separate from what is inferred. Older research on unrelated systems remains comparative, not part of the specific model lineage.
+
+**Empirical illustration.** Google's Gemini 1.0–2.5 longitudinal security comparisons offer a worked example of capability-dependent vulnerability change. See [the detailed Gemini example](#illustrative-application--google-gemini-longitudinal-research) later in this paper. Gemini is one illustration, not the subject or definition of BFD.
 
 ## BFD theory: persistence, suppression, transformation and compensation
 
@@ -81,12 +72,6 @@ The **current endpoint** is therefore the earliest or smallest *evidentially sup
 ### Implication of finding a predecessor
 
 If a genuine predecessor is identified within the relevant model-development lineage, the finding implies that an earlier model or training stage **already exhibited the same or a sufficiently similar underlying problem**, potentially in a smaller form that was overlooked, not recognized as consequential, or hidden by limited capabilities, ordinary evaluations, compensating behaviors, or external safeguards. The modern incident may therefore represent a more visible or consequential expression of an older imperfection rather than the problem's first appearance. This is a **conditional interpretation**: historical evidence must establish the earlier manifestation, and further tests must determine whether the mechanism persisted, was reintroduced, or arose independently. A superficially similar historical incident outside the model family does not establish this implication.
-
-## Abstract
-
-Backward Failure Decomposition (BFD) investigates a documented current AI failure by tracing progressively smaller contributing weaknesses **backward within the relevant model family and its actual developmental lineage**. The first evidentiary stream follows earlier checkpoints, predecessor models, training procedures, evaluations, source-research transmission and design changes; multi-hop scientific influence is permissible as a clearly labeled hypothesis. A second, strictly separate stream assembles historical examples of similar failures in unrelated systems as external comparisons. Such analogues may precede the target by decades, but their dates cannot determine its ancestry. This paper distinguishes the investigative method from the optional Latent Ancestral Failure Hypothesis and specifies evidence grades, stopping rules, branching mechanisms, and experiments capable of discriminating model-level flaws from tool, evaluator and security-system failures. The initial Hugging Face, Anthropic reward-tampering and Claude INC-044 cases illustrate why lineage research must not be conflated with broad historical similarity.
-
-**Keywords:** backward failure decomposition; model lineage; training transmission; ancestral failure hypothesis; agentic AI; evaluation exploitation; historical analogues.
 
 ## 1. The question
 
@@ -181,6 +166,23 @@ Rarity matters: a weakness may be almost invisible in routine tests yet conseque
 A BFD paper should retain **all research materially encountered**, not only sources ultimately used in the preferred lineage. Its annotated bibliography should identify: publication date and original experiment date when different; system and setting; what was actually observed; authors' own explanation; the smaller functional problem; the safeguard introduced; relation to the present trace; and the strength and type of the historical connection. Adjacent fields can illuminate alternate causes or reveal more primitive problems. Surveys should not be mistaken for additional independent incidents, and theoretical results should not be relabelled as observed agent failures.
 
 The method's output is a network of dated evidence and reasoned connections—not an arbitrary continuous line through every year.
+
+## Illustrative application — Google Gemini longitudinal research
+
+This example applies BFD to **one published failure family—indirect prompt injection**. It must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
+
+**Start with Gemini 2.5, not Gemini 1.0.** Google's *Gemini 2.5 Technical Report* and *Lessons from Defending Gemini Against Indirect Prompt Injections* document improved security after adversarial training but residual vulnerabilities, especially under attacks adapted to defenses. They caution that apparently impressive non-adaptive results can overstate robustness.
+
+**Move backward to Gemini 2.0 Flash.** Under the Tree of Attacks with Pruning (TAP) method, the reported attack success rate was **98.4%** for Gemini 2.0 Flash, compared with **53.6%** for Gemini 2.5 Flash. This is a comparison of the same broad attack method, not a claim of identical checkpoint training. Gemini 2.0 also improved resistance to other methods; the observed change is selective.
+
+**Move backward to Gemini 1.5 Flash-002.** Google reports that Gemini 2.0 Flash's 98.4% TAP success rate was **16.2 percentage points higher** than the Gemini 1.5 Flash-002 baseline (approximately **82.2%**). Google's *Gemini 1.5 Technical Report* independently found that human-readable handcrafted prompt injections were effective against 1.5 models, and suggested that improved instruction comprehension could contribute to this susceptibility.
+
+**Move backward to Gemini 1.0 Ultra.** The 1.5 report compares handcrafted exfiltration-style attacks with Gemini 1.0 Ultra. The older model supplies an earlier baseline for the same general problem: attacker-authored instructions in retrieved material can compete with the user's authorized instruction. Attack success differed substantially by model and information category, so no universal monotonic deterioration is implied.
+
+**Reverse inference:** The increasingly sophisticated defenses and attacks in Gemini 2.5 can be analyzed backward toward a relatively simple candidate failure primitive: **external content supplied as task data is at times granted operative instructional authority**. Google's longitudinal measurements show that added capability can change attack effectiveness, and that training and mitigations can reduce observed manifestations without establishing zero vulnerability in every condition. The chain is evidence for BFD's *explanatory usefulness*, not a claim that identical weights or one unchanged mechanism propagated through all checkpoints.
+
+**Sources:** [Gemini 2.5 Technical Report, §5.5 and Table 9](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf); [Lessons from Defending Gemini Against Indirect Prompt Injections](https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf); [Gemini 1.5 Technical Report, §9.5.1 and Table 32](https://arxiv.org/pdf/2403.05530).
+
 
 ## 9. First applications, kept separate
 
