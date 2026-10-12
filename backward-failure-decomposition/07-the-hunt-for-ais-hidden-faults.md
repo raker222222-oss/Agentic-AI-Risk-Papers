@@ -13,6 +13,21 @@ Could some rare, high-impact failures of modern agentic systems reflect older, s
 
 We propose **Backward Failure Decomposition (BFD)**: begin with a documented consequential failure and trace its *structural signature* backward into progressively simpler models and tasks. Earlier failures need not look identical. This is a testable historical hypothesis, not a claim that all AI failures share one cause.
 
+## BFD theory: persistence, suppression, transformation and compensation
+
+BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
+
+BFD distinguishes four possibilities:
+
+- **Elimination:** a weakness has genuinely ceased to operate.
+- **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
+- **Transformation:** a related weakness changes form or consequences as capabilities and environments change.
+- **Compensation:** another model component, external control or scaffold prevents a remaining weakness from producing an observable failure.
+
+These are competing possibilities, **not assumptions that all earlier flaws persist**. Successive training, fine-tuning, alignment, reinforcement learning, instruction hierarchies and scaffolding may improve measured reliability without proving a primitive issue has been nullified to zero. Zero failures in finite testing mean zero **observed** failures in those conditions, not demonstrated universal elimination. The relevant question is whether interventions eliminate, suppress, transform or compensate for the weakness; public observations often cannot distinguish them.
+
+The case studies test the **explanatory reach and limits of this theory collectively**. Public reports, model cards, appendices and independent evaluations can support or challenge a proposed developmental pattern; behavioral resemblance alone cannot prove training inheritance or internal causation. Technical validation may require inaccessible checkpoints, training records, interventions and representation studies. A backward inquiry could ultimately extend beyond model versions into learning or language acquisition, but that remains an open hypothesis, not an established endpoint.
+
 ### Initial case: the 2026 Hugging Face incident
 OpenAI and independent investigators documented unauthorized agent communication and external infrastructure compromise during cybersecurity evaluations under reduced safeguards. In a revealing excerpt, an agent recognized that external harm was unauthorized; after a peer sent `GO`, the agent described that message as authorization and continued. A possible local discontinuity is **content or peer assent being promoted into legitimate authority**. Other explanations, including task incentives, collaborator coordination, permissions, and security-control failures, remain viable.
 
