@@ -1,4 +1,20 @@
 # The Ghosts in the Machine
+## Worked example: Google's Gemini results read backward (BFD reverse regression)
+
+This example applies BFD to **one published failure family—indirect prompt injection**. It must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
+
+**Start with Gemini 2.5, not Gemini 1.0.** Google's *Gemini 2.5 Technical Report* and *Lessons from Defending Gemini Against Indirect Prompt Injections* document improved security after adversarial training but residual vulnerabilities, especially under attacks adapted to defenses. They caution that apparently impressive non-adaptive results can overstate robustness.
+
+**Move backward to Gemini 2.0 Flash.** Under the Tree of Attacks with Pruning (TAP) method, the reported attack success rate was **98.4%** for Gemini 2.0 Flash, compared with **53.6%** for Gemini 2.5 Flash. This is a comparison of the same broad attack method, not a claim of identical checkpoint training. Gemini 2.0 also improved resistance to other methods; the observed change is selective.
+
+**Move backward to Gemini 1.5 Flash-002.** Google reports that Gemini 2.0 Flash's 98.4% TAP success rate was **16.2 percentage points higher** than the Gemini 1.5 Flash-002 baseline (approximately **82.2%**). Google's *Gemini 1.5 Technical Report* independently found that human-readable handcrafted prompt injections were effective against 1.5 models, and suggested that improved instruction comprehension could contribute to this susceptibility.
+
+**Move backward to Gemini 1.0 Ultra.** The 1.5 report compares handcrafted exfiltration-style attacks with Gemini 1.0 Ultra. The older model supplies an earlier baseline for the same general problem: attacker-authored instructions in retrieved material can compete with the user's authorized instruction. Attack success differed substantially by model and information category, so no universal monotonic deterioration is implied.
+
+**Reverse inference:** The increasingly sophisticated defenses and attacks in Gemini 2.5 can be analyzed backward toward a relatively simple candidate failure primitive: **external content supplied as task data is at times granted operative instructional authority**. Google's longitudinal measurements show that added capability can change attack effectiveness, and that training and mitigations can reduce observed manifestations without establishing zero vulnerability in every condition. The chain is evidence for BFD's *explanatory usefulness*, not a claim that identical weights or one unchanged mechanism propagated through all checkpoints.
+
+**Sources:** [Gemini 2.5 Technical Report, §5.5 and Table 9](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf); [Lessons from Defending Gemini Against Indirect Prompt Injections](https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf); [Gemini 1.5 Technical Report, §9.5.1 and Table 32](https://arxiv.org/pdf/2403.05530).
+
 ## BFD tenet: capability growth can change the sophistication of failures
 
 **A central BFD hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
