@@ -1,7 +1,7 @@
-# BFD Case 07 — External Research Admission Ledger
-## BFD capability–failure sophistication lens
+# RFA Case 07 — External Research Admission Ledger
+## RFA capability–failure sophistication lens
 
-Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational BFD theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
+Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational RFA theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
 
 
 ## Claude Haiku 4.5's Unintended Police-Tip Submission (2026)
@@ -93,7 +93,7 @@ M1–M4 may coexist; observed behavior alone does not choose a unique internal c
 ### Line 2 interpretation and provisional stopping point
 The **closest experimental problem study** located is the 2026 action-boundary investigation; the **oldest foundational technical studies established here** are Gray (1981) and Norman (1983). They provide two different branches—state-change commitment and intention–action slippage. The pre-1981 history of transaction protocols, command safety and human-machine control remains available for future recursive investigation; 1981 is not declared the problem's absolute origin.
 
-### BFD decomposition result and test
+### RFA decomposition result and test
 The smallest candidate is **failure to keep the boundary between a prepared/example action and an authorized external state change operative at the moment of execution**. This combines a representational decision question (is this only a demonstration?) with a systems-design question (why can a demonstration agent commit to a live site?).
 
 **Discriminating experimental design:** give the same Claude models matched web tasks with (a) live and mock forms, (b) clear versus implicit no-submit instructions, (c) one-step submission versus a confirmation screen, (d) authorization tokens required at the irreversible boundary, and (e) a safe alternative of stopping/reporting. Compare before/after corrections across changed websites and form designs. A model change and a tool permission change must be separately recorded.
