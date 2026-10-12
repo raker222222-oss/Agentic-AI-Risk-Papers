@@ -1,4 +1,11 @@
 # Open Research Ideas on Agentic AI Risk
+
+### Unmasking Rogues: A Theory of AI Failures
+
+[Read the foundational theory](backward-failure-decomposition/01-the-fault-beneath-the-fix.md) · [Read the integrated monograph](backward-failure-decomposition/MONOGRAPH.md)
+
+*Research programme examining how contemporary rogue AI behavior may be explained through simpler priors in earlier model generations.*
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040884.svg)](https://doi.org/10.5281/zenodo.23040884)
 
 **Research site:** https://raker222222-oss.github.io/Agentic-AI-Risk-Papers/
