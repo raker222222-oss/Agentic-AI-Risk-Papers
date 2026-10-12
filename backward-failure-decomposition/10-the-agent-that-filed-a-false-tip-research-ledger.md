@@ -1,4 +1,9 @@
 # BFD Case 07 — External Research Admission Ledger
+## BFD capability–failure sophistication lens
+
+Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational BFD theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
+
+
 ## Claude Haiku 4.5's Unintended Police-Tip Submission (2026)
 *Research-stage record — 10 October 2026; not a finished case report.*
 
