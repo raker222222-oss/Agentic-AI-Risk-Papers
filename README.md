@@ -19,6 +19,21 @@ BFD begins with a documented incident in a **specifically identifiable model** a
 
 Priority goes to cases with accessible primary incident evidence and documented technical or training predecessors. Model lineage must be distinguished from product-release chronology: a newer model name does not, by itself, establish inherited weights, training data, mechanisms, or behavior. External historical analogues are investigated separately and must not be presented as demonstrated ancestors of the incident model. Where direct causal inheritance is unknown, the analysis explicitly identifies the evidence gap.
 
+## BFD theory: persistence, suppression, transformation and compensation
+
+BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
+
+BFD distinguishes four possibilities:
+
+- **Elimination:** a weakness has genuinely ceased to operate.
+- **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
+- **Transformation:** a related weakness changes form or consequences as capabilities and environments change.
+- **Compensation:** another model component, external control or scaffold prevents a remaining weakness from producing an observable failure.
+
+These are competing possibilities, **not assumptions that all earlier flaws persist**. Successive training, fine-tuning, alignment, reinforcement learning, instruction hierarchies and scaffolding may improve measured reliability without proving a primitive issue has been nullified to zero. Zero failures in finite testing mean zero **observed** failures in those conditions, not demonstrated universal elimination. The relevant question is whether interventions eliminate, suppress, transform or compensate for the weakness; public observations often cannot distinguish them.
+
+The case studies test the **explanatory reach and limits of this theory collectively**. Public reports, model cards, appendices and independent evaluations can support or challenge a proposed developmental pattern; behavioral resemblance alone cannot prove training inheritance or internal causation. Technical validation may require inaccessible checkpoints, training records, interventions and representation studies. A backward inquiry could ultimately extend beyond model versions into learning or language acquisition, but that remains an open hypothesis, not an established endpoint.
+
 ## Master framework
 
 The series is organized around an upstream architectural problem: **language is a compressed representation of state, while a language model often has to reconstruct state from that compressed representation.** Because the inverse is underdetermined, learned priors participate directly in state construction.
