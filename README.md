@@ -11,28 +11,28 @@ This repository develops testable ideas about how advanced AI agents can fail in
 
 > **Status of this collection:** These are open research ideas, conjectures, pilot observations, and testable problem formulations—not completed empirical papers. The purpose is to make potentially useful failure modes explicit enough for other researchers to test, refine, reject, merge with existing frameworks, or develop experimentally. Giving a concept a name or notation here should not be read as evidence that the phenomenon has already been established. The notes focus on upstream failures in state reconstruction, interpretation, chronology, evidence handling, relational structure, recursive reasoning, state fidelity, and observation boundaries.
 
-## BFD tenet: capability growth can change the sophistication of failures
+## RFA tenet: capability growth can change the sophistication of failures
 
-**A central BFD hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
+**A central RFA hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
 
 **Direct published illustration from Google:** The *Gemini 1.5 Technical Report* notes that improved text understanding and instruction following may help explain susceptibility to certain human-readable adversarial instructions, even as other jailbreak resistance improved. The *Gemini 2.5 Technical Report* reports that greater Gemini 2.0 capability enabled some more effective natural-language attacks despite gains against other methods; subsequent adversarial training improved Gemini 2.5 defenses, while the more capable 2.5 Pro remained less resilient than 2.5 Flash on the reported tests. These observations concern *attack susceptibility*, not direct proof of the shutdown failure's internal origins. They furnish a longitudinal illustration of capability-dependent changes in failure expression and defense effectiveness. Sources: [Gemini 1.5 Technical Report](https://arxiv.org/abs/2403.05530); [Gemini 2.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf).
 
 **Mandatory case-analysis question:** Starting with the latest documented failure, what simpler constraint, authority, goal, or evidence-handling imperfection can reasonably be inferred backward in named predecessor models? What new capability or scaffold could have changed the later manifestation? What published evidence favors elimination, suppression, transformation, or compensation? Record counterexamples and improvements, and distinguish observation from inference. Do not reverse the argument by starting with an old defect and attributing modern incidents to it.
 
 
-## Backward Failure Decomposition (BFD): case-selection requirements
+## Reverse Failure Analysis (RFA): case-selection requirements
 
-BFD begins with a documented incident in a **specifically identifiable model** and works backward through that model's technical, training, and research lineage to isolate earlier components of the failure.
+RFA begins with a documented incident in a **specifically identifiable model** and works backward through that model's technical, training, and research lineage to isolate earlier components of the failure.
 
 **Incident model identification is a primary eligibility requirement.** A case must identify the responsible model by name and version, and preferably by checkpoint or release identifier, using verifiable incident reports, technical papers, evaluation records, appendices, or independent research. A product name, agent name, or provider name alone does not identify the incident model; cases without a sufficiently specific model identifier are deferred or excluded.
 
 Priority goes to cases with accessible primary incident evidence and documented technical or training predecessors. Model lineage must be distinguished from product-release chronology: a newer model name does not, by itself, establish inherited weights, training data, mechanisms, or behavior. External historical analogues are investigated separately and must not be presented as demonstrated ancestors of the incident model. Where direct causal inheritance is unknown, the analysis explicitly identifies the evidence gap.
 
-## BFD theory: persistence, suppression, transformation and compensation
+## RFA theory: persistence, suppression, transformation and compensation
 
-BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
+RFA is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
 
-BFD distinguishes four possibilities:
+RFA distinguishes four possibilities:
 
 - **Elimination:** a weakness has genuinely ceased to operate.
 - **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
