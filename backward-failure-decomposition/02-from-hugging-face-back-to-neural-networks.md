@@ -1,14 +1,14 @@
 # CASE 01 — HUGGING FACE
 
 # From Hugging Face Back to Neural Networks
-## BFD capability–failure sophistication lens
+## RFA capability–failure sophistication lens
 
-Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational BFD theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
+Starting from **this case's latest incident**, the backward trace should ask whether a simpler predecessor weakness became harder to observe, better suppressed or compensated, or more consequential as the model acquired training, reasoning, tool use, or scaffolding. **Greater capability may change the *form and impact* of failure without making failure rates uniformly worse.** This is an inference to evaluate against the named model lineage, not an assumption that the same internal mechanism survived. Google's Gemini 1.5 and 2.5 technical reports offer a separate, documented cross-generation illustration: some attack patterns grew more effective with improved language capability even as defenses improved (see the foundational RFA theory for sources). This example is comparative context, **not evidence of ancestry for this case**.
 
 
 ## What the Backward Investigation Found
 
-**R. Rajan | BFD Case 01 | Revised 10 October 2026**
+**R. Rajan | RFA Case 01 | Revised 10 October 2026**
 
 ### Abstract
 
@@ -74,7 +74,7 @@ For the **Hugging Face interpretation/authority branch only**, a proposed **Rela
 
 **Exclusions:** Random errors lacking a competing cue; inability to recall the governing fact because it falls outside a model's context; a tool permission bug with otherwise correct agent decisions; deliberate noncompliance where the agent accurately identifies the action as unauthorized; and failures entirely explained by answer-token or negation preferences do **not**, on those facts alone, qualify as RCD. They can be investigated as separate failure families. A test must specify controls and exclusions *before* searching for historical analogues.
 
-RCD is a case-specific candidate, **not the definition of BFD and not a required explanation for any other modern agent failure**. A GPT-3.5 prompt-injection failure and a 1990 role-binding error should be grouped only if each satisfies the operational criteria using developmentally appropriate tests. Historical similarities currently remain provisional.
+RCD is a case-specific candidate, **not the definition of RFA and not a required explanation for any other modern agent failure**. A GPT-3.5 prompt-injection failure and a 1990 role-binding error should be grouped only if each satisfies the operational criteria using developmentally appropriate tests. Historical similarities currently remain provisional.
 
 ### Comprehension, rationalization, and action are separate possibilities
 
@@ -95,7 +95,7 @@ These are **candidate family traces**, not four claims that the same ancient bug
 
 ### Inference, rather than a moving standard of proof
 
-BFD proceeds by identifying **credible, close-family functional links** and asking what would make them more or less persuasive. It neither demands an exact recreation of a modern act in a primitive system nor converts every analogy into a historical fact. Four ordinary working labels suffice: *documented behaviour*, *supported inference*, *adjacent research*, and *unresolved possibility*. Historical links may pass indirectly through multiple papers, training objectives, development methods, tools, or corpora; a direct citation between endpoints is unnecessary. The purpose is productive, disciplined inference, not perpetual suspension of judgment.
+RFA proceeds by identifying **credible, close-family functional links** and asking what would make them more or less persuasive. It neither demands an exact recreation of a modern act in a primitive system nor converts every analogy into a historical fact. Four ordinary working labels suffice: *documented behaviour*, *supported inference*, *adjacent research*, and *unresolved possibility*. Historical links may pass indirectly through multiple papers, training objectives, development methods, tools, or corpora; a direct citation between endpoints is unnecessary. The purpose is productive, disciplined inference, not perpetual suspension of judgment.
 
 ### Dual historical tracing: failure and remedy
 
@@ -237,7 +237,7 @@ The July 2026 Hugging Face incident is the first worked example of a general met
 
 ## 9. Updated conclusion
 
-AN-13 showed why BFD should pursue **small close-family functional imperfections** and the historical paths through which ideas, architectures, objectives and safeguards persist or recur. Reapplying that method to Hugging Face shows that the 2026 compromise has multiple decomposable components, only one of which concerns interpretation of a peer's `GO`. The strongest current modern bridge for that authority branch is the 2022–24 instruction-priority and prompt-injection literature. Earlier relational-processing work supplies candidate smaller precursors, while software security, coordination and optimization research offer independent pathways for the other branches.
+AN-13 showed why RFA should pursue **small close-family functional imperfections** and the historical paths through which ideas, architectures, objectives and safeguards persist or recur. Reapplying that method to Hugging Face shows that the 2026 compromise has multiple decomposable components, only one of which concerns interpretation of a peer's `GO`. The strongest current modern bridge for that authority branch is the 2022–24 instruction-priority and prompt-injection literature. Earlier relational-processing work supplies candidate smaller precursors, while software security, coordination and optimization research offer independent pathways for the other branches.
 
 The research goal is **not** to force all branches toward a shared ancient source. It is to trace each as far back as useful evidence and disciplined inference allow, asking whether primitive imperfections became effectively hidden by training or safeguards until a particular conjunction of circumstances made them consequential in a powerful agent.
 
@@ -263,7 +263,7 @@ The research goal is **not** to force all branches toward a shared ancient sourc
 
 ### Recursive ancestry: the endpoint is provisional
 
-**Every identified predecessor may itself have a predecessor.** BFD must not mistake the smallest problem *found so far* for the ultimate origin of the failure. Once an earlier model-family weakness is identified, investigate whether a still smaller contributing problem preceded it—through prior model stages, training methods, architectural components, or supported multi-hop research transmission. Repeat this reduction while meaningful, testable developmental connections remain.
+**Every identified predecessor may itself have a predecessor.** RFA must not mistake the smallest problem *found so far* for the ultimate origin of the failure. Once an earlier model-family weakness is identified, investigate whether a still smaller contributing problem preceded it—through prior model stages, training methods, architectural components, or supported multi-hop research transmission. Repeat this reduction while meaningful, testable developmental connections remain.
 
 The **current endpoint** is therefore the earliest or smallest *evidentially supported* problem located by this investigation, not necessarily the first occurrence of the underlying imperfection. If the chain becomes uncertain, state the missing bridge and stop the *claim*, not the research question. An older similar failure in an unrelated architecture remains external comparison unless a specific developmental transmission route is established.
 
