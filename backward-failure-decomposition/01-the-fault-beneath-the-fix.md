@@ -11,6 +11,21 @@
 
 **Backward Failure Decomposition (BFD) is a method for tracing a documented AI failure backward through its model-development lineage, progressively decomposing it until the smallest identifiable problem capable of contributing to the final incident is found.**
 
+## BFD theory: persistence, suppression, transformation and compensation
+
+BFD is a broad, retrospective **theory under examination across multiple documented cases**, not a claim to have established internal causation in any particular incident. Each study begins with an **identified incident model** (version and, when available, checkpoint), a primary incident record, and a documented developmental or research lineage. Cases that identify only a product, agent or provider are deferred. Earlier manifestations need not reproduce the endpoint incident: the theory asks whether **simpler limitations in the same failure family** can be observed in earlier generations and whether added training, reasoning, constraints, tool access and scaffolding could alter their expression or consequences.
+
+BFD distinguishes four possibilities:
+
+- **Elimination:** a weakness has genuinely ceased to operate.
+- **Suppression:** its measured manifestations decline under tested conditions, but it may still occur elsewhere.
+- **Transformation:** a related weakness changes form or consequences as capabilities and environments change.
+- **Compensation:** another model component, external control or scaffold prevents a remaining weakness from producing an observable failure.
+
+These are competing possibilities, **not assumptions that all earlier flaws persist**. Successive training, fine-tuning, alignment, reinforcement learning, instruction hierarchies and scaffolding may improve measured reliability without proving a primitive issue has been nullified to zero. Zero failures in finite testing mean zero **observed** failures in those conditions, not demonstrated universal elimination. The relevant question is whether interventions eliminate, suppress, transform or compensate for the weakness; public observations often cannot distinguish them.
+
+The case studies test the **explanatory reach and limits of this theory collectively**. Public reports, model cards, appendices and independent evaluations can support or challenge a proposed developmental pattern; behavioral resemblance alone cannot prove training inheritance or internal causation. Technical validation may require inaccessible checkpoints, training records, interventions and representation studies. A backward inquiry could ultimately extend beyond model versions into learning or language acquisition, but that remains an open hypothesis, not an established endpoint.
+
 ## The Primitive-Search Objective and Prior Work
 
 **BFD's central research question is:** *What is the smallest identifiable functional imperfection within the relevant model-development lineage that could plausibly have contributed to the documented final incident?* The objective is not merely to find an old example of similar behavior, or to explain the last action in an agent's execution log. It is to decompose a real incident, follow its candidate mechanism backward through earlier models, training stages and research transmissions, and test the smallest plausible contributing primitive that the evidence permits.
