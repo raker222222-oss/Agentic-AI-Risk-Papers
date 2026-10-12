@@ -1,7 +1,7 @@
 # PART I — THEORY
 
-# The Fault Beneath the Fix
-## A Theory of Reverse Failure Analysis
+# Unmasking Rogues
+## A Theory of AI Failures
 
 **R. Rajan | Foundational working paper | Revised 12 October 2026**
 
@@ -9,9 +9,9 @@
 
 ## Abstract
 
-Reverse Failure Analysis (RFA) proposes a general theory and retrospective method for investigating whether sophisticated AI failures have simpler antecedents within identifiable model-development families. Starting with a documented incident in a **named model**, RFA decomposes its distinct failure components and argues strictly **backward** through earlier models, evaluations, training approaches and relevant research. The theory proposes that as capability, alignment, safeguards and scaffolding accumulate, some weaknesses may be eliminated, suppressed, compensated for, transformed, or combined into more consequential failures. Earlier manifestations need not resemble the modern incident exactly.
+This paper proposes a general theory and retrospective method for investigating whether sophisticated AI failures have simpler antecedents within identifiable model-development families. Starting with a documented incident in a **named model**, RFA decomposes its distinct failure components and argues strictly **backward** through earlier models, evaluations, training approaches and relevant research. The theory proposes that as capability, alignment, safeguards and scaffolding accumulate, some weaknesses may be eliminated, suppressed, compensated for, transformed, or combined into more consequential failures. Earlier manifestations need not resemble the modern incident exactly.
 
-RFA is tested broadly through multiple cases, including evidence that challenges its hypotheses. It relies on publicly accessible research and reasoned inference, without requiring inaccessible checkpoint-level proof or claiming to establish internal causal mechanisms. A separate historical track examines analogues outside the relevant model family without presenting them as technical ancestors. Zero observed failures under finite test conditions do not prove universal elimination. The research programme proposes questions that investigators with greater experimental access could test more deeply, possibly even extending into learning and language acquisition. Individual examples, including Google's longitudinal Gemini findings, illustrate the theory rather than define it.
+The theory is tested broadly through multiple cases, including evidence that challenges its hypotheses. It relies on publicly accessible research and reasoned inference, without requiring inaccessible checkpoint-level proof or claiming to establish internal causal mechanisms. A separate historical track examines analogues outside the relevant model family without presenting them as technical ancestors. Zero observed failures under finite test conditions do not prove universal elimination. The research programme proposes questions that investigators with greater experimental access could test more deeply, possibly even extending into learning and language acquisition. Individual examples, including Google's longitudinal Gemini findings, illustrate the theory rather than define it.
 
 **Keywords:** Reverse Failure Analysis; model development; AI safety; latent weaknesses; capability growth; suppression; transformation; compensation; retrospective inference.
 
