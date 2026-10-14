@@ -42,6 +42,8 @@ A primitive functional weakness may survive in transformed form, be independentl
 
 The word **ancestral** therefore refers to a reconstructible functional and historical relationship, not necessarily direct inheritance of model weights. Some investigations may support direct developmental transmission; others may support scientific or engineering inheritance, training-mediated acquisition, or independent recurrence under shared constraints. These are distinct explanations and should remain distinguishable.
 
+This is a **search-guiding, conditional hypothesis**, not an assertion that every later failure preserves an earlier inherited defect. Evidence that a proposed precursor disappears in well-matched developmental comparisons while the later failure remains, or that a documented new training or system change adequately explains the outcome without the proposed earlier component, can disfavor that specific ancestral explanation. A missing historical record, by itself, is not evidence that the underlying behavior never existed.
+
 ## 2. The principle of progressive reduction
 
 A modern failure should be decomposed into smaller problems as the investigation moves backward. This does **not** require identical classifications. For example, a current agent interpreting a peer's message as permission may have a candidate predecessor in an instruction-following system's failure to preserve source priority; an even earlier system might inconsistently apply a relationship despite retaining the necessary entities. The farther-back issue is smaller, and its consequences may have been negligible.
@@ -135,7 +137,7 @@ Before beginning the historical search, the investigator records the initial fun
 
 The decomposition remains open to revision as new evidence emerges. Material revisions are explained, so the historical account does not merely reproduce categories selected after convenient predecessors have been found.
 
-For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward.
+**Every identified component must carry one descriptive connection label**, including when no predecessor is found. For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward. A concise component ledger should include **component, initial or revised definition, connection label, cited earlier observation, reason for the connection, and an observation that could weaken it**.
 
 Each proposed connection explains the relevance of the earlier observation, the developmental relationship inferred, and a plausible contrary observation that would weaken that explanation using published evidence. The account distinguishes the original investigators' observations, additional model-specific history, proposed developmental relationships, independent scientific research, and unresolved alternatives.
 
@@ -204,11 +206,19 @@ The theory is an evidence-grounded investigative proposal. Its contribution is t
 
 ## 8. Evaluating the research programme
 
-The useful question is not how many papers can be assembled under a broad metaphor. It is whether independent the backward investigation applications repeatedly yield (i) smaller explanatory components that were not apparent in the modern incident label; (ii) credible functional or historical bridges; (iii) experimentally discriminable predictions; and (iv) a clearer account of how safeguards corrected, compensated for, or contained the problem.
+The useful question is not how many papers can be assembled under a broad metaphor. It is whether independent backward investigations repeatedly yield (i) smaller explanatory components that were not apparent in the modern incident label; (ii) credible functional or historical bridges; (iii) observations that distinguish competing explanations; and (iv) a clearer account of how safeguards corrected, compensated for, or contained the problem.
 
 Some cases will stop near the modern incident, or resolve mainly to an ordinary software-security defect. Some may uncover an old close-family precursor without a particular route of transmission. Both outcomes should remain in the register. Across a growing inventory, the frequency and depth of useful backward traces can be reported without assuming a common ancestor.
 
 Potential falsifying findings for a **particular** proposed ancestry include a genuinely unrelated mechanism at an intermediate step, a presumed weak precursor that disappears under matched tests, a chronology inconsistent with the claimed transmission, or evidence that a modern event is fully explained by independent system constraints. Such outcomes refine the backward investigation rather than invalidate its general use.
+
+### Evaluating the usefulness of the method
+
+The retrospective method is evaluated by whether it produces informative functional decomposition, historically meaningful connections, and clearer distinctions among candidate explanations than the endpoint description alone. If investigations repeatedly stop without informative earlier connections, that limits the **added value of historical tracing in those records**, not the possibility that undocumented antecedents existed. Findings unfavorable to particular ancestral explanations are retained rather than converted into support by relabeling them as suppression or transformation.
+
+### Standard retrospective reporting format
+
+Each completed investigation should report: **(1)** what the original incident investigators observed; **(2)** additional model-family or developmental research recovered through backward investigation; **(3)** the inferred connections, alternatives, and contrary observations; **(4)** independent functional precedents explicitly separated from model ancestry; and **(5)** observations in existing or later-published research that would discriminate between interpretations. This is a research reporting structure, not a requirement to conduct new experiments.
 
 ## 9. A practical research agenda
 
