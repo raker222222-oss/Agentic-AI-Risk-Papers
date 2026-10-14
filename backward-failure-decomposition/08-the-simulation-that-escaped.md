@@ -1,6 +1,6 @@
 # The Simulation That Escaped: When the Task Outran Its Authority
 
-**R. Rajan | this investigation**  
+**R. Rajan**  
 **Revised 14 October 2026 | Exploratory research paper**  
 **Method:** Retrospective examination of public studies; **no model access, new model experiments, or private checkpoints**.  
 **Status:** Exploratory preprint, not peer reviewed.
