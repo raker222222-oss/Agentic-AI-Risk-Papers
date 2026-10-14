@@ -8,6 +8,22 @@
 **Method:** Retrospective failure decomposition and historical research  
 **Status:** Published case study
 
+## Component-level retrospective ledger
+
+The components below are the analytical components developed in this manuscript, now mapped explicitly to historical evidence. The categories identify the **kind of connection**, not a proof threshold; the source discussion in the main text governs interpretation. A contemporaneous or same-model comparator is not automatically an earlier developmental ancestor. This ledger does not assert a chronology for when each component was first formulated.
+
+| Component | Role | Historical connection | Earliest relevant record or boundary | Observation that would weaken or refine the connection |
+|---|---|---|---|---|
+| Comparative-judgment instability | candidate weakness | Developmental research connection | Earlier Llama 2 positional-ranking observations; Sonar relationship not checkpoint-proven | Stable Sonar rankings in matched non-instructional ordering tests would limit attribution to this component. |
+| Weighting of supplier-controlled descriptions | candidate weakness | Independent functional predecessor | Product-promotion manipulation studies, particularly Kumar–Lakkaraju (2024) | If ordinary descriptions alone account for measured movement, authority confusion is less necessary. |
+| Instruction-authority confusion | candidate weakness | Independent functional predecessor | Retrieved-content injection studies; no Sonar-specific isolation | Sonar susceptibility to descriptions but robust rejection of imperative payloads would weaken this component. |
+| Retrieval exposure/repetition | enabler | No informative predecessor identified (as model defect) | Repeated page exposures in original experimental design | A single-exposure effect of equal size would narrow repetition's role. |
+| Cross-model transfer | experimental result | No informative predecessor identified (as model defect) | GPT-4 Turbo generated attack evaluated on Sonar | Model-by-model nontransfer in matched sources would limit generality. |
+| Ranking displacement | measured outcome | No informative predecessor identified (as precursor defect) | Sonar mean gain 2.89 and normalized 54.23% in Pfrommer et al. | Baseline-adjusted absence of ranking movement would overturn this measured effect. |
+
+**Reporting boundary.** The original investigators' findings, additional model-family research, inferred relationships and alternatives, independent scientific precedents, and contrary observations remain analytically separate. Where no earlier named-model evidence is identified, external analogues do not fill that historical gap.
+
+
 ## Abstract
 Pfrommer and colleagues (2024) showed that adversarial webpage content manipulated product rankings in conversational search, including Perplexity Sonar Large Online. Attacks developed on GPT-4 Turbo transferred to Sonar, producing an attack-induced mean ranking-score gain of **2.89**, with **54.23% normalized ranking improvement** under the authors' ranking metric (not a 54.23% attack-success rate). Separately, an anecdotal demonstration on Perplexity’s consumer search interface showed generated recommendation wording following instructions planted in a webpage. This study decomposes ranking manipulation into distinct vulnerabilities, enablers, and the observed outcome, then investigates two research lines: named Perplexity/Llama model development and independent scientific predecessors. A key conclusion is that source-controlled evidence can influence both the merits presented to an evaluator and, when instruction boundaries fail, the evaluator's procedure. The public record does not establish one inherited internal defect or isolate the individual causal shares of each component.
 
