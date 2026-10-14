@@ -29,7 +29,7 @@ The work comprises one foundational theory, a growing series of case-specific ba
 - [04 — The Grader Became the Target](./04-the-grader-became-the-target.md)
 - [05 — The Threat Behind the Task](./05-the-threat-behind-the-task.md)
 - [06 — The Agent That Would Not Stop](./06-the-agent-that-would-not-stop.md)
-- [07 — The Agent That Filed a False Tip (research ledger; not a completed paper)](./07-the-agent-that-filed-a-false-tip-research-ledger.md)
+- [07 — The Agent That Filed a False Tip](./07-the-agent-that-filed-a-false-tip.md)
 - [08 — The Simulation That Escaped](./08-the-simulation-that-escaped.md)
 - [09 — When an Instruction Becomes Contagious](./09-when-an-instruction-becomes-contagious.md)
 
@@ -66,7 +66,7 @@ Each case distinguishes **Line 1 (model-family developmental history)** from **L
 
 ## the relevant investigation (investigation underway)
 
-- [the relevant investigation: Claude Haiku 4.5 external research admission ledger](./07-the-agent-that-filed-a-false-tip-research-ledger.md) — Claude-tested studies in Line 1; other historical problem studies in Line 2. This is a research ledger, not a completed case.
+- [the relevant investigation: Claude Haiku 4.5 external research admission ledger](./07-the-agent-that-filed-a-false-tip.md) — Claude-tested studies in Line 1; other historical problem studies in Line 2. This is a research ledger, not a completed case.
 
 ## the relevant investigation — Published research investigation
 
