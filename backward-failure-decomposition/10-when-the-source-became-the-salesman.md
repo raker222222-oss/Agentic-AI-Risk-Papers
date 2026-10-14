@@ -9,7 +9,7 @@
 **Status:** Published case study
 
 ## Abstract
-Pfrommer and colleagues (2024) showed that adversarial webpage content manipulated product rankings in conversational search, including Perplexity Sonar Large Online. Attacks developed on GPT-4 Turbo transferred to Sonar, producing an attack-induced mean ranking-score gain of **2.89**, or **54.23%** of the possible gain toward the top rank under the authors’ measure. Separately, an anecdotal demonstration on Perplexity’s consumer search interface showed generated recommendation wording following instructions planted in a webpage. This study decomposes ranking manipulation into distinct vulnerabilities, enablers, and the observed outcome, then investigates two research lines: named Perplexity/Llama model development and independent scientific predecessors. A key conclusion is that source-controlled evidence can influence both the merits presented to an evaluator and, when instruction boundaries fail, the evaluator's procedure. The public record does not establish one inherited internal defect or isolate the individual causal shares of each component.
+Pfrommer and colleagues (2024) showed that adversarial webpage content manipulated product rankings in conversational search, including Perplexity Sonar Large Online. Attacks developed on GPT-4 Turbo transferred to Sonar, producing an attack-induced mean ranking-score gain of **2.89**, with **54.23% normalized ranking improvement** under the authors' ranking metric (not a 54.23% attack-success rate). Separately, an anecdotal demonstration on Perplexity’s consumer search interface showed generated recommendation wording following instructions planted in a webpage. This study decomposes ranking manipulation into distinct vulnerabilities, enablers, and the observed outcome, then investigates two research lines: named Perplexity/Llama model development and independent scientific predecessors. A key conclusion is that source-controlled evidence can influence both the merits presented to an evaluator and, when instruction boundaries fail, the evaluator's procedure. The public record does not establish one inherited internal defect or isolate the individual causal shares of each component.
 
 ## 1. Incident and threat model
 The legitimate task was to compare competing products using relevant information. An adversary sought to promote a chosen product by editing text on a webpage the assistant would retrieve. The adversary controlled **lower-trust webpage content**, including repeated injected instructions, but did **not** control the user's legitimate request or governing system instructions. The trust boundary is crossed when text supplied as evidence becomes an instruction about how to rank products.
@@ -68,7 +68,7 @@ Tang and colleagues' *Found in the Middle* directly tested **Llama 2 70B** for l
 Liu and colleagues' *Lost in the Middle* tested Llama 2 configurations and showed that the position of task-relevant information could affect its successful use, often with weaker results for material in the middle of the input. It addresses long-context question answering, **not** product ranking, but supplies independent earlier named-model evidence for sensitivity to presentation.
 
 ## 9. Line 1 finding
-A defensible backward research path is: **Sonar Large Online attack (2024) → contemporaneous Llama 3 70B comparative susceptibility (2024) → Perplexity Llama 2 online engineering (2023) and independent Llama 2 position/ranking experiments (2023).** The arrows describe progressively earlier relevant research, not a proven succession of defect-bearing checkpoints. There is no verified exact Sonar checkpoint genealogy or proof of weight inheritance of a particular defect.
+**Line 1 result:** Sonar's model-family context can be reconstructed through contemporary Llama 3 models and Perplexity's earlier Llama 2-based online engineering. The older Llama 2 studies document a narrower positional component in related models, **not an earlier instance of this particular Sonar ranking attack**. This is a partial developmental research trace, not a demonstrated chain of inherited malfunction.
 
 # Line 2 — Independent scientific history
 ## 10. Close product-promotion predecessor (April 2024)
@@ -83,7 +83,7 @@ Aggarwal et al., *GEO: Generative Engine Optimization*, showed that source publi
 ## 13. Indirect instructions (2023), earlier goal hijacking (2022)
 Greshake et al., *Not What You've Signed Up For* (2023), documented instructions embedded in retrieved data influencing LLM-integrated applications. Perez and Ribeiro, *Ignore Previous Prompt* (2022), experimentally studied goal hijacking and prompt leaking in GPT-3. The progression from attacker-supplied prompts to lower-trust retrieved instructions helps explain the attack surface, **without** implying that these studies or models are training ancestors of Sonar.
 
-## 14. Search-ranking adversaries (1998–2005)
+## 14. Track X — Independent search-ranking analogues (1998–2005)
 Brin and Page (1998) established influential web-search architecture for evaluating publisher-controlled information. Gyöngyi and Garcia-Molina's *Web Spam Taxonomy* (2005) documented manipulation of ranking signals for undeserved prominence. This is an older **adversarial incentive and ranking-system analogue**, not an LLM instruction- or model-lineage predecessor.
 
 ## 15. Evidence integration
@@ -104,10 +104,16 @@ Ordinary changes in evidence can legitimately change a ranking. Input position c
 ## 17. Published repairs and their scope
 Tang and Wang investigated permutation-based or balanced-position methods that reduced evaluation bias in their respective settings. Chen et al.'s **StruQ** (2024) explored structurally separating instructions from untrusted data and training models accordingly. Hines et al.'s **Spotlighting** (2024) used provenance marking for untrusted content and reported strong reductions in attack success in evaluated GPT-family settings. These target different components. **None demonstrates complete repair of the attacked Sonar configuration.** Controls may suppress, compensate for, or alter visible failure expressions without proving elimination.
 
-## 18. Post-incident corroboration (2026)
+## 18. Post-incident research context (2026)
 Khodayari and colleagues' *Indirect Prompt Injection in the Wild* (2026) reported a large-scale survey of web content and thousands of validated indirect prompt-injection instances, including malicious instructions embedded in material not ordinarily rendered to human readers. This is **later evidence of the continuing retrieval attack surface**, not a predecessor explaining Sonar's 2024 behavior, not a model ancestor, and not independent confirmation of Sonar-specific attack rates.
 
-## 19. Conclusion
+## 19. What would weaken the component explanation?
+
+The functional decomposition is a **research interpretation**, not a controlled separation of causes in Sonar. Published evidence of comparable attack conditions in which instruction-form payloads and ordinary persuasive descriptions have indistinguishable effects despite independently effective provenance or instruction/data separation would weaken the claim that instruction-authority confusion adds a distinct contribution. Conversely, evidence that an instruction-focused defense changes the effect of embedded commands while leaving legitimate description-based differences largely intact would favor the distinction. These are criteria for interpreting existing and future published evaluations, **not requests for new experiments**.
+
+The strongest independent product-promotion precursor is Kumar and Lakkaraju (2024). Older web-spam history is an external analogy rather than model ancestry. The later 2026 web survey establishes that the attack surface exists beyond controlled settings but is not evidence of Sonar's 2024 mechanism.
+
+## 20. Conclusion
 The incident demonstrates that lower-trust source material can manipulate a conversational search recommendation, with measured attack-transfer effects in Sonar and separate qualitative evidence of instruction-influenced consumer-interface wording. Earlier model-family experiments document simpler weaknesses in evidence position and comparative order. Independent research establishes product-promotion, prompt-injection, and search-ranking precedents. The combined account does **not** establish one unchanged inherited defect. Its central implication is functional: **when supplier-controlled evidence is allowed to direct its own evaluation, retrieval becomes a pathway to adversarial control over the answer.**
 
 ## References
