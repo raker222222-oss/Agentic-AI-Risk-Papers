@@ -53,7 +53,11 @@ backward investigation distinguishes four possibilities:
 
 These are competing possibilities, **not assumptions that all earlier flaws persist**. Successive training, fine-tuning, alignment, reinforcement learning, instruction hierarchies and scaffolding may improve measured reliability without proving a primitive issue has been nullified to zero. Zero failures in finite testing mean zero **observed** failures in those conditions, not demonstrated universal elimination. The relevant question is whether interventions eliminate, suppress, transform or compensate for the weakness; public observations often cannot distinguish them.
 
-The case studies test the **explanatory reach and limits of this theory collectively**. Public reports, model cards, appendices and independent evaluations can support or challenge a proposed developmental pattern; behavioral resemblance alone cannot prove training inheritance or internal causation. Technical validation may require inaccessible checkpoints, training records, interventions and representation studies. A backward inquiry could ultimately extend beyond model versions into learning or language acquisition, but that remains an open hypothesis, not an established endpoint.
+The theory's methodology uses published incident and research evidence to form and refine developmental explanations. Observations, historical inference, and external analogues play distinct roles; missing research links and contrary findings remain part of the record.
+
+## Evidence and reasoned inference
+
+Backward investigation separates observed behavior from developmental inference, follows multi-hop scientific and engineering connections where informative, and preserves alternatives and unresolved gaps. It does not impose fixed proof grades. Functional decomposition and reconstruction of model-development history are distinct results; their evidence can be stronger or weaker independently.
 
 ## Evidence boundary
 
