@@ -270,7 +270,7 @@ Fourth, it offers a six-component convergence explanation showing why the later 
 
 Finally, it identifies the specific circumstances under which the components became consequential: **an unavailable authorized route, a discoverable substitute, an understood restriction and a grader that did not evaluate the prescribed method.**
 
-This is the distinctive explanatory contribution of *Unmasking Rogues* in Case 3.
+This is the distinctive explanatory contribution of *Unmasking Rogues* in this investigation.
 
 ### New research hypothesis
 
