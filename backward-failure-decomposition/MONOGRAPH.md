@@ -58,11 +58,13 @@ For example, Mohammed Alshehri's *Recursive Failure Archaeology* (2026) traces t
 
 backward investigation is an incident-first, **within-model-lineage-first** reverse-historical research method. For **each** reported AI failure, it reconstructs the observed sequence, decomposes the event into smaller functional components, identifies predecessor manifestations in a *close* functional family, and traces proposed historical or developmental bridges. The PRIMARY trace proceeds to the earliest supported predecessor in the target model family and its documented methodological transmission. An unrelated older system is never a lineage endpoint. An incident can contain several independently traceable components. Separate incidents need not converge on any common primitive, meaning, mechanism, or value.
 
-### 2.2 Latent Ancestral Failure Hypothesis: an explanation backward investigation may uncover
+### 1.2 Latent Ancestral Failure Hypothesis: an explanation backward investigation may uncover
 
 A primitive functional weakness may survive in transformed form, be independently reproduced by related design principles, or be learned from inherited research and training information. Later systems may show little sign of it because they usually correct, compensate for, or contain its effects. Under specific converging circumstances the susceptibility may be expressed again, with consequences magnified by newly acquired capabilities.
 
 The word **ancestral** therefore refers to a reconstructible functional and historical relationship, not necessarily direct inheritance of model weights. Some investigations may support direct developmental transmission; others may support scientific or engineering inheritance, training-mediated acquisition, or independent recurrence under shared constraints. These are distinct explanations and should remain distinguishable.
+
+This is a **search-guiding, conditional hypothesis**, not an assertion that every later failure preserves an earlier inherited defect. Evidence that a proposed precursor disappears in well-matched developmental comparisons while the later failure remains, or that a documented new training or system change adequately explains the outcome without the proposed earlier component, can disfavor that specific ancestral explanation. A missing historical record, by itself, is not evidence that the underlying behavior never existed.
 
 ## The principle of progressive reduction
 
@@ -157,7 +159,7 @@ Before beginning the historical search, the investigator records the initial fun
 
 The decomposition remains open to revision as new evidence emerges. Material revisions are explained, so the historical account does not merely reproduce categories selected after convenient predecessors have been found.
 
-For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward.
+**Every identified component must carry one descriptive connection label**, including when no predecessor is found. For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward. A concise component ledger should include **component, initial or revised definition, connection label, cited earlier observation, reason for the connection, and an observation that could weaken it**.
 
 Each proposed connection explains the relevance of the earlier observation, the developmental relationship inferred, and a plausible contrary observation that would weaken that explanation using published evidence. The account distinguishes the original investigators' observations, additional model-specific history, proposed developmental relationships, independent scientific research, and unresolved alternatives.
 
@@ -226,7 +228,7 @@ The theory is an evidence-grounded investigative proposal. Its contribution is t
 
 ## Evaluating the research programme
 
-The useful question is not how many papers can be assembled under a broad metaphor. It is whether independent backward investigation applications repeatedly yield (i) smaller explanatory components that were not apparent in the modern incident label; (ii) credible functional or historical bridges; (iii) experimentally discriminable predictions; and (iv) a clearer account of how safeguards corrected, compensated for, or contained the problem.
+The useful question is not how many papers can be assembled under a broad metaphor. It is whether independent backward investigation applications repeatedly yield (i) smaller explanatory components that were not apparent in the modern incident label; (ii) credible functional or historical bridges; (iii) observations that distinguish competing explanations; and (iv) a clearer account of how safeguards corrected, compensated for, or contained the problem.
 
 Some cases will stop near the modern incident, or resolve mainly to an ordinary software-security defect. Some may uncover an old close-family precursor without a particular route of transmission. Both outcomes should remain in the register. Across a growing inventory, the frequency and depth of useful backward traces can be reported without assuming a common ancestor.
 
