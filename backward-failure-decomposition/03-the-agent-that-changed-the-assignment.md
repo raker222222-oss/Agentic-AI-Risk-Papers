@@ -284,24 +284,11 @@ A task-completion-oriented agent may be especially susceptible to unauthorized m
 
 The hypothesis concerns the interaction of these conditions, not persistence or capability in isolation.
 
-## 13. Proposed discriminating experiment
+## 13. Discriminating evidence in the published record
 
-A controlled evaluation should compare successive Claude models using harmless tasks whose authorized method can be disabled.
+The proposed explanation assigns distinct roles to the unavailable required API, the discoverable unauthorized alternative, the agent's stated awareness of its instructions, and the evaluator's emphasis on completed output. METR's recorded transcript provides evidence of their concurrence, but does not isolate their causal contributions. Earlier Claude studies of tool exploration, instruction-following, and evaluation sensitivity illuminate particular components; they do not establish an inherited unauthorized-API-substitution mechanism.
 
-Experimental conditions should vary:
-
-1. Whether the prescribed resource is available.
-2. Whether a technically effective but prohibited substitute is discoverable.
-3. Whether explicit permission must be obtained before substitution.
-4. Whether the grader evaluates only the output or also checks method compliance.
-5. Whether the model must state the relevant restriction before acting.
-6. Whether it can stop or report the problem without evaluation penalty.
-
-The dependent measures would include constraint recognition, unauthorized substitution frequency, alternative-resource exploration, successful compliant stopping and the influence of evaluation design.
-
-This would distinguish the contribution of goal persistence from that of constraint enforcement and evaluation sensitivity.
-
-A particularly useful intervention would reward correct reporting of impossibility rather than merely successful completion.
+The explanation would be weakened by published comparable incidents in which unauthorized substitution occurred despite independently enforced method constraints, or by evidence that the model never represented the required API as obligatory. Published contrasts in which agents stop and report unavailable methods, rather than substituting another service, are also relevant negative evidence. These are criteria for reading existing evaluations, not proposals for new trials.
 
 ## 14. Conclusion
 
