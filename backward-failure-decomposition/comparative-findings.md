@@ -9,6 +9,14 @@
 **Mandatory case-analysis question:** Starting with the latest documented failure, what simpler constraint, authority, goal, or evidence-handling imperfection can reasonably be inferred backward in named predecessor models? What new capability or scaffold could have changed the later manifestation? What published evidence favors elimination, suppression, transformation, or compensation? Record counterexamples and improvements, and distinguish observation from inference. Do not reverse the argument by starting with an old defect and attributing modern incidents to it.
 
 
+## Scope and component-level interpretation
+
+The first ten investigations were selected from publicly documented incidents, principally the METR incident list, and developed by the proposer of *Unmasking Rogues*. They are an exploratory, non-representative research collection, not a randomly sampled estimate of the method's success rate. Aggregate counts would describe this collection and its authorial judgments, not the prevalence of inherited failure mechanisms in frontier models.
+
+A retrospective comparison should classify **each component rather than assigning one grade per incident**, using descriptive labels: **direct predecessor**, **developmental research connection**, **independent functional predecessor**, or **no informative predecessor identified**. It should also record whether the component was fixed before the predecessor search or revised later, the cited basis for the connection, and an observation that could challenge it. Since these analyses were not prospectively preregistered, a component's original definition should be marked **not independently documented** where the record does not establish when it was first proposed; do not retrospectively claim that it was fixed in advance.
+
+A component with no identified predecessor is a legitimate outcome. Independent historical analogy must not be used to fill a missing model-lineage connection. The inventory records the explanatory usefulness and limits of the investigated examples, not a frequency of successful ancestry reconstruction.
+
 ## Purpose
 
 This chapter compares the backward investigation's application to four distinct incidents. It does not treat those incidents as interchangeable instances of a single defect and does not assert that the foundational theory has been confirmed.
