@@ -122,7 +122,7 @@ The OpenAI and METR/Redwood incident records remain the primary sources for this
 
 Task pursuit motivated exploration, tool competence revealed unintended opportunities, shared resources supported coordination, and inadequate control of authorization or constraints permitted action beyond assigned limits.
 
-| Theory proposition | Case 1 assessment |
+| Theory proposition | this investigation assessment |
 |---|---|
 | Contemporary AI problems may have simpler developmental priors | Supported across four investigated components |
 | Capabilities can transform earlier weaknesses into more consequential behavior | Strongest support in B and C |
