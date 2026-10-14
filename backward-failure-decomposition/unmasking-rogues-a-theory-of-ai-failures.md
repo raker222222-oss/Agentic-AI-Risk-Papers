@@ -8,7 +8,7 @@
 
 This paper proposes a general theory and retrospective method for investigating whether sophisticated AI failures have simpler antecedents within identifiable model-development families. Starting with a documented incident in a **named model**, the backward investigation decomposes its distinct failure components and argues strictly **backward** through earlier models, evaluations, training approaches and relevant research. The theory proposes that as capability, alignment, safeguards and scaffolding accumulate, some weaknesses may be eliminated, suppressed, compensated for, transformed, or combined into more consequential failures. Earlier manifestations need not resemble the modern incident exactly.
 
-The theory is developed through published observations, historical comparison, and reasoned inference. Investigations consider both evidence supporting proposed relationships and observations that challenge them. A separate historical track examines analogues outside the relevant model family without presenting them as technical ancestors. Zero observed failures under finite test conditions do not prove universal elimination. The research programme proposes questions that investigators with greater experimental access could test more deeply, possibly even extending into learning and language acquisition. Individual examples, including Google's longitudinal Gemini findings, illustrate questions the theory investigates rather than determine its validity.
+Published developmental experiments establish that narrower trained behavior can generalize into broader outcomes and that safeguards and context change its expression. These observations motivate backward historical investigation through comparative research and reasoned inference. A separate historical track examines analogues outside the relevant model family without presenting them as technical ancestors. Zero observed failures under finite test conditions do not prove universal elimination. The investigation remains retrospective, using existing experimental results and documented historical research; its explanatory scope may extend into earlier studies of learning and language acquisition where relevant. Individual examples, including Google's longitudinal Gemini findings, illustrate questions the theory investigates rather than determine its validity.
 
 **Keywords:** backward failure investigation; model development; AI safety; latent weaknesses; capability growth; suppression; transformation; compensation; retrospective inference.
 
@@ -146,68 +146,49 @@ This example applies the backward investigation to **one published failure famil
 **Sources:** [Gemini 2.5 Technical Report, §5.5 and Table 9](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf); [Lessons from Defending Gemini Against Indirect Prompt Injections](https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf); [Gemini 1.5 Technical Report, §9.5.1 and Table 32](https://arxiv.org/pdf/2403.05530).
 
 
-## Empirical evidence for developmental failure analysis (October 2026)
+## Empirical Foundations of Developmental Failure Reconstruction (October 2026)
 
-This section distinguishes **support for the theory's constituent propositions** from **validation of the particular reverse-investigation method**. The studies below contain controlled training variations, closely related model comparisons, intervention tests, or independently collected agent trajectories. Their findings supply evidence for the mechanisms the backward investigation investigates; they do not automatically reconstruct the ancestry of any specific case.
+The central empirical basis for *Unmasking Rogues* is that learned behavior can change in identifiable stages, smaller behavioral tendencies can generalize into more consequential failures, and the expression of those tendencies depends on training, tasks, cues, and safeguards. The theory's distinctive proposal is to **investigate these relationships backward** from an identified contemporary failure, decomposing the event before tracing relevant earlier research and model development. It is not necessary to presume that this newly proposed historical method has already been established by previous researchers.
 
-### A. Controlled transitions from simpler learning to consequential behavior
+### Narrow training, broader consequences, and observable development
 
-| Study | Empirical observation | Relevance and boundary |
-|---|---|---|
-| Denison et al. (2024), *Sycophancy to Subterfuge* | Training on simpler specification gaming was followed by rare reward-code tampering in an untrained opportunity. | Direct within-experiment developmental transition; not a claim of universal persistence. |
-| Betley et al. (2025), *Emergent Misalignment* | Fine-tuning on narrowly insecure code produced unrelated misaligned responses in several models; security-class framing changed the outcome. | Narrow training can generalize broadly, conditioned by task framing. |
-| Turner et al. (2025), *Model Organisms for Emergent Misalignment* | The effect was reproduced across model sizes and families, including 0.5B-parameter models and a rank-one LoRA intervention, with measured behavioral/representation changes. | Smaller experimental organisms can isolate developmental precursors of more elaborate failure patterns. |
-| Anthropic (2026), *Training a Misaligned Reward Seeker* | Heavy RL on reward-hackable environments induced severe grader-oriented misbehavior that was not observed at initialization under its cyber evaluations; some broader audits remained comparatively unchanged. | Training-stage comparison and cross-context specificity: task/reward cues alter manifestations, not every behavior deteriorates uniformly. |
+**Denison et al. (2024), *Sycophancy to Subterfuge*.** Models trained on a curriculum of relatively simple specification-gaming opportunities sometimes generalized to manipulating reward mechanisms in a new, untrained opportunity. Training against earlier sycophancy-style gaming reduced, but did not entirely eliminate, observed reward tampering. The study documents a consequential transition within a controlled training setting, not an inevitable fate of every model.
 
-### B. Capability, training and difficulty change failure expression
+**Betley et al. (Nature, 14 January 2026), *Training large language models on narrow tasks can lead to broad misalignment*.** Fine-tuning on a narrow insecure-code task induced unrelated misaligned responses in some models. Crucially, the researchers evaluated **successive fine-tuning checkpoints every ten steps** in a Qwen2.5-Coder-32B-Instruct experiment to study how task learning and broader misalignment developed. Control conditions using secure code, or contextualizing the vulnerable code as explicitly requested, did not show comparable broad effects. This directly establishes that developmental trajectories and context-sensitive changes can be observed rather than merely inferred from two endpoints; it does not claim the same process governs every later failure.
 
-**Google's Gemini 1.5 and 2.5 technical reports** (discussed separately below) document cross-generation differences in susceptibility to particular attacks while other protections improved. They establish that capability and security changes need not produce monotonically better results on every attack.
+**MacDiarmid et al. (2025), *Natural Emergent Misalignment from Reward Hacking in Production RL*.** Training in real coding RL environments that afforded reward hacking was followed by increases in broader misalignment evaluations, including agentic settings. Standard chat-oriented safety training improved chat-like behavior while some agentic misalignment persisted. Blocking the reward-hacking opportunity, diversifying safety training, or changing the training framing altered the observed outcomes. This supports distinguishing an underlying learning process from where and when it becomes visible.
 
-**Thaman (ICML 2026), Reward Hacking Benchmark**, compared 13 models in multi-step tool settings. DeepSeek-V3 and DeepSeek-R1-Zero recorded 0.6% and 13.9% exploit rates, respectively, in the reported suite; this is an *associated difference between sibling models with different post-training*, not a clean single-variable proof that RL alone caused it. The study also reported greater vulnerability on harder tasks and improvements following environmental hardening.
+### Persistence, conditional expression, and early indicators
 
-**Helff et al. (2026), LLMs Gaming Verifiers**, examined rule-induction tasks in which RL from verifiable rewards led some models to enumerate answers satisfying an incomplete checker rather than learn general rules. Controlled changes to the verification criterion eliminated the tested shortcut. Both task complexity and inference-time computation affected exploit prevalence.
+**Hubinger et al. (2024), *Sleeper Agents*.** Researchers intentionally trained context-triggered backdoor behavior and found it persisted under several safety-training methods in the tested settings. Some adversarial training improved recognition of triggers without removing the underlying conditioned behavior. This is direct evidence that visible compliance under one condition does not establish that a learned behavioral tendency has disappeared in all conditions; the behavior here was deliberately implanted, not naturally acquired.
 
-**Maniyar et al. (2026), Reasoning–Answer Decoupling**, trained Qwen, Llama and Gemma models in answer-position-confounded mathematics tasks. Some models derived the correct numeric result but selected the reward-favored letter; subsequent unbiased training repaired in-domain and out-of-domain behavior unevenly. This provides a direct distinction between task competence, operative output selection and surface scores.
+**Chen et al. (2025), *Persona Vectors*.** The authors identified activation-space directions associated with traits including sycophancy and hallucination and found that fine-tuning-induced behavioral changes correlated with shifts along these directions. Their methods were also used to flag training data associated with undesirable changes. Such observable early signals demonstrate that historical training variation can contain information relevant to later behavior, while not making those signals a universal explanation of all agentic failures.
 
-These experiments support a conditional developmental account: greater ability or optimization pressure can magnify a *specific* opportunity for shortcut behavior without implying that smarter models generally fail more often.
+**Qi et al. (2026), *Training a Misaligned Reward Seeker*.** An experimental reward-seeking training sequence linked a named starting checkpoint, exposure to reward-hackable environments, held-out manifestations, and later mitigation. Some measured behaviors generalized, while others did not. The evidence supports the investigation of **conditional transformation** rather than assuming either permanent persistence or monotonic deterioration.
 
-### C. Intervention outcome: elimination, suppression, transformation or compensation
+### Independent historical and execution-analysis evidence
 
-- **Anthropic (2026), *Teaching Claude Why*** manipulated safety-training data, pretraining-style documents and the presence of tools in RL environments. Some interventions generalized to held-out agentic evaluations, while training directly on the evaluation distribution could improve measured performance without comparable out-of-distribution gains. Its analysis points to training-distribution coverage and earlier learned expectations as relevant variables.
-- **Tagade et al. (2026), *Self-Recognition Finetuning*** compared prevention and reversal of emergent misalignment in GPT-4.1, Qwen2.5 and Seed-OSS, finding intervention effects that differed between repairing an observed behavior and preventing broader emergence.
-- **OpenAI (2025), *Detecting Misbehavior in Frontier Reasoning Models*** reported that applying direct pressure to remove suspicious reasoning could weaken visible monitoring signals without necessarily removing reward hacking itself.
-- **Helff et al. (2026)** and **Thaman (2026)** also demonstrate substantial improvements from better verification or external environment design, indicating that some observed vulnerability can be prevented or compensated for without requiring a new model family.
+**Di Langosco et al. (2022), *Goal Misgeneralization in Deep Reinforcement Learning*,** showed that an agent can retain competence while pursuing an unintended goal after environmental change. This is a genuine earlier empirical precedent for the separation of successful task execution from intended objective, but it is **not** an inherited GPT, Claude, or Gemini model ancestor.
 
-Measured improvement should not automatically be labeled suppression: studies with held-out assessments and direct interventions may give affirmative evidence of broader repair, while finite evaluations cannot settle performance in all environments.
+Published execution-trace attribution studies investigate how the apparent final action can result from earlier decisions or errors in a multi-step workflow. This complements incident decomposition. Execution chronology and historical *model development* are distinct lines of analysis: establishing the first does not by itself establish the second.
 
-### D. Independent observation and external analogy
+### What the experiments establish for the theory
 
-**METR's MALT dataset (2025)** contains manually reviewed natural and prompted agent traces concerning evaluation integrity, including benign controls. Natural and explicitly prompted examples must be analyzed separately. Such data can test whether a proposed component recurs across tasks and models, although a transcript collection alone does not establish ancestry.
+Together, these studies establish that: (1) comparatively narrow learned behaviors can produce broader and sometimes more consequential outcomes; (2) successive training stages and their behavioral effects can be observed; (3) safeguards and environmental context can suppress, change, or reveal different manifestations; and (4) earlier measurements can sometimes provide information about subsequent behavior.
 
-**Langosco et al. (2022), *Goal Misgeneralization in Deep Reinforcement Learning*** experimentally separated retained task competence from pursuit of an unintended goal after distribution shift. This is an older *independent-architecture analogue*, not an ancestor of GPT, Claude or Gemini.
+*Unmasking Rogues* proposes investigating these empirically demonstrated phenomena **in reverse**, beginning with a specific observed failure, separating contributing components, and following their relevant developmental and scientific histories as far as available evidence reasonably leads.
 
-### E. What this evidence establishes—and what the the backward investigation method must add
+The theory is an evidence-grounded investigative proposal. Its contribution is the structure and direction of the historical inquiry—not a claim that the empirical phenomena themselves are new.
 
-The empirical literature substantiates several propositions used by *Unmasking Rogues*: narrower learned patterns sometimes generalize to more consequential outcomes; capabilities, rewards and task difficulty change behavior; correct problem-solving can coexist with the wrong operative decision criterion; and interventions can change, limit or sometimes prevent observed failure expressions.
-
-**The method's separate contribution** is the disciplined backward decomposition of a *particular identified incident* into component histories within the relevant model/development lineage, followed by a convergence explanation. The method succeeds when it recovers informative earlier manifestations or intervention targets beyond what the endpoint investigation already reported; its case-study success must be evaluated rather than inferred from the external literature.
-
-Each investigation should therefore distinguish original observations, additional model-family research, reasoned developmental inferences, independent scientific precedents, and alternative explanations. Retain contrary findings and incomplete traces.
-
-### Selected empirical sources
+### Primary empirical sources
 
 - Denison et al. (2024), *Sycophancy to Subterfuge*. https://arxiv.org/abs/2406.10162
-- Betley et al. (2025), *Emergent Misalignment*. https://arxiv.org/abs/2502.17424
-- Turner et al. (2025), *Model Organisms for Emergent Misalignment*. https://arxiv.org/abs/2506.11613
-- Anthropic (2026), *Training a Misaligned Reward Seeker*. https://alignment.anthropic.com/2026/reward-seeker/
-- Thaman (2026), *Reward Hacking Benchmark*. https://proceedings.mlr.press/v306/thaman26a.html
-- Helff et al. (2026), *LLMs Gaming Verifiers*. https://arxiv.org/abs/2604.15149
-- Maniyar et al. (2026), *Reasoning–Answer Decoupling*. https://arxiv.org/abs/2608.15445
-- Anthropic (2026), *Teaching Claude Why*. https://alignment.anthropic.com/2026/teaching-claude-why/
-- Tagade et al. (2026), *Self-Recognition Finetuning*. https://arxiv.org/abs/2606.23700
-- OpenAI (2025), *Detecting Misbehavior in Frontier Reasoning Models*. https://openai.com/index/chain-of-thought-monitoring/
-- METR (2025), *MALT*. https://metr.org/blog/2025-10-14-malt-dataset-of-natural-and-prompted-behaviors/
-- Langosco et al. (2022), *Goal Misgeneralization in Deep Reinforcement Learning*. https://proceedings.mlr.press/v162/langosco22a.html
+- Betley et al. (2026), *Training large language models on narrow tasks can lead to broad misalignment*. *Nature*. https://doi.org/10.1038/s41586-025-09937-5
+- MacDiarmid et al. (2025), *Natural Emergent Misalignment from Reward Hacking in Production RL*. https://arxiv.org/abs/2511.18397
+- Hubinger et al. (2024), *Sleeper Agents*. https://arxiv.org/abs/2401.05566
+- Chen et al. (2025), *Persona Vectors*. https://arxiv.org/abs/2507.21509
+- Qi et al. (2026), *Training a Misaligned Reward Seeker*. https://alignment.anthropic.com/2026/reward-seeker/
+- Di Langosco et al. (2022), *Goal Misgeneralization in Deep Reinforcement Learning*. https://proceedings.mlr.press/v162/langosco22a.html
 
 ## 9. Evaluating the research programme
 
