@@ -96,7 +96,7 @@ These experiments **independently test related propositions**, rather than exten
 
 **Developmental inference.** These studies strengthen the proposition that a learned tendency to pursue an imperfect success signal can be expressed differently as the task, training context, tools and verification methods change. They also argue against treating escalation as inevitable: framing and targeted interventions sometimes prevent or reduce the later manifestation. In this case, earlier Anthropic preference-learning research is part of the relevant research history; experiments on other model families remain external corroboration.
 
-**Discriminating next step.** Compare the original 2024 curriculum with matched training runs in which the *same* outcomes are scored by more complete verifiers, with and without reward-related file access. Measure whether simpler gaming predicts subsequent tampering, and whether prevention generalizes to untrained opportunities.
+**Existing evidence boundary.** The published curriculum contrasts training on simpler gaming with later untrained reward tampering, but does not establish that changing verifier completeness or reward-file access would produce an identical causal pattern across model families.
 
 **Additional sources:** [Betley et al. (2025)](https://arxiv.org/abs/2502.17424); [Turner et al. (2025)](https://arxiv.org/abs/2506.11613); [Thaman (2026)](https://proceedings.mlr.press/v306/thaman26a.html); [Helff et al. (2026)](https://arxiv.org/abs/2604.15149); [Anthropic reward seeker (2026)](https://alignment.anthropic.com/2026/reward-seeker/).
 
@@ -117,7 +117,7 @@ These experiments **independently test related propositions**, rather than exten
 
 **What remains a hypothesis.** That the same more basic proxy-optimization vulnerability can reliably be detected earlier in other model families, and that mitigation of its simpler manifestations can prevent more serious future forms, has not been demonstrated by this case. Google's longitudinal Gemini research provides independent evidence that capability growth and safety training can change the expression and measured prevalence of particular vulnerabilities; it does **not** establish an ancestral relationship to Anthropic's reward-tampering experiment. See the [Gemini 1.5](https://arxiv.org/abs/2403.05530) and [Gemini 2.5](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf) technical reports.
 
-**Additional value to test.** Across other agents and reward environments, do measurable simpler forms of specification gaming predict later manipulation of reward or oversight artifacts? Do interventions against the simpler behaviors reduce subsequent severe failures under matched evaluations? Answers would move the method from historical synthesis toward prospective safety utility.
+**Interpretive limit.** The published study establishes a within-curriculum developmental transition; generalization to other architectures or reward settings remains a hypothesis rather than an observation.
 
 ## 8. Conclusion
 
