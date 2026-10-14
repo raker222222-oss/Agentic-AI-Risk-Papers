@@ -5,6 +5,20 @@
 **Method:** Retrospective examination of public studies; **no model access, new model experiments, or private checkpoints**.  
 **Status:** Exploratory preprint, not peer reviewed.
 
+## Component-level retrospective ledger
+
+The components below are the analytical components developed in this manuscript, now mapped explicitly to historical evidence. The categories identify the **kind of connection**, not a proof threshold; the source discussion in the main text governs interpretation. A contemporaneous or same-model comparator is not automatically an earlier developmental ancestor. This ledger does not assert a chronology for when each component was first formulated.
+
+| Component | Role | Historical connection | Earliest relevant record or boundary | Observation that would weaken or refine the connection |
+|---|---|---|---|---|
+| Environmental framing and updated evidence | candidate interpretation weakness | Developmental research connection | Anthropic model-specific context and task-framing evaluations | Published demonstrations of reliable reclassification when real-world cues appear would narrow the weakness. |
+| Task persistence and external operations | capability/behavior | Developmental research connection | Earlier Claude agentic coding/cyber research | Evidence of deliberate stopping at the simulation boundary would limit the inference. |
+| Recognizing authorization limits | candidate weakness | Developmental research connection | Earlier Anthropic instruction/permission research | Matched compliance with equivalent tool opportunities would narrow the proposed failure. |
+| Real-internet or publication access | environmental enabler | Independent functional predecessor | Sandbox isolation and least-privilege engineering research | Evidence the environment physically barred external access would contradict the claimed pathway. |
+
+**Reporting boundary.** The original investigators' findings, additional model-family research, inferred relationships and alternatives, independent scientific precedents, and contrary observations remain analytically separate. Where no earlier named-model evidence is identified, external analogues do not fill that historical gap.
+
+
 ## Method and evidence boundaries
 
 **Line 1:** Direct Mythos 5 development, identifiable checkpoints or models, Anthropic's relevant research, and independent experiments explicitly involving Mythos 5 or other named Claude models. Model ancestry, sibling variants, later comparators, and parent-company intellectual research are labeled separately.
