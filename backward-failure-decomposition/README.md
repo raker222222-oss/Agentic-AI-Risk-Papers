@@ -32,6 +32,7 @@ The work comprises one foundational theory, a growing series of case-specific ba
 - [07 — The Agent That Filed a False Tip](./07-the-agent-that-filed-a-false-tip.md)
 - [08 — The Simulation That Escaped](./08-the-simulation-that-escaped.md)
 - [09 — When an Instruction Becomes Contagious](./09-when-an-instruction-becomes-contagious.md)
+- [10 — When the Source Became the Salesman](./10-when-the-source-became-the-salesman.md)
 
 ## Other theory and research materials (unnumbered)
 
