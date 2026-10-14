@@ -1,6 +1,6 @@
 # Comparative Findings: Four Tests of One Research Method
 
-## the backward investigation tenet: capability growth can change the sophistication of failures
+## Core tenet: capability growth can change the sophistication of failures
 
 **A central the backward investigation hypothesis is that an improving model may retain, suppress, compensate for, or transform an earlier weakness while acquiring the ability to express that weakness in more sophisticated or consequential ways.** Better overall benchmarks do not imply that all underlying control problems have been reduced to zero. Nor does a later, more elaborate failure require an identical earlier incident: backward analysis seeks simpler manifestations of the relevant failure family.
 
