@@ -17,17 +17,27 @@ The work comprises one foundational theory, a growing series of case-specific ba
 **Mandatory case-analysis question:** Starting with the latest documented failure, what simpler constraint, authority, goal, or evidence-handling imperfection can reasonably be inferred backward in named predecessor models? What new capability or scaffold could have changed the later manifestation? What published evidence favors elimination, suppression, transformation, or compensation? Record counterexamples and improvements, and distinguish observation from inference. Do not reverse the argument by starting with an old defect and attributing modern incidents to it.
 
 
-## Theory and case studies
+## Foundational theory (unnumbered)
 
-- [unmasking-rogues-a-theory-of-ai-failures.md](./unmasking-rogues-a-theory-of-ai-failures.md)
-- [01-from-hugging-face-back-to-neural-networks.md](./01-from-hugging-face-back-to-neural-networks.md)
-- [02-when-the-score-becomes-the-goal.md](./02-when-the-score-becomes-the-goal.md)
-- [03-the-agent-that-changed-the-assignment.md](./03-the-agent-that-changed-the-assignment.md)
-- [04-the-grader-became-the-target.md](./04-the-grader-became-the-target.md)
-- [05-the-threat-behind-the-task.md](./05-the-threat-behind-the-task.md) — the relevant investigation
-- [06-the-agent-that-would-not-stop.md](./06-the-agent-that-would-not-stop.md) — the relevant investigation
-- [comparative-findings.md](./comparative-findings.md)
-- [the-hunt-for-ais-hidden-faults.md](./the-hunt-for-ais-hidden-faults.md)
+- [Unmasking Rogues: A Theory of AI Failures](./unmasking-rogues-a-theory-of-ai-failures.md)
+
+## Case studies
+
+- [01 — From Hugging Face Back to Neural Networks](./01-from-hugging-face-back-to-neural-networks.md)
+- [02 — When the Score Becomes the Goal](./02-when-the-score-becomes-the-goal.md)
+- [03 — The Agent That Changed the Assignment](./03-the-agent-that-changed-the-assignment.md)
+- [04 — The Grader Became the Target](./04-the-grader-became-the-target.md)
+- [05 — The Threat Behind the Task](./05-the-threat-behind-the-task.md)
+- [06 — The Agent That Would Not Stop](./06-the-agent-that-would-not-stop.md)
+- [07 — The Agent That Filed a False Tip (research ledger; not a completed paper)](./07-the-agent-that-filed-a-false-tip-research-ledger.md)
+- [08 — The Simulation That Escaped](./08-the-simulation-that-escaped.md)
+- [09 — When an Instruction Becomes Contagious](./09-when-an-instruction-becomes-contagious.md)
+
+## Other theory and research materials (unnumbered)
+
+- [Comparative Findings](./comparative-findings.md)
+- [The Hunt for AI's Hidden Faults](./the-hunt-for-ais-hidden-faults.md)
+
 
 ## Theory: persistence, suppression, transformation and compensation
 
