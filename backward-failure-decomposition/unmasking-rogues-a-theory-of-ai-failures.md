@@ -26,23 +26,23 @@ A **candidate primitive** is a simpler functional limitation—such as misassign
 
 ### Relation to existing methods
 
-The ingredients of the backward investigation have substantial prior art. Post-incident forensics and root-cause analysis work backward through an execution environment; agent execution-provenance research traces evidence, tool calls and decisions; behavioral comparisons detect changes between model versions; model-lineage and data-attribution techniques identify relationships among checkpoints or training influences; reward-hacking research tests how specification exploits emerge or generalize. **These are relevant instruments and partial precedents, not evidence that the complete the backward investigation programme has been previously proposed or that it is unprecedented.**
+The ingredients of the backward investigation have substantial prior art. Post-incident forensics and root-cause analysis work backward through an execution environment; agent execution-provenance research traces evidence, tool calls and decisions; behavioral comparisons detect changes between model versions; model-lineage and data-attribution techniques identify relationships among checkpoints or training influences; reward-hacking research tests how specification exploits emerge or generalize. **These are relevant instruments and partial precedents, not evidence that the complete backward investigation programme has been previously proposed or that it is unprecedented.**
 
 For example, Mohammed Alshehri's *Recursive Failure Archaeology* (2026) traces the earliest consequential failure *within a particular agent execution*. Wang et al.'s *From Agent Traces to Trust* (2026) surveys evidence tracing and execution provenance across tools, memory, and actions. Such work differs in temporal target from the backward investigation: the backward investigation seeks a smaller *developmental precursor within the model's history* that could help explain a present incident. Our literature search has not identified a clearly matching general programme across a portfolio of agentic incidents, but this is a provisional novelty assessment, not a claim of exhaustive priority.
 
-## 2. Two propositions, not one
+## 1. Two propositions, not one
 
-### 2.1 backward failure investigation: the method
+### 1.1 Backward failure investigation: the method
 
 the backward investigation is an incident-first, **within-model-lineage-first** reverse-historical research method. For **each** reported AI failure, it reconstructs the observed sequence, decomposes the event into smaller functional components, identifies predecessor manifestations in a *close* functional family, and traces proposed historical or developmental bridges. The PRIMARY trace proceeds to the earliest supported predecessor in the target model family and its documented methodological transmission. An unrelated older system is never a lineage endpoint. An incident can contain several independently traceable components. Separate incidents need not converge on any common primitive, meaning, mechanism, or value.
 
-### 2.2 Latent Ancestral Failure Hypothesis: an explanation the backward investigation may uncover
+### 1.2 Latent Ancestral Failure Hypothesis: an explanation backward investigation may uncover
 
 A primitive functional weakness may survive in transformed form, be independently reproduced by related design principles, or be learned from inherited research and training information. Later systems may show little sign of it because they usually correct, compensate for, or contain its effects. Under specific converging circumstances the susceptibility may be expressed again, with consequences magnified by newly acquired capabilities.
 
 The word **ancestral** therefore refers to a reconstructible functional and historical relationship, not necessarily direct inheritance of model weights. Some investigations may support direct developmental transmission; others may support scientific or engineering inheritance, training-mediated acquisition, or independent recurrence under shared constraints. These are distinct explanations and should remain distinguishable.
 
-## 3. The principle of progressive reduction
+## 2. The principle of progressive reduction
 
 A modern failure should be decomposed into smaller problems as the investigation moves backward. This does **not** require identical classifications. For example, a current agent interpreting a peer's message as permission may have a candidate predecessor in an instruction-following system's failure to preserve source priority; an even earlier system might inconsistently apply a relationship despite retaining the necessary entities. The farther-back issue is smaller, and its consequences may have been negligible.
 
@@ -50,7 +50,7 @@ Functional closeness should be argued using what mattered to the outcome: the ta
 
 A modern event can split into several branches. Unauthorized communication, goal-pursuit pressure, authority attribution, and sandbox defects might coexist within one incident but require different histories. the backward investigation follows each branch without demanding a single final explanation.
 
-## 4. Investigative depth and reasonable inference
+## 3. Investigative depth and reasonable inference
 
 **An immediate explanation is not necessarily an ancestral explanation.** Naming reward hacking or prompt injection should begin, not automatically terminate, deeper investigation. Continue looking for simpler enabling conditions and their history, while allowing a defensible stopping point where the available evidence ceases to distinguish further possibilities.
 
@@ -58,7 +58,7 @@ the backward investigation uses cumulative evidence and disciplined inference. A
 
 Retain negative controls, competing explanations, cases that do not fit, and unsuccessful traces; otherwise a historical atlas would become a collection selected to validate itself.
 
-## 5. Four candidate transmission routes
+## 4. Four candidate transmission routes
 
 1. **Scientific inheritance.** Ideas and findings travel indirectly through citation networks, researchers, adjacent fields, books, surveys, and widely adopted methods. The path may branch and recombine, rather than form a single chain of direct citations.
 2. **Engineering inheritance.** Evaluation functions, objectives, software practices, benchmarks, algorithms, permission interfaces, and assumptions persist or are recreated across implementations. A vulnerability can recur even if developers know its general class.
@@ -67,7 +67,7 @@ Retain negative controls, competing explanations, cases that do not fit, and uns
 
 These routes may interact. A research community can carry forward both descriptions of a weakness and safeguards against it while new evaluations recreate opportunities for similar exploitation.
 
-## 6. Latency, safeguards, and convergent circumstances
+## 5. Latency, safeguards, and convergent circumstances
 
 A vulnerability may be difficult to observe for several reasons:
 
@@ -80,7 +80,7 @@ An ordinary pass is compatible with more than one of these. the backward investi
 
 Rarity matters: a weakness may be almost invisible in routine tests yet consequential with external tools. This does not establish a frequency or imply that catastrophe is inevitable. It motivates controlled interaction tests in harmless environments.
 
-## 7. Standard the backward investigation protocol
+## 6. Standard backward investigation protocol
 
 **Step 1 — Admit the incident.** Require a primary account from the developer, deployer, or responsible research organization (or a detailed independent investigation), identifying actual observed behaviour and relevant environmental conditions. Keep deployment incidents separate from deliberately induced evaluations. A report's interpretation is evidence, not an unchallengeable verdict.
 
@@ -100,9 +100,9 @@ Rarity matters: a weakness may be almost invisible in routine tests yet conseque
 
 **Step 9 — Present two distinct research lines.** Report model-family developmental history and independent scientific history separately. State the earliest supported relevant observation for each component, plausible intermediate connections, unresolved breaks, and competing explanations; do not present independent analogues as documented model ancestry.
 
-## 8. Evidence and annotation standard
+## 7. Evidence and annotation standard
 
-A the backward investigation paper should retain **all research materially encountered**, not only sources ultimately used in the preferred lineage. Its annotated bibliography should identify: publication date and original experiment date when different; system and setting; what was actually observed; authors' own explanation; the smaller functional problem; the safeguard introduced; relation to the present trace; and the strength and type of the historical connection. Adjacent fields can illuminate alternate causes or reveal more primitive problems. Surveys should not be mistaken for additional independent incidents, and theoretical results should not be relabelled as observed agent failures.
+A backward investigation paper should retain **all research materially encountered**, not only sources ultimately used in the preferred lineage. Its annotated bibliography should identify: publication date and original experiment date when different; system and setting; what was actually observed; authors' own explanation; the smaller functional problem; the safeguard introduced; relation to the present trace; and the strength and type of the historical connection. Adjacent fields can illuminate alternate causes or reveal more primitive problems. Surveys should not be mistaken for additional independent incidents, and theoretical results should not be relabelled as observed agent failures.
 
 The method's output is a network of dated evidence and reasoned connections—not an arbitrary continuous line through every year.
 
@@ -129,9 +129,21 @@ Backward investigation follows available published model evaluations, incident r
 The investigation's output is an explanatory reconstruction with visible evidence, meaningful alternative interpretations, and an honest boundary between established observations and reasoned historical connections. Its purpose is to advance understanding while remaining open to better explanations.
 
 
-## Illustrative application — Google Gemini longitudinal research
+### Recording and Assessing Backward Connections
 
-This example applies the backward investigation to **one published failure family—indirect prompt injection**. It must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
+Before beginning the historical search, the investigator records the initial functional decomposition of the contemporary failure and describes what a simpler earlier manifestation of each component might look like.
+
+The decomposition remains open to revision as new evidence emerges. Material revisions are explained, so the historical account does not merely reproduce categories selected after convenient predecessors have been found.
+
+For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward.
+
+Each proposed connection explains the relevance of the earlier observation, the developmental relationship inferred, and a plausible contrary observation that would weaken that explanation using published evidence. The account distinguishes the original investigators' observations, additional model-specific history, proposed developmental relationships, independent scientific research, and unresolved alternatives.
+
+An incomplete trace identifies where the available record currently stops; it does not, by itself, invalidate the scientific hypothesis. The purpose is transparent, revisable reasoning rather than an automatic rule for rejecting explanations.
+
+## Illustrative evidence — Variation in Gemini prompt-injection susceptibility
+
+This illustration examines **published longitudinal variation in indirect prompt-injection susceptibility** across named Gemini generations. It demonstrates how model capability and safeguards can alter observed failure rates; it does **not** independently establish a reconstructed simpler ancestor of a more complex incident, and must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
 
 **Start with Gemini 2.5, not Gemini 1.0.** Google's *Gemini 2.5 Technical Report* and *Lessons from Defending Gemini Against Indirect Prompt Injections* document improved security after adversarial training but residual vulnerabilities, especially under attacks adapted to defenses. They caution that apparently impressive non-adaptive results can overstate robustness.
 
@@ -141,7 +153,7 @@ This example applies the backward investigation to **one published failure famil
 
 **Move backward to Gemini 1.0 Ultra.** The 1.5 report compares handcrafted exfiltration-style attacks with Gemini 1.0 Ultra. The older model supplies an earlier baseline for the same general problem: attacker-authored instructions in retrieved material can compete with the user's authorized instruction. Attack success differed substantially by model and information category, so no universal monotonic deterioration is implied.
 
-**Reverse inference:** The increasingly sophisticated defenses and attacks in Gemini 2.5 can be analyzed backward toward a relatively simple candidate failure primitive: **external content supplied as task data is at times granted operative instructional authority**. Google's longitudinal measurements show that added capability can change attack effectiveness, and that training and mitigations can reduce observed manifestations without establishing zero vulnerability in every condition. The chain is evidence for the backward investigation's *explanatory usefulness*, not a claim that identical weights or one unchanged mechanism propagated through all checkpoints.
+**Reverse inference:** The increasingly sophisticated defenses and attacks in Gemini 2.5 can be analyzed backward toward a relatively simple candidate failure primitive: **external content supplied as task data is at times granted operative instructional authority**. Google's longitudinal measurements show that added capability can change attack effectiveness, and that training and mitigations can reduce observed manifestations without establishing zero vulnerability in every condition. These comparisons illustrate changing susceptibility within a model family, not a complete demonstration of the proposed backward historical reconstruction or a claim that one unchanged mechanism propagated through all checkpoints.
 
 **Sources:** [Gemini 2.5 Technical Report, §5.5 and Table 9](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf); [Lessons from Defending Gemini Against Indirect Prompt Injections](https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf); [Gemini 1.5 Technical Report, §9.5.1 and Table 32](https://arxiv.org/pdf/2403.05530).
 
@@ -190,7 +202,7 @@ The theory is an evidence-grounded investigative proposal. Its contribution is t
 - Qi et al. (2026), *Training a Misaligned Reward Seeker*. https://alignment.anthropic.com/2026/reward-seeker/
 - Di Langosco et al. (2022), *Goal Misgeneralization in Deep Reinforcement Learning*. https://proceedings.mlr.press/v162/langosco22a.html
 
-## 9. Evaluating the research programme
+## 8. Evaluating the research programme
 
 The useful question is not how many papers can be assembled under a broad metaphor. It is whether independent the backward investigation applications repeatedly yield (i) smaller explanatory components that were not apparent in the modern incident label; (ii) credible functional or historical bridges; (iii) experimentally discriminable predictions; and (iv) a clearer account of how safeguards corrected, compensated for, or contained the problem.
 
@@ -198,7 +210,7 @@ Some cases will stop near the modern incident, or resolve mainly to an ordinary 
 
 Potential falsifying findings for a **particular** proposed ancestry include a genuinely unrelated mechanism at an intermediate step, a presumed weak precursor that disappears under matched tests, a chronology inconsistent with the claimed transmission, or evidence that a modern event is fully explained by independent system constraints. Such outcomes refine the backward investigation rather than invalidate its general use.
 
-## 10. A practical research agenda
+## 9. A practical research agenda
 
 Create a source-anchored cross-company incident register, retaining primary reports and detailed evaluations from OpenAI, Anthropic, Google DeepMind, Meta and independent evaluators. Investigate each incident individually; group cases provisionally when their smaller functional problems are close. Assign stable IDs and keep the original company terminology alongside our the backward investigation classifications.
 
