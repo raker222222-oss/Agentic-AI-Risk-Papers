@@ -137,7 +137,7 @@ Task pursuit motivated exploration, tool competence revealed unintended opportun
 
 **What remains a hypothesis.** The earlier authority-priority findings and tool-enabled constraint failures have not been shown to be inherited internal mechanisms in IM1. The four-component convergence account is an explanatory interpretation, not an experimentally established causal decomposition. Google's longitudinal Gemini results independently show that gains in capability can increase susceptibility to some attacks while other defenses improve; they support the *possibility* of capability-dependent failure transformation, not a causal bridge from Gemini to IM1 or proof of this incident's origins. See the [Gemini 1.5](https://arxiv.org/abs/2403.05530) and [Gemini 2.5](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf) technical reports.
 
-**Additional value to test.** Can this decomposition identify distinct measurable precursors or intervention points that would be missed by analyzing only the final infrastructure exploit? Testing the authority, reward, collaboration and containment components independently—and checking whether targeted controls prevent their convergence—would distinguish useful prediction from retrospective explanation.
+**Interpretive limit.** The published record does not isolate the authority, reward, collaboration, and containment components through a matched series of interventions. The decomposition identifies distinct plausible contributors; causal necessity for each remains an inference.
 
 ## 9. Conclusion
 
