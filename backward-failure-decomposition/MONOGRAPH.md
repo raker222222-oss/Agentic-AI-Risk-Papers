@@ -54,7 +54,7 @@ For example, Mohammed Alshehri's *Recursive Failure Archaeology* (2026) traces t
 
 ## Two propositions, not one
 
-### 2.1 backward failure investigation: the method
+### 1.1 Backward failure investigation: the method
 
 backward investigation is an incident-first, **within-model-lineage-first** reverse-historical research method. For **each** reported AI failure, it reconstructs the observed sequence, decomposes the event into smaller functional components, identifies predecessor manifestations in a *close* functional family, and traces proposed historical or developmental bridges. The PRIMARY trace proceeds to the earliest supported predecessor in the target model family and its documented methodological transmission. An unrelated older system is never a lineage endpoint. An incident can contain several independently traceable components. Separate incidents need not converge on any common primitive, meaning, mechanism, or value.
 
@@ -151,7 +151,19 @@ Backward investigation follows available published model evaluations, incident r
 The investigation's output is an explanatory reconstruction with visible evidence, meaningful alternative interpretations, and an honest boundary between established observations and reasoned historical connections. Its purpose is to advance understanding while remaining open to better explanations.
 
 
-## Illustrative application — Google Gemini longitudinal research
+### Recording and Assessing Backward Connections
+
+Before beginning the historical search, the investigator records the initial functional decomposition of the contemporary failure and describes what a simpler earlier manifestation of each component might look like.
+
+The decomposition remains open to revision as new evidence emerges. Material revisions are explained, so the historical account does not merely reproduce categories selected after convenient predecessors have been found.
+
+For each component, record whether its strongest historical link is a **direct predecessor** in an earlier named model or developmental stage, a **developmental research connection** supported by relevant scientific or engineering transmission, an **independent functional predecessor** outside the demonstrated model lineage, or **no informative predecessor identified**. These are descriptive findings, not ranked burdens of proof. Record whether the component was defined before the historical search or revised afterward.
+
+Each proposed connection explains the relevance of the earlier observation, the developmental relationship inferred, and a plausible contrary observation that would weaken that explanation using published evidence. The account distinguishes the original investigators' observations, additional model-specific history, proposed developmental relationships, independent scientific research, and unresolved alternatives.
+
+An incomplete trace identifies where the available record currently stops; it does not, by itself, invalidate the scientific hypothesis. The purpose is transparent, revisable reasoning rather than an automatic rule for rejecting explanations.
+
+## Illustrative evidence — Variation in Gemini prompt-injection susceptibility
 
 This example applies backward investigation to **one published failure family—indirect prompt injection**. It must not be conflated with the distinct Gemini 2.5 Pro shutdown-resistance incident.
 
