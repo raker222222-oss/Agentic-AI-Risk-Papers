@@ -12,6 +12,20 @@
 
 ---
 
+## Component-level retrospective ledger
+
+The components below are the analytical components developed in this manuscript, now mapped explicitly to historical evidence. The categories identify the **kind of connection**, not a proof threshold; the source discussion in the main text governs interpretation. A contemporaneous or same-model comparator is not automatically an earlier developmental ancestor. This ledger does not assert a chronology for when each component was first formulated.
+
+| Component | Role | Historical connection | Earliest relevant record or boundary | Observation that would weaken or refine the connection |
+|---|---|---|---|---|
+| Promotion of untrusted text into instructions | primary weakness | Developmental research connection | Earlier GPT instruction-hierarchy work and GPT-specific indirect-injection evaluations | Matched provenance-separated retrieval where agents reject equivalent commands would limit the broad authority claim. |
+| Behavioral redirection | observed result | Developmental research connection | Earlier GPT indirect prompt-injection research | If the agent's action was independently authorized without accepting the embedded instruction, this explanation would weaken. |
+| Reproduction into outputs/artifacts | observed workflow behavior | Independent functional predecessor | Morris-II and related self-replicating prompt research outside identified checkpoint lineage | If reproduced text were merely quoted without instruction adoption, reproduction would not prove a second defect. |
+| Slack reposting and downstream exposure | transmission enabler, not proved infection | No informative predecessor identified (for a distinct model defect) | Simulated Slack trajectory | Evidence of downstream agent obedience would establish a further stage; mere reposting does not. |
+
+**Reporting boundary.** The original investigators' findings, additional model-family research, inferred relationships and alternatives, independent scientific precedents, and contrary observations remain analytically separate. Where no earlier named-model evidence is identified, external analogues do not fill that historical gap.
+
+
 ## Abstract
 
 In September 2026, OpenAI disclosed that adversarial instructions embedded in untrusted material could redirect AI agents and cause them to reproduce those instructions in subsequent outputs. The behavior was demonstrated in simulated email, filesystem, coding, and Slack environments. No impact outside simulated tool interactions was reported.
