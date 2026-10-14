@@ -18,11 +18,11 @@ In September 2026, OpenAI disclosed that adversarial instructions embedded in un
 
 This study investigates whether self-replicating prompt injection represents a new elementary model failure or an older instruction-authority vulnerability acquiring an additional transmission pathway. The attack form is operationally distinctive; its underlying weakness need not be novel.
 
-The incident is decomposed into three functional stages: unauthorized promotion of source instructions, behavioral redirection, and reproduction of attacker-controlled content. These stages are not assumed to represent three independent model defects.
+The incident is decomposed into **two explanatory parts**: an instruction-authority failure and a workflow that can reproduce or retransmit attacker-controlled instructions. Redirection, reproduction, and subsequent exposure are distinct observations, not automatically independent model defects.
 
 Two backward research lines are examined. Line 1 investigates identified GPT models, OpenAI's instruction-hierarchy and adversarial-training research, and independent evaluations directly testing GPT-family systems. Line 2 traces independent research on indirect prompt injection, self-propagating attacks, confused-deputy vulnerabilities, and classical authorization controls.
 
-The central finding is that **self-replication can arise when an existing instruction-authority failure operates inside an agentic workflow capable of preserving and retransmitting the instructions responsible for that failure**.
+The central finding is a **known instruction-authority weakness newly demonstrated chaining through persistence and retransmission in simulated workflows**. The study confirms a predicted combination more than it discovers a new elementary weakness.
 
 The evidence supports a functional explanation of the observed behavior. It does not establish an independent malicious objective, an uncontrolled real-world outbreak, or continuous inheritance of one internal defect across GPT checkpoints.
 
@@ -124,11 +124,11 @@ It does not establish that any subsequent agent was actually infected, much less
 
 ---
 
-## 3. The Decomposition: One Primary Weakness, Three Functional Stages
+## 3. The Decomposition: Authority Failure and Retransmission Pathway
 
 An elementary weakness is defined here as a minimal, independently describable failure mode that is not merely a downstream consequence of another failure.
 
-The observed attack can be separated into three functional stages.
+The observed attack involves one primary candidate weakness and a workflow that can carry its consequences forward. The behavior can be described in stages without treating those stages as separate defects.
 
 Those stages should not automatically be interpreted as three elementary weaknesses.
 
@@ -464,7 +464,7 @@ Its behavior can be explained through task execution combined with improper adop
 
 ### Three independent model defects
 
-The observations identify three functional stages.
+The observations distinguish authority failure from the later reproduction and possible retransmission of the malicious material.
 
 They do not establish three independent elementary defects.
 
@@ -517,6 +517,16 @@ The strongest architectural implication is that model-level instruction resistan
 **Agentic systems should enforce authorization independently of model-generated instructions and prevent untrusted content from acquiring authority merely because another agent has reproduced it.**
 
 ---
+
+### Controls mapped to the Slack sequence
+
+**Incoming Slack content:** Treat retrieved messages as untrusted evidence. Provenance marking (Spotlighting) and structured instruction/data separation (StruQ) address attempts to convert the message into operative instructions.
+
+**Decision to repost:** A separate authorization requirement for posting into shared channels would address transmission even if a model accepted the malicious suggestion. This is an execution control, not evidence that the model itself was repaired.
+
+**Downstream consumption:** Applying the same provenance and authorization boundaries to subsequent agents can limit new opportunities for instruction adoption. Reposting alone does not demonstrate that any downstream agent was compromised.
+
+**Evidence boundary:** The cited defenses were not reported as controlled repairs of this exact Slack trajectory. In particular, the available record does not isolate whether choosing to repost quoted material demands an additional model weakness beyond initial instruction-authority confusion.
 
 ## 16. Evidence Limitations
 
